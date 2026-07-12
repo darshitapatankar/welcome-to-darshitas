@@ -27,8 +27,7 @@ function Star() {
 }
 
 // Site footer from the Framer home page "Stack" frame: a full-screen Unicorn
-// Studio scene with the giant Gambarino wordmark (~168px at 1440, tracking
-// -0.04em, dark navy gradient fill), social links, and the rotated sticker.
+// Studio scene with social links and the rotated sticker.
 export default function Footer() {
   return (
     <footer
@@ -40,11 +39,6 @@ export default function Footer() {
         className="absolute inset-0 h-full w-full"
         altText="Darshita Patankar"
       />
-      <h2 className="font-display pointer-events-none relative z-[2] w-full text-center text-[11.6vw] leading-none tracking-[-0.04em] whitespace-nowrap">
-        <span className="bg-gradient-to-t from-[rgb(13,13,41)] to-[rgb(23,23,51)] bg-clip-text text-transparent">
-          Darshita Patankar
-        </span>
-      </h2>
       <nav
         aria-label="Social"
         className="absolute inset-x-0 bottom-[137px] z-[3] flex flex-wrap items-center justify-center gap-6 md:gap-12"
