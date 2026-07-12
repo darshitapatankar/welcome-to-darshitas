@@ -1,0 +1,509 @@
+{
+  "type": "WebPageNode",
+  "id": "c2hu9M_e3",
+  "name": "/wellim",
+  "variables": [],
+  "$parentId": "sn7IXw6X9",
+  "$breakpoints": [
+    {
+      "id": "FTiWhtWbE",
+      "name": "Desktop"
+    }
+  ],
+  "attributes": {
+    "path": "/wellim"
+  },
+  "children": [
+    {
+      "type": "FrameNode",
+      "name": "Desktop",
+      "id": "FTiWhtWbE",
+      "$isPrimary": true,
+      "attributes": {
+        "fill": "rgb(8, 8, 10)",
+        "layout": "stack",
+        "stackDirection": "vertical",
+        "stackDistribution": "start",
+        "stackAlignment": "center",
+        "stackWrapEnabled": false,
+        "gap": 0,
+        "overflow": "hidden",
+        "left": "0px",
+        "right": "null",
+        "top": "0px",
+        "bottom": "null",
+        "centerAnchorX": "0%",
+        "centerAnchorY": "0%",
+        "constraintsLocked": false,
+        "width": "1420px",
+        "height": "auto",
+        "transition": "spring-duration 0.4s 0.2 0s"
+      },
+      "children": [
+        {
+          "type": "FrameNode",
+          "id": "kRvENyCqq",
+          "attributes": {
+            "fill": "rgb(8, 8, 10)",
+            "layout": "stack",
+            "stackDirection": "vertical",
+            "stackDistribution": "center",
+            "stackAlignment": "center",
+            "stackWrapEnabled": false,
+            "gap": 0,
+            "position": "relative",
+            "width": "1fr",
+            "height": "auto",
+            "zIndex": "1"
+          },
+          "children": [
+            {
+              "type": "FrameNode",
+              "name": "Frame 1618872548",
+              "id": "cSBcrZRoh",
+              "attributes": {
+                "fill": "rgba(28, 26, 23, 1)",
+                "layout": "stack",
+                "stackDirection": "vertical",
+                "stackDistribution": "center",
+                "stackAlignment": "center",
+                "stackWrapEnabled": false,
+                "gap": 0,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": "1fr",
+                "height": "auto"
+              },
+              "children": [
+                {
+                  "type": "FrameNode",
+                  "name": "Frame 1618872553",
+                  "id": "gTc8gipSk",
+                  "attributes": {
+                    "layout": "stack",
+                    "stackDirection": "vertical",
+                    "stackDistribution": "start",
+                    "stackAlignment": "center",
+                    "gap": 100,
+                    "position": "relative",
+                    "width": "1fr",
+                    "height": "auto"
+                  },
+                  "children": [
+                    {
+                      "type": "FrameNode",
+                      "name": "Frame 1618872552",
+                      "id": "Emm7Z70iJ",
+                      "attributes": {
+                        "layout": "stack",
+                        "stackDirection": "vertical",
+                        "stackDistribution": "start",
+                        "stackAlignment": "center",
+                        "gap": 0,
+                        "position": "relative",
+                        "width": "1fr",
+                        "height": "4511.5px"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "Slide 16:9 - 1",
+                          "id": "KiO592BY7",
+                          "attributes": {
+                            "fill": "rgba(28, 26, 23, 1)",
+                            "layout": "null",
+                            "overflow": "hidden",
+                            "position": "relative",
+                            "width": "1fr",
+                            "height": "798.75px"
+                          },
+                          "children": [
+                            {
+                              "type": "FrameNode",
+                              "name": "Untitled@2-1471x724 1",
+                              "id": "F19AeGfr9",
+                              "attributes": {
+                                "fill": "https://framerusercontent.com/images/aSahr26fhmxdXg25wQ0vlz3SU.png",
+                                "layout": "null",
+                                "left": "null",
+                                "right": "null",
+                                "top": "null",
+                                "bottom": "null",
+                                "centerAnchorX": "50%",
+                                "centerAnchorY": "50%",
+                                "constraintsLocked": false,
+                                "width": "329.8541564941406px",
+                                "height": "233.7083282470703px"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "SVGNode",
+                          "name": "Slide 16:9 - 4",
+                          "id": "E7RV7rOMy",
+                          "attributes": {
+                            "position": "relative",
+                            "width": "1fr",
+                            "height": "800px"
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Frame 3440",
+                          "id": "WZJ8ya_M8",
+                          "attributes": {
+                            "fill": "rgba(255, 255, 255, 1)",
+                            "layout": "null",
+                            "overflow": "hidden",
+                            "position": "relative",
+                            "width": "100%",
+                            "height": "811.4285888671875px"
+                          },
+                          "children": [
+                            {
+                              "type": "FrameNode",
+                              "name": "Group 3423",
+                              "id": "c58zs4WIq",
+                              "attributes": {
+                                "layout": "null",
+                                "left": "0px",
+                                "right": "0px",
+                                "top": "-585px",
+                                "bottom": "-586px",
+                                "centerAnchorX": "49.08%",
+                                "centerAnchorY": "50.06%",
+                                "constraintsLocked": true,
+                                "width": "1446px",
+                                "height": "1982px"
+                              },
+                              "children": [
+                                {
+                                  "type": "FrameNode",
+                                  "name": "Sun Image 1",
+                                  "id": "Dv93u2LoU",
+                                  "attributes": {
+                                    "fill": "https://framerusercontent.com/images/ATAhSUmerwkmS04KkF7WDwsb0o.png",
+                                    "layout": "null",
+                                    "left": "0px",
+                                    "right": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px",
+                                    "centerAnchorX": "50%",
+                                    "centerAnchorY": "50%",
+                                    "constraintsLocked": true,
+                                    "width": "1473px",
+                                    "height": "1982px"
+                                  }
+                                },
+                                {
+                                  "type": "FrameNode",
+                                  "name": "Moon Image 1",
+                                  "id": "U_FMqWsVJ",
+                                  "attributes": {
+                                    "fill": "https://framerusercontent.com/images/WXt7FNOj27xJbFLvIH5gQBPRao.png",
+                                    "layout": "null",
+                                    "left": "0px",
+                                    "right": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px",
+                                    "centerAnchorX": "50%",
+                                    "centerAnchorY": "50%",
+                                    "constraintsLocked": true,
+                                    "width": "1472px",
+                                    "height": "1982px"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Frame 1618872549",
+                          "id": "kH4N0wfkX",
+                          "attributes": {
+                            "fill": "rgba(251, 246, 238, 1)",
+                            "layout": "stack",
+                            "stackDirection": "horizontal",
+                            "stackDistribution": "center",
+                            "stackAlignment": "center",
+                            "gap": 10,
+                            "padding": "128px 124px 128px 124px",
+                            "position": "relative",
+                            "width": "1fr",
+                            "height": "658px"
+                          },
+                          "children": [
+                            {
+                              "type": "RichTextNode",
+                              "name": "Wellim is for those who seek and manifest moments when they feel truly alive. We believe in crafting instances of fulfillment where you feel free and liberated from all constraints. A Wellim experience is born when you are in perfect alignment with yourself, your surroundings, and the universe. It’s in these moments of harmony that everything falls into place, creating an epiphany that transcends the ordinary.",
+                              "id": "I7LHK8voc",
+                              "attributes": {
+                                "position": "relative",
+                                "width": "1140px",
+                                "height": "auto",
+                                "fontName": "DM Sans",
+                                "fontStyle": "normal",
+                                "fontWeight": 300,
+                                "fontSize": "24px",
+                                "letterSpacing": "-0.02em",
+                                "lineHeight": "1.2em",
+                                "textAlignment": "start",
+                                "textDecorationStyle": "solid",
+                                "textColor": "rgb(28, 26, 23)"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextBlock",
+                                  "id": "v:I7LHK8voc:0",
+                                  "attributes": {
+                                    "tag": "p"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "TextRun",
+                                      "id": "v:I7LHK8voc:0:0",
+                                      "attributes": {
+                                        "text": "Wellim is for those who seek and manifest moments when they feel truly alive. We believe in crafting instances of fulfillment where you feel free and liberated from all constraints. "
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "TextBlock",
+                                  "id": "v:I7LHK8voc:1",
+                                  "attributes": {
+                                    "tag": "p"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "TextLineBreak",
+                                      "id": "v:I7LHK8voc:1:0"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "TextBlock",
+                                  "id": "v:I7LHK8voc:2",
+                                  "attributes": {
+                                    "tag": "p"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "TextRun",
+                                      "id": "v:I7LHK8voc:2:0",
+                                      "attributes": {
+                                        "text": "A Wellim experience is born when you are in perfect alignment with yourself, your surroundings, and the universe. It’s in these moments of harmony that everything falls into place, creating an epiphany that transcends the ordinary."
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Mask group-2 1",
+                          "id": "TWhkgcQCb",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/9PAJN5pMONVX0WT0kGEQz9A3Pw.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "105%",
+                            "height": "733px",
+                            "aspectRatio": 2.26
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "image 467",
+                          "id": "CeALT_bcd",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/9eQg64NiRgZNTeVMq9YnUu1Q3o.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "1fr",
+                            "height": "1px",
+                            "aspectRatio": 1.9
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ComponentInstanceNode",
+                      "id": "Qk8CeZhKx",
+                      "component": "lRDHiNWNVWmE0lqtoVHP",
+                      "$componentDisplayName": "Video",
+                      "attributes": {
+                        "$control__source": "Upload",
+                        "$control__uRL": "https://framerusercontent.com/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4",
+                        "$control__file": "https://framerusercontent.com/assets/h0VsODHDTfecjyQOTZwYsx5Ig0.mp4",
+                        "$control__playing": "true",
+                        "$control__radius": "0px",
+                        "$control__poster": "true",
+                        "$control__background": "rgba(0,0,0,0)",
+                        "$control__startTime": "0",
+                        "$control__loop": "true",
+                        "$control__fit": "Cover",
+                        "$control__controls": "false",
+                        "$control__muted": "true",
+                        "$control__volume": "25",
+                        "position": "relative",
+                        "width": "1fr",
+                        "height": "auto"
+                      }
+                    },
+                    {
+                      "type": "FrameNode",
+                      "name": "Frame 1410103951",
+                      "id": "r9iPvOuMh",
+                      "attributes": {
+                        "layout": "stack",
+                        "stackDirection": "horizontal",
+                        "stackDistribution": "center",
+                        "stackAlignment": "center",
+                        "gap": 0,
+                        "position": "relative",
+                        "width": "1fr",
+                        "height": "auto"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "image 468",
+                          "id": "ZmoPtjBPQ",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/pzfoskdVvtKR2mSV6TsORV0WZLc.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "655px",
+                            "height": "627.5px",
+                            "aspectRatio": 1.04
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "image 470",
+                          "id": "qp76NUHax",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/L7yNV3m8hj0PNDPgW9hVzFpzah8.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "655px",
+                            "height": "627.5px",
+                            "aspectRatio": 1.04
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FrameNode",
+                      "name": "Frame 1618872551",
+                      "id": "fcweAkoyf",
+                      "attributes": {
+                        "layout": "stack",
+                        "stackDirection": "vertical",
+                        "stackDistribution": "start",
+                        "stackAlignment": "center",
+                        "gap": 100,
+                        "position": "relative",
+                        "width": "1fr",
+                        "height": "auto"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "Mask group-1 1",
+                          "id": "Bb41Holbw",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/z1IjhNLeVXxpTmKASwBtIg8vzo.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "105%",
+                            "height": "683px",
+                            "aspectRatio": 2.26
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "image 471",
+                          "id": "U1E_RhNXf",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/gEXS9IEZxMWJ0Pbswes2bqlRhw.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "1420px",
+                            "height": "477.5px",
+                            "aspectRatio": 2.97
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "image 472",
+                          "id": "Gtg8WVhvl",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/RWnqVtrjbSvlEZABkUSXgdTvYwI.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "1420px",
+                            "height": "940.5px",
+                            "aspectRatio": 1.51
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "image 474",
+                          "id": "dOFcUxC9x",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/f3Y24cDQhASHm4s0hHRoz8KpxGU.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "1280px",
+                            "height": "833px",
+                            "aspectRatio": 1.54
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FrameNode",
+                      "name": "Frame 1618872554",
+                      "id": "txyi9CkSz",
+                      "attributes": {
+                        "layout": "stack",
+                        "stackDirection": "vertical",
+                        "stackDistribution": "start",
+                        "stackAlignment": "start",
+                        "gap": 0,
+                        "position": "relative",
+                        "width": "1fr",
+                        "height": "auto"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "image 473",
+                          "id": "FRrJpdt0y",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/75Fht63c5Hx68glWcop5xUoL5E.png",
+                            "layout": "null",
+                            "position": "relative",
+                            "width": "100%",
+                            "height": "2460.67578125px",
+                            "aspectRatio": 0.59
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

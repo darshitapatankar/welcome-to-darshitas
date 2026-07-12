@@ -1,0 +1,752 @@
+{
+  "type": "WebPageNode",
+  "id": "A8z7cAHXg",
+  "name": "/illustrations",
+  "variables": [],
+  "$parentId": "sn7IXw6X9",
+  "$breakpoints": [
+    {
+      "id": "MaKsH92vO",
+      "name": "Desktop"
+    }
+  ],
+  "attributes": {
+    "path": "/illustrations"
+  },
+  "children": [
+    {
+      "type": "FrameNode",
+      "name": "Desktop",
+      "id": "MaKsH92vO",
+      "$isPrimary": true,
+      "attributes": {
+        "fill": "white",
+        "layout": "stack",
+        "stackDirection": "vertical",
+        "stackDistribution": "start",
+        "stackAlignment": "center",
+        "stackWrapEnabled": false,
+        "gap": 10,
+        "overflow": "hidden",
+        "left": "0px",
+        "right": "null",
+        "top": "0px",
+        "bottom": "null",
+        "centerAnchorX": "0%",
+        "centerAnchorY": "0%",
+        "constraintsLocked": false,
+        "width": "1420px",
+        "height": "auto",
+        "transition": "spring-duration 0.4s 0.2 0s"
+      },
+      "children": [
+        {
+          "type": "FrameNode",
+          "id": "VqMYmEf9i",
+          "attributes": {
+            "fill": "rgb(97, 0, 53)",
+            "layout": "stack",
+            "stackDirection": "vertical",
+            "stackDistribution": "center",
+            "stackAlignment": "center",
+            "stackWrapEnabled": false,
+            "gap": 100,
+            "overflow": "hidden",
+            "padding": "100px 100px 0px 100px",
+            "position": "relative",
+            "width": "1fr",
+            "height": "auto",
+            "zIndex": "1"
+          },
+          "children": [
+            {
+              "type": "FrameNode",
+              "id": "EsYrbeqKa",
+              "attributes": {
+                "layout": "stack",
+                "stackDirection": "horizontal",
+                "stackDistribution": "center",
+                "stackAlignment": "center",
+                "stackWrapEnabled": false,
+                "gap": 90,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": "1fr",
+                "height": "auto"
+              },
+              "children": [
+                {
+                  "type": "ComponentInstanceNode",
+                  "id": "Jr4Ylwrcl",
+                  "component": "jfK7C7JmdHGaVBsvt1V7",
+                  "$componentDisplayName": "Dot Lottie",
+                  "attributes": {
+                    "$control__source": "File",
+                    "$control__link": "https://lottie.host/d826e0a7-b7e8-4072-8afe-c943ed2dd2ca/DpX3m5yT5Z.lottie",
+                    "$control__file": "https://framerusercontent.com/assets/QwToT4kQuTb2KGsVGJke13u0c8M.lottie",
+                    "$control__autoplay": "true",
+                    "$control__backdrop": "rgba(0, 85, 255, 0)",
+                    "$control__controls": "false",
+                    "$control__direction": "Normal",
+                    "$control__hoverPlay": "false",
+                    "$control__loop": "true",
+                    "$control__speed": "1",
+                    "$control__progress": "0",
+                    "position": "relative",
+                    "width": "584px",
+                    "height": "409px"
+                  }
+                },
+                {
+                  "type": "ComponentInstanceNode",
+                  "id": "Vp1baGgax",
+                  "component": "jfK7C7JmdHGaVBsvt1V7",
+                  "$componentDisplayName": "Dot Lottie",
+                  "attributes": {
+                    "$control__source": "File",
+                    "$control__link": "https://lottie.host/d826e0a7-b7e8-4072-8afe-c943ed2dd2ca/DpX3m5yT5Z.lottie",
+                    "$control__file": "https://framerusercontent.com/assets/08d9E9io3faCY4F4LTwYO1Q43N8.lottie",
+                    "$control__autoplay": "true",
+                    "$control__backdrop": "rgba(0, 85, 255, 0)",
+                    "$control__controls": "false",
+                    "$control__direction": "Normal",
+                    "$control__hoverPlay": "false",
+                    "$control__loop": "true",
+                    "$control__speed": "1",
+                    "$control__progress": "0",
+                    "position": "relative",
+                    "width": "434px",
+                    "height": "409px"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "FrameNode",
+              "name": "Pattern",
+              "id": "yqLj6yPbF",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/3dI6e9jrn00iqtj4IaOX1E4I.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "116.39344262295081%",
+                "height": "923px",
+                "aspectRatio": 1.54
+              }
+            }
+          ]
+        },
+        {
+          "type": "FrameNode",
+          "id": "ZpaUAUXMp",
+          "attributes": {
+            "layout": "stack",
+            "stackDirection": "vertical",
+            "stackDistribution": "center",
+            "stackAlignment": "center",
+            "stackWrapEnabled": false,
+            "gap": 10,
+            "overflow": "hidden",
+            "position": "relative",
+            "width": "1fr",
+            "height": "auto"
+          },
+          "children": [
+            {
+              "type": "FrameNode",
+              "name": "Frame 2147224263",
+              "id": "b90fh3Fx5",
+              "attributes": {
+                "layout": "stack",
+                "stackDirection": "vertical",
+                "stackDistribution": "start",
+                "stackAlignment": "start",
+                "gap": 0,
+                "position": "relative",
+                "width": "1420px",
+                "height": "auto"
+              },
+              "children": [
+                {
+                  "type": "FrameNode",
+                  "name": "Frame 1",
+                  "id": "dUcpl9zZQ",
+                  "attributes": {
+                    "fill": "rgba(255, 255, 255, 1)",
+                    "layout": "null",
+                    "overflow": "hidden",
+                    "position": "relative",
+                    "width": "100%",
+                    "height": "1893.3333740234375px"
+                  },
+                  "children": [
+                    {
+                      "type": "FrameNode",
+                      "name": "Group 1",
+                      "id": "Oi2Y_xoJH",
+                      "attributes": {
+                        "layout": "null",
+                        "left": "0px",
+                        "right": "null",
+                        "top": "0px",
+                        "bottom": "null",
+                        "centerAnchorX": "0%",
+                        "centerAnchorY": "0%",
+                        "constraintsLocked": false,
+                        "width": "1420px",
+                        "height": "1893.3333740234375px"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 1",
+                          "id": "sXsmPOHSn",
+                          "attributes": {
+                            "layout": "null",
+                            "left": "0px",
+                            "right": "null",
+                            "top": "0px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "1420px",
+                            "height": "1893.3333740234375px"
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 4",
+                          "id": "obiGwItJK",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/yCBVeZ9vxKWVorJgEajc6sj2M0.png",
+                            "layout": "null",
+                            "left": "0px",
+                            "right": "null",
+                            "top": "0px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "1420px",
+                            "height": "1893.3333740234375px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "Frame 25",
+                  "id": "SYEUrpktq",
+                  "attributes": {
+                    "fill": "rgba(255, 255, 255, 1)",
+                    "layout": "null",
+                    "overflow": "hidden",
+                    "position": "relative",
+                    "width": "100%",
+                    "height": "488.7166442871094px"
+                  },
+                  "children": [
+                    {
+                      "type": "FrameNode",
+                      "name": "Group 1",
+                      "id": "uIZ9w3qA1",
+                      "attributes": {
+                        "layout": "null",
+                        "left": "null",
+                        "right": "null",
+                        "top": "null",
+                        "bottom": "null",
+                        "centerAnchorX": "49.93%",
+                        "centerAnchorY": "49.95%",
+                        "constraintsLocked": false,
+                        "width": "989px",
+                        "height": "232px"
+                      },
+                      "children": [
+                        {
+                          "type": "SVGNode",
+                          "name": "ph:flower-lotus",
+                          "id": "NA2Ta3cCn",
+                          "attributes": {
+                            "left": "-0.9px",
+                            "right": "null",
+                            "top": "29.48px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "58px",
+                            "height": "57px"
+                          }
+                        },
+                        {
+                          "type": "SVGNode",
+                          "name": "ph:flower-lotus",
+                          "id": "Y61c3oZcK",
+                          "attributes": {
+                            "left": "-0.9px",
+                            "right": "null",
+                            "top": "159.94px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "58px",
+                            "height": "57px"
+                          }
+                        },
+                        {
+                          "type": "RichTextNode",
+                          "name": "This art is inspired by Alphonse Mucha's Daydream, but with a touch of Indian flavour. I tried to create a fusion of my favourite art styles, Art Nouveau and Madhubani, both coming from two different lands but seamlessly merging under this digital painting.",
+                          "id": "Np0TJRkiB",
+                          "attributes": {
+                            "left": "103.54px",
+                            "right": "null",
+                            "top": "0px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "885.7250366210938px",
+                            "height": "auto",
+                            "fontName": "Montserrat",
+                            "fontStyle": "normal",
+                            "fontWeight": 400,
+                            "fontSize": "23.67px",
+                            "letterSpacing": "0em",
+                            "lineHeight": "1.2em",
+                            "textAlignment": "start",
+                            "textDecorationStyle": "solid",
+                            "textColor": "rgb(0, 0, 0)"
+                          },
+                          "children": [
+                            {
+                              "type": "TextBlock",
+                              "id": "v:Np0TJRkiB:0",
+                              "attributes": {
+                                "tag": "p"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextRun",
+                                  "id": "v:Np0TJRkiB:0:0",
+                                  "attributes": {
+                                    "text": "This art is inspired by Alphonse Mucha's Daydream, but with a touch of Indian flavour. I tried to create a fusion of my favourite art styles, Art Nouveau and Madhubani, both coming from two different lands but seamlessly merging under this digital painting."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "RichTextNode",
+                          "name": "The colour palette belongs to the late 19th century Art Nouveau style, however, the painting majorly leans towards the local Madhubani art found in the northern hemisphere of India.",
+                          "id": "VgZFGGIyZ",
+                          "attributes": {
+                            "left": "103.54px",
+                            "right": "null",
+                            "top": "144.96px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "885.7250366210938px",
+                            "height": "auto",
+                            "fontName": "Montserrat",
+                            "fontStyle": "normal",
+                            "fontWeight": 400,
+                            "fontSize": "23.67px",
+                            "letterSpacing": "0em",
+                            "lineHeight": "1.2em",
+                            "textAlignment": "start",
+                            "textDecorationStyle": "solid",
+                            "textColor": "rgb(0, 0, 0)"
+                          },
+                          "children": [
+                            {
+                              "type": "TextBlock",
+                              "id": "v:VgZFGGIyZ:0",
+                              "attributes": {
+                                "tag": "p"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextRun",
+                                  "id": "v:VgZFGGIyZ:0:0",
+                                  "attributes": {
+                                    "text": "The colour palette belongs to the late 19th century Art Nouveau style, however, the painting majorly leans towards the local Madhubani art found in the northern hemisphere of India."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "Frame 26",
+                  "id": "UPzc7R_6f",
+                  "attributes": {
+                    "fill": "rgba(255, 255, 255, 1)",
+                    "layout": "null",
+                    "overflow": "hidden",
+                    "position": "relative",
+                    "width": "100%",
+                    "height": "1583.8916015625px"
+                  },
+                  "children": [
+                    {
+                      "type": "FrameNode",
+                      "name": "Group 1",
+                      "id": "cIw71klXT",
+                      "attributes": {
+                        "layout": "null",
+                        "left": "0px",
+                        "right": "null",
+                        "top": "0px",
+                        "bottom": "null",
+                        "centerAnchorX": "0%",
+                        "centerAnchorY": "0%",
+                        "constraintsLocked": false,
+                        "width": "1420.0008544921875px",
+                        "height": "1553.2552490234375px"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 5",
+                          "id": "DfymdfAwY",
+                          "attributes": {
+                            "border": "14.791667938232422px solid rgba(255, 255, 255, 1)",
+                            "fill": "https://framerusercontent.com/images/B5qlSDnKBl0t0K3fzPDxzDMADug.png",
+                            "layout": "null",
+                            "left": "0px",
+                            "right": "null",
+                            "top": "0px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "715.3338623046875px",
+                            "height": "711.7749633789062px"
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 6",
+                          "id": "opOPJEzYv",
+                          "attributes": {
+                            "border": "14.791667938232422px solid rgba(255, 255, 255, 1)",
+                            "fill": "https://framerusercontent.com/images/dSmDcEfVZXTBBPljwhQ2NJ4UeA.png",
+                            "layout": "null",
+                            "left": "715.33px",
+                            "right": "null",
+                            "top": "0px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "704.6660766601562px",
+                            "height": "894.5999755859375px"
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 8",
+                          "id": "KruVWC4RQ",
+                          "attributes": {
+                            "border": "14.791667938232422px solid rgba(255, 255, 255, 1)",
+                            "fill": "https://framerusercontent.com/images/K6tr2QFWiZCp9aWzFPR9edGclRI.png",
+                            "layout": "null",
+                            "left": "0px",
+                            "right": "null",
+                            "top": "809.86px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "715.3338623046875px",
+                            "height": "668.316650390625px"
+                          }
+                        },
+                        {
+                          "type": "RichTextNode",
+                          "name": "This portrait is of my dearest friend Manavi. Over here, she is wearing Indian jewels and jasmine flowers.",
+                          "id": "dLeViFhht",
+                          "attributes": {
+                            "left": "54.6px",
+                            "right": "null",
+                            "top": "734.79px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "606.140625px",
+                            "height": "auto",
+                            "fontName": "Montserrat",
+                            "fontStyle": "normal",
+                            "fontWeight": 400,
+                            "fontSize": "21.3px",
+                            "letterSpacing": "0em",
+                            "lineHeight": "1.2em",
+                            "textAlignment": "start",
+                            "textDecorationStyle": "solid",
+                            "textColor": "rgb(0, 0, 0)"
+                          },
+                          "children": [
+                            {
+                              "type": "TextBlock",
+                              "id": "v:dLeViFhht:0",
+                              "attributes": {
+                                "tag": "p"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextRun",
+                                  "id": "v:dLeViFhht:0:0",
+                                  "attributes": {
+                                    "text": "This portrait is of my dearest friend Manavi. Over here, she is wearing Indian jewels and jasmine flowers."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "RichTextNode",
+                          "name": "The Banasari saree pattern displayed over here is one of the finest patterns for sarees found in India.",
+                          "id": "dWp_Z1mRf",
+                          "attributes": {
+                            "left": "54.6px",
+                            "right": "null",
+                            "top": "1501.18px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "606.140625px",
+                            "height": "auto",
+                            "fontName": "Montserrat",
+                            "fontStyle": "normal",
+                            "fontWeight": 400,
+                            "fontSize": "21.3px",
+                            "letterSpacing": "0em",
+                            "lineHeight": "1.2em",
+                            "textAlignment": "start",
+                            "textDecorationStyle": "solid",
+                            "textColor": "rgb(0, 0, 0)"
+                          },
+                          "children": [
+                            {
+                              "type": "TextBlock",
+                              "id": "v:dWp_Z1mRf:0",
+                              "attributes": {
+                                "tag": "p"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextRun",
+                                  "id": "v:dWp_Z1mRf:0:0",
+                                  "attributes": {
+                                    "text": "The Banasari saree pattern displayed over here is one of the finest patterns for sarees found in India."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "RichTextNode",
+                          "name": "The zodiac signs surrounding the lady were majorly seen in Art Nouveau works, however here it is drawn in a Madhubani style.",
+                          "id": "cL0LIDIk4",
+                          "attributes": {
+                            "left": "760.31px",
+                            "right": "null",
+                            "top": "916.07px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "614.714599609375px",
+                            "height": "auto",
+                            "fontName": "Montserrat",
+                            "fontStyle": "normal",
+                            "fontWeight": 400,
+                            "fontSize": "21.3px",
+                            "letterSpacing": "0em",
+                            "lineHeight": "1.2em",
+                            "textAlignment": "start",
+                            "textDecorationStyle": "solid",
+                            "textColor": "rgb(0, 0, 0)"
+                          },
+                          "children": [
+                            {
+                              "type": "TextBlock",
+                              "id": "v:cL0LIDIk4:0",
+                              "attributes": {
+                                "tag": "p"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextRun",
+                                  "id": "v:cL0LIDIk4:0:0",
+                                  "attributes": {
+                                    "text": "The zodiac signs surrounding the lady were majorly seen in Art Nouveau works, however here it is drawn in a Madhubani style."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 7",
+                          "id": "MSZUvtvNu",
+                          "attributes": {
+                            "border": "14.791667938232422px solid rgba(255, 255, 255, 1)",
+                            "fill": "https://framerusercontent.com/images/xrn1aGmpLWGOjvyBNcqM9hSGI2Y.png",
+                            "layout": "null",
+                            "left": "715.33px",
+                            "right": "null",
+                            "top": "1015.63px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "307.35723876953125px",
+                            "height": "462.54815673828125px"
+                          }
+                        },
+                        {
+                          "type": "FrameNode",
+                          "name": "Manavi painting 10",
+                          "id": "zXYcd15u0",
+                          "attributes": {
+                            "border": "14.791667938232422px solid rgba(255, 255, 255, 1)",
+                            "fill": "https://framerusercontent.com/images/EBEAnM9PNLikxYWucuQNBfHU.png",
+                            "layout": "null",
+                            "left": "1022.69px",
+                            "right": "null",
+                            "top": "1015.63px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "397.3088073730469px",
+                            "height": "462.54815673828125px"
+                          }
+                        },
+                        {
+                          "type": "RichTextNode",
+                          "name": "Over here we see a snake, a Bengal tiger, a lotus, Sitar, and the river Ganges all symbolising Indian culture.",
+                          "id": "ER_C1dV4j",
+                          "attributes": {
+                            "left": "760.31px",
+                            "right": "null",
+                            "top": "1498.82px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "614.714599609375px",
+                            "height": "54.43333435058594px",
+                            "fontName": "Montserrat",
+                            "fontStyle": "normal",
+                            "fontWeight": 400,
+                            "fontSize": "21.3px",
+                            "letterSpacing": "0em",
+                            "lineHeight": "1.2em",
+                            "textAlignment": "start",
+                            "textDecorationStyle": "solid",
+                            "textColor": "rgb(0, 0, 0)",
+                            "textVerticalAlignment": "top"
+                          },
+                          "children": [
+                            {
+                              "type": "TextBlock",
+                              "id": "v:ER_C1dV4j:0",
+                              "attributes": {
+                                "tag": "p"
+                              },
+                              "children": [
+                                {
+                                  "type": "TextRun",
+                                  "id": "v:ER_C1dV4j:0:0",
+                                  "attributes": {
+                                    "text": "Over here we see a snake, a Bengal tiger, a lotus, Sitar, and the river Ganges all symbolising Indian culture."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "Frame 4",
+                  "id": "SPGMy84KS",
+                  "attributes": {
+                    "fill": "rgba(255, 255, 255, 1)",
+                    "layout": "null",
+                    "overflow": "hidden",
+                    "position": "relative",
+                    "width": "100%",
+                    "height": "1557.2667236328125px"
+                  },
+                  "children": [
+                    {
+                      "type": "FrameNode",
+                      "name": "Group 1",
+                      "id": "s5V4Y8AmN",
+                      "attributes": {
+                        "layout": "null",
+                        "left": "-65.08px",
+                        "right": "null",
+                        "top": "-146.73px",
+                        "bottom": "null",
+                        "centerAnchorX": "0%",
+                        "centerAnchorY": "0%",
+                        "constraintsLocked": false,
+                        "width": "1550.166748046875px",
+                        "height": "1703.9998779296875px"
+                      },
+                      "children": [
+                        {
+                          "type": "FrameNode",
+                          "name": "Mockup3",
+                          "id": "C9QBD8urF",
+                          "attributes": {
+                            "fill": "https://framerusercontent.com/images/T73nRazpZ69gbK0GjYAgJdhfKIA.png",
+                            "layout": "null",
+                            "left": "0px",
+                            "right": "null",
+                            "top": "0px",
+                            "bottom": "null",
+                            "centerAnchorX": "0%",
+                            "centerAnchorY": "0%",
+                            "constraintsLocked": false,
+                            "width": "1550.166748046875px",
+                            "height": "1703.9998779296875px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

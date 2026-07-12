@@ -1,0 +1,527 @@
+{
+  "id": "IoTp8wcjc",
+  "name": "Projects",
+  "slugFieldName": "Slug",
+  "fields": [
+    {
+      "id": "PzC0vS7Sc",
+      "name": "Title",
+      "type": "string"
+    },
+    {
+      "id": "cp2VoDEuB",
+      "name": "Description",
+      "type": "string"
+    },
+    {
+      "id": "yo4kR0uaF",
+      "name": "Thumbnail",
+      "type": "image"
+    },
+    {
+      "id": "G9ptKhxBM",
+      "name": "Category",
+      "type": "enum"
+    },
+    {
+      "id": "a0D6spSb3",
+      "name": "Date",
+      "type": "string"
+    },
+    {
+      "id": "nJUQ9X1GY",
+      "name": "Content",
+      "type": "formattedText"
+    },
+    {
+      "id": "QF5HjKRiw",
+      "name": "Gallery",
+      "type": "array"
+    },
+    {
+      "id": "wZN80gF7t",
+      "name": "File",
+      "type": "file"
+    },
+    {
+      "id": "qow_IiwlX",
+      "name": "Name",
+      "type": "string"
+    }
+  ],
+  "items": [
+    {
+      "id": "MQs6UFX8f",
+      "slug": "wellim",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "Wellim",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "dfQsav4399qqgAEIB8HiRG2O4y0.gif",
+            "url": "https://framerusercontent.com/images/dfQsav4399qqgAEIB8HiRG2O4y0.gif",
+            "thumbnailUrl": "https://framerusercontent.com/images/dfQsav4399qqgAEIB8HiRG2O4y0.gif?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Branding, Illustration & Motion Design | 2024",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/tLyp4zlZ3rjzePbpCYuz2JIKSko.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/S15KaMQ8MF8U5SYAmE5LOZ8zIDA.png\"><h6><br></h6><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/1HapnqwgLa3ADRUP1CE2vj2lMQ.mp4\"></video><h1><br></h1><h1>Introduction</h1><p>Wellim is not just a luxury destination, it is an experience that embodies tranquility, renewal, and intentionality. Designed for discerning individuals who prioritise depth over opulence, Wellim positions itself as a brand that invites users to “transcend into better experiences.”</p><h1><br></h1><h1>Challenge</h1><p>To craft a visual identity and communication strategy that reflects luxury without being loud, one that connects emotionally with modern travellers seeking quiet sophistication and soul-deep rest.</p><p><br></p><img alt=\"\" src=\"https://framerusercontent.com/images/NfQIuf9zEztF2P3rhztey0eoEM.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/mckcsplnaLEYMVbqNl8fT1rHk.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/30NergX8YWoDEF6B0jXGbtcp9A.png\"><h1><br></h1><h1>Strategy</h1><p>By anchoring the brand in natural metaphors (eclipse, warm light, soft spaces), Wellim creates a feeling of calm anticipation. Every touchpoint, from website to social media evokes peace and exclusivity.</p><h1><br></h1><img alt=\"\" src=\"https://framerusercontent.com/images/5ZReXpPhGKfkqjyMBZPNSvrGtI.png\"><h6><br></h6><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/9IrHIk43PEl0KtaVBwObcBWl7o.mp4\"></video><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/U0XrOIfadASucu1uVmSze4y0.png\"><h1><br></h1><h1>Brand Essence</h1><p>Wellim is crafted for individuals who seek luxurious, meaningful escapes. It positions itself at the intersection of well-being and elevated living, targeting discerning travelers or clients who value immersive comfort and curated serenity.</p><h1><br></h1><img alt=\"\" src=\"https://framerusercontent.com/images/oxqZUqGwUZsgcYWgZq9YXr28s4.png\"><h6><br></h6><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/7MEZpd5H86Kh4kuWGwQJXd5VzD8.mp4\"></video><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/istuAYOsN8kHvJLtEFR4f6IZ7E.png\"><h6><br></h6><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/uxzKkmT6Oh0Mju2Hcw8JTW88Yp8.mp4\"></video><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/LvSZ7xDekGGomqXJjIUQLr8TEaM.png\"><h6><br></h6><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/uoRSjVfsUqwAJOXwrLwyjJ7mTU.mp4\"></video><h6><br></h6><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/L7NyuOekzkrps2o1LD6iPF7GQ.mp4\"></video><h6><br></h6>",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file",
+          "value": {
+            "id": "1HapnqwgLa3ADRUP1CE2vj2lMQ.mp4",
+            "url": "https://framerusercontent.com/assets/1HapnqwgLa3ADRUP1CE2vj2lMQ.mp4",
+            "extension": "mp4"
+          }
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "mHUOZo7HY",
+      "slug": "stack-results",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "Stack Results",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "Stack Results is a branding project rooted in transparency, connection, and community-powered wellness. At the heart of the identity is a sun-like logo, built from individual squares that seem to gently fall into place — representing people coming together, sharing their health stacks to inspire others.  The coral tone brings a bright, energizing warmth to the brand, while the soft pastel system adds lightness and clarity. Together, they form a visual language that feels clean, minimal, and approachable — much like the journey toward better health when shared.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "k5ak5D7qtMpau5Q8WCLEle7FWiI.png",
+            "url": "https://framerusercontent.com/images/k5ak5D7qtMpau5Q8WCLEle7FWiI.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/k5ak5D7qtMpau5Q8WCLEle7FWiI.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Branding | 2025",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<p><br></p><img alt=\"\" src=\"https://framerusercontent.com/images/k5ak5D7qtMpau5Q8WCLEle7FWiI.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/9iRuBnwK2e3FvfpGUuok3dAZcoI.png\"><p><br></p><h1>Introduction</h1><p>Stack Results is a branding project rooted in transparency, connection, and community-powered wellness. The brand seeks to guide users in optimizing their health stacks—custom combinations of wellness tools, routines, and insights—through collaboration and shared stories.</p><h1><br></h1><img alt=\"\" src=\"https://framerusercontent.com/images/pY4gNmk2jINR68GxcyDpm9IK1w.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/QzczjhDRvkEEnAWLOteaqTUxxA.png\"><h1><br></h1><h1>Challenge</h1><p>In a world saturated with health apps and fragmented advice, Stack Results needed to differentiate itself through a brand that felt both credible and inviting. The challenge was to visually communicate:</p><h6><br></h6><ul><li data-preset-tag=\"p\"><p>The community-driven nature of the platform.</p></li><li data-preset-tag=\"p\"><p>The modularity of personalized health stacks.</p></li><li data-preset-tag=\"p\"><p>A sense of approachable expertise—not clinical, but trustworthy.</p></li><li data-preset-tag=\"p\"><p>A welcoming, optimistic energy without overwhelming users.</p></li></ul><h1><br></h1><video loop=\"\" playsinline=\"\" src=\"https://framerusercontent.com/images/fE2EfmUYOdVJ59NLW5inqg6YTYU.mp4\"></video><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/T5U3r1oe9JoEmoO0pDV9UkTyAg.png\"><h1><br></h1><h1>Strategy &amp; Concept</h1><p>At the heart of the identity is a <strong>sun-like logo</strong> composed of small individual squares that gently orbit in a circular motion. These squares symbolise: <strong>Individuals</strong> and their unique wellness components. <strong>Community sharing</strong>, represented through the formation of a circle. The <strong>cyclical nature of health</strong> that is non-linear but interconnected.</p><h1><br></h1><img alt=\"\" src=\"https://framerusercontent.com/images/AvZilp77F1wN97xDItMZz6Yeg8.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/gDg3NlKsqrVcf5Fo9WPizRd1cSo.png\"><h1><br></h1><h1>Visual System</h1><p><strong>The Color Palette has Coral</strong> as the primary colour, it is a vibrant tone chosen for its energizing and warm properties, used sparingly to highlight key actions and calls to engagement. The <strong>Soft Pastels</strong>, such as mint, sky blue, and butter yellow provide a sense of calm, lightness, and clarity. These reflect the diversity and modularity of user health stacks.</p><h1><br></h1><img alt=\"\" src=\"https://framerusercontent.com/images/g97co8VZrbR7ALFjeofSlCWtgII.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/xlhx2IybNwNKz6ppLqXUOk4w68.png\"><h6><br></h6>",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "JhWRWkgVa",
+      "slug": "museo",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "Museo",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "Museo is a no-code playground for creators to build bold, expressive digital products that shape internet culture. I was responsible for the brand identity. The brand blends digital nostalgia, rebellious energy, and self-expression to empower the next generation of creators.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "jDBkx9Xv9ftVCEbi8EUlARPxE.png",
+            "url": "https://framerusercontent.com/images/jDBkx9Xv9ftVCEbi8EUlARPxE.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/jDBkx9Xv9ftVCEbi8EUlARPxE.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<img alt=\"\" src=\"https://framerusercontent.com/images/jDBkx9Xv9ftVCEbi8EUlARPxE.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/cPrSsEaJBqAuOxWTLh1XqpdSW0.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/aZZRXnhgKIfWctAAnVbJ4upwO8.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/CXRmeM2BGTGsO5NHs3Bca6Po.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/OCxDHPKJIsf9fkmPnuPfzTPt4U.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/koprSFEoTutgjkibCsUr9JbXhqo.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/B04Sl9lPzdEWXiE6UPb59dV2huI.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/ARTlAkcWyxTEFl6uQzLCvSyRhm4.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/4r0wKBUfjaUHW7cGgVgiT9cbE8.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/35T1HpWaMpqQ2mRkguSBo15U1o.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/QTcnYRddbDnz9RrCqVMEWNp7u98.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/WcQFBZ9h6uZH8aTONJDuzlxFyR0.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/jRFsRYItee2S111HKhaeBQJMYs.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "Dg4wCMWW2",
+      "slug": "pondicherry-botanical",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "Pondicherry Botanical",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.  The brand identity and website design transport viewers to the colonial era, mirroring the aesthetic of vintage newspapers and old-world charm. The color palette is inspired by the timeless facades of Pondicherry’s colonial architecture, lending an air of nostalgia.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "4nZ1yoGZUyxqJCWYGrpIvJ6yQ.png",
+            "url": "https://framerusercontent.com/images/4nZ1yoGZUyxqJCWYGrpIvJ6yQ.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/4nZ1yoGZUyxqJCWYGrpIvJ6yQ.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Branding & Illustration | 2022",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<img alt=\"\" src=\"https://framerusercontent.com/images/4nZ1yoGZUyxqJCWYGrpIvJ6yQ.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/RLKIhKgzBPUYEygzaWHOliAyws.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/nQiRv4E9Lb6EJ8Zk40rr9ly3p7Q.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/X6P8LI8u7nUkG7VCLG86a5BhJig.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/scMsp95ydjY7FKNotocQjuVbw.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/CmusqekvRiCGSH7Nmwc26MWo.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/0uIAPTFE6HbUADqCF5rv21f40.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/FGzeSjXHkCUajEGnvJjb4zRs.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/037x1DdaLA9UcwayfkD2W7LEoig.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "BULz8lI_U",
+      "slug": "demure",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "demure",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "Demure is my first exploration into typeface design, created during an online course at Practica Program. With its soft curves and delicate serifs, it balances a sense of warmth and refinement. Designed with subtle contrasts and organic letterforms, Demure captures an understated charm, reminiscent of handwritten calligraphy yet structured enough for modern typography. ",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "J5dnL6RVqgKzwKQATQyGfqeKsF8.png",
+            "url": "https://framerusercontent.com/images/J5dnL6RVqgKzwKQATQyGfqeKsF8.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/J5dnL6RVqgKzwKQATQyGfqeKsF8.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Typeface Design",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<img alt=\"\" src=\"https://framerusercontent.com/images/wW2OAdZa1efTh8bDXYLRJL7Ow.png\"><h6><br></h6><img alt=\"\" src=\"https://framerusercontent.com/images/xfpB2K8d7QuYaY7ZmDEWtwAjxjM.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/59EFsSIHSVD7ByBOhnZLD9fkUw.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/74uRP4NW91pYoK62r6x8mNIb3M.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/DhXK1xTAocro6fo5Nuy5jtRhR8.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/JpY8rFyndxQwXKJSFsLXJWYnNM.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/6PdSBHYIW2BIbfe0PjG8iNItkeI.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/6jExryeALL3Uky0KoWHCaH2gs.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/8UWIV9kOyq6CNVH6KWBaZS3LBjU.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "QcWTVcvj6",
+      "slug": "36-days-of-type",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "36 Days of Type",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "36 Days of Type is an annual global challenge that brings together designers, illustrators, and artists to creatively interpret the Latin alphabet and numbers over 36 days. Having admired the incredible work shared during this event for years, I decided to take part and explore typography in my own way.  For this project, I experimented with Latin letterforms using bold colors, fluid shapes, and playful compositions. My focus was on bringing energy and vibrancy to each letter while exploring different styles and textures.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "lfOoe7TtOkvAAax1pJdUdELHB8.png",
+            "url": "https://framerusercontent.com/images/lfOoe7TtOkvAAax1pJdUdELHB8.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/lfOoe7TtOkvAAax1pJdUdELHB8.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Typography | 2023",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<img alt=\"\" src=\"https://framerusercontent.com/images/NkhBV2L5Yg4LrigZKlLqHXto.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/JLLT8Es8Axn2AAF3UUTLcR10U8g.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/w9msuWj43KVx2qXckg8E6zUC7s.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/4eKijyHzbdaJCxz4v4qCS43Lrbc.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/jn4DDB843SfHgi63xWGqSJUJgek.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/gP0rs5qZpZMuxrmNziHD5QEstU.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "cA3hajsGZ",
+      "slug": "custom-type",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "Custom Type",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "This project is a deep dive into custom type design experimenting with different styles, textures, and cultural influences. From elegant scripts to bold neon aesthetics, each type treatment tells its own story. Some designs draw inspiration from classic calligraphy, while others explore contemporary and experimental typography, integrating elements of Devanagari and Latin scripts.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "g5TZ6ilxp9oL3tg13m1CRdSA.png",
+            "url": "https://framerusercontent.com/images/g5TZ6ilxp9oL3tg13m1CRdSA.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/g5TZ6ilxp9oL3tg13m1CRdSA.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Typography | 2024",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<img alt=\"\" src=\"https://framerusercontent.com/images/dTvfMbmLL3BM4y1kaACA8IsRRE.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/G0a27PXNNo1fLMaHNHPNjbuLGU.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/nt002CPcRU0T7zUzk3rAdIzAw.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/Gdo2j8JtcuIf0grNj7DWGIFcVm0.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/QOE6bWRV6PgfIG9A8pW2fm3oun8.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/dMSzfK7lRcMBxh6bemsjK8D5g.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/R1h2cW53hlvbZ4kLZFxTALK3UQ.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/YNcR2pLofp2rCskMP6UI2CUPYpk.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "NHODZmCxi",
+      "slug": "manavi-x-madhubani",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "Manavi x Madhubani",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "Inspired by Alphonse Mucha’s Daydream, in this piece I merge the flowing elegance of Art Nouveau with the intricate storytelling of Madhubani. The soft, flowing color palette reflects the elegance of late 19th-century Art Nouveau, while the intricate patterns and storytelling elements embrace the essence of Madhubani folk art. At the heart of this composition is my dearest friend, Manavi, adorned in a Banarasi Sari and jasmine flowers.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "eIIVdWsmNo7T9J1W2m9Nz0K5gg.png",
+            "url": "https://framerusercontent.com/images/eIIVdWsmNo7T9J1W2m9Nz0K5gg.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/eIIVdWsmNo7T9J1W2m9Nz0K5gg.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Drinks"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Illustration | 2022",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<p><br></p><img alt=\"\" src=\"https://framerusercontent.com/images/qeaLpXISef1tTI3SPZeOHElFqZA.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/L3ww71jiAX258GMOBEC79Ka8Yc.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/lSuZo3p0GOTKMBUDJqO3ot5F5vs.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/mxOXizu6TUit7YdGaR4tor00.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "FK_5mWJtN",
+      "slug": "gitpoap",
+      "draft": false,
+      "fieldData": {
+        "PzC0vS7Sc": {
+          "type": "string",
+          "value": "GitPOAP",
+          "valueByLocale": {}
+        },
+        "cp2VoDEuB": {
+          "type": "string",
+          "value": "A collection all the POAPs I illustrated for GitPOAP.",
+          "valueByLocale": {}
+        },
+        "yo4kR0uaF": {
+          "type": "image",
+          "value": {
+            "id": "joZTmwfeUMAWX5YuScKGwVSMEKA.png",
+            "url": "https://framerusercontent.com/images/joZTmwfeUMAWX5YuScKGwVSMEKA.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/joZTmwfeUMAWX5YuScKGwVSMEKA.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "G9ptKhxBM": {
+          "type": "enum",
+          "value": "Drinks"
+        },
+        "a0D6spSb3": {
+          "type": "string",
+          "value": "Illustrations | 2022",
+          "valueByLocale": {}
+        },
+        "nJUQ9X1GY": {
+          "type": "formattedText",
+          "value": "<p><br></p><img alt=\"\" src=\"https://framerusercontent.com/images/1ccrUSQuW0C03hCUCP6EntAyM.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/AdYrk1to8PTeGyCC0rsaMpw4JEg.png\"><h6> </h6><img alt=\"\" src=\"https://framerusercontent.com/images/mrrursqH2rGplvN0BlT06FSUgg.png\">",
+          "valueByLocale": {}
+        },
+        "QF5HjKRiw": {
+          "type": "array",
+          "value": []
+        },
+        "wZN80gF7t": {
+          "type": "file"
+        },
+        "qow_IiwlX": {
+          "type": "string",
+          "value": "",
+          "valueByLocale": {}
+        }
+      }
+    }
+  ]
+}

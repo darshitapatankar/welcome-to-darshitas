@@ -1,0 +1,227 @@
+{
+  "type": "WebPageNode",
+  "id": "GHn4WN2po",
+  "name": "/custom-type",
+  "variables": [],
+  "$parentId": "sn7IXw6X9",
+  "$breakpoints": [
+    {
+      "id": "J_nIFHAKp",
+      "name": "Desktop"
+    }
+  ],
+  "attributes": {
+    "path": "/custom-type"
+  },
+  "children": [
+    {
+      "type": "FrameNode",
+      "name": "Desktop",
+      "id": "J_nIFHAKp",
+      "$isPrimary": true,
+      "attributes": {
+        "fill": "rgb(0, 0, 0)",
+        "layout": "null",
+        "overflow": "hidden",
+        "left": "0px",
+        "right": "null",
+        "top": "0px",
+        "bottom": "null",
+        "centerAnchorX": "0%",
+        "centerAnchorY": "0%",
+        "constraintsLocked": false,
+        "width": "1420px",
+        "height": "3085px",
+        "transition": "spring-duration 0.4s 0.2 0s"
+      },
+      "children": [
+        {
+          "type": "FrameNode",
+          "name": "Veer zara",
+          "id": "A7249hxbD",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": false,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/iXgV46Vly162Q4o18mTfRBUXBdU.png",
+            "layout": "null",
+            "left": "65.5px",
+            "right": "774.5px",
+            "top": "1039px",
+            "bottom": "null",
+            "centerAnchorX": "25%",
+            "centerAnchorY": "42.22%",
+            "constraintsLocked": true,
+            "width": "580px",
+            "height": "580px",
+            "aspectRatio": 1
+          }
+        },
+        {
+          "type": "FrameNode",
+          "name": "Rose1",
+          "id": "c0uWoZtzU",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": false,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/e9If0bjkewWRd7XQWY79o3Q5wIc.png",
+            "layout": "null",
+            "left": "793.5px",
+            "right": "102.5px",
+            "top": "1105px",
+            "bottom": "null",
+            "centerAnchorX": "74.3%",
+            "centerAnchorY": "43.42%",
+            "constraintsLocked": true,
+            "rotation": "-11deg",
+            "width": "524px",
+            "height": "524px",
+            "aspectRatio": 1
+          }
+        },
+        {
+          "type": "FrameNode",
+          "name": "Lover",
+          "id": "pMcIdB3Ht",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": false,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/vM2rRkXFywWmv7Aw6Ux5WR7yCuw.png",
+            "layout": "null",
+            "left": "733.5px",
+            "right": "118.5px",
+            "top": "1920px",
+            "bottom": "null",
+            "centerAnchorX": "71.62%",
+            "centerAnchorY": "70.01%",
+            "constraintsLocked": true,
+            "rotation": "5deg",
+            "width": "568px",
+            "height": "568px",
+            "aspectRatio": 1
+          }
+        },
+        {
+          "type": "FrameNode",
+          "name": "Apple@1.5x",
+          "id": "NQNIPlPYd",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": false,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/zqNeBIlkqDzErPiSLeGTCVoO1nM.png",
+            "layout": "null",
+            "left": "89.5px",
+            "right": "null",
+            "top": "1733px",
+            "bottom": "null",
+            "centerAnchorX": "25%",
+            "centerAnchorY": "63.5%",
+            "constraintsLocked": false,
+            "width": "532px",
+            "height": "532px",
+            "aspectRatio": 1
+          }
+        },
+        {
+          "type": "FrameNode",
+          "name": "BRAT",
+          "id": "w0S12l6pe",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": false,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/OpfYu06EToWNJyAFQDarLMcPpy8.png",
+            "layout": "null",
+            "left": "113px",
+            "right": "null",
+            "top": "519.5px",
+            "bottom": "null",
+            "centerAnchorX": "19.23%",
+            "centerAnchorY": "21.6%",
+            "constraintsLocked": false,
+            "rotation": "-8deg",
+            "width": "321px",
+            "height": "321px",
+            "aspectRatio": 1
+          }
+        },
+        {
+          "type": "FrameNode",
+          "name": "Pyaasa 3",
+          "id": "JdlRSFUa6",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": false,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/MrXjJn7Pmd2RY4moyjLF0iYxrs.jpg",
+            "layout": "null",
+            "left": "152.49px",
+            "right": "null",
+            "top": "2452.5px",
+            "bottom": "null",
+            "centerAnchorX": "27.82%",
+            "centerAnchorY": "85.07%",
+            "constraintsLocked": false,
+            "rotation": "-2deg",
+            "width": "486px",
+            "height": "451px",
+            "aspectRatio": 1.08
+          }
+        },
+        {
+          "type": "FrameNode",
+          "name": "Barbie square",
+          "id": "I62TWbIC8",
+          "attributes": {
+            "cursor": "grab",
+            "dragEffect": {
+              "freeform": true,
+              "snapBack": true,
+              "momentum": false,
+              "transition": "inertia 400 30"
+            },
+            "fill": "https://framerusercontent.com/images/fjlHK8E7fy7ONVPdE24KWPrrU.png",
+            "layout": "null",
+            "left": "509px",
+            "right": "null",
+            "top": "46px",
+            "bottom": "null",
+            "centerAnchorX": "65.92%",
+            "centerAnchorY": "15.03%",
+            "constraintsLocked": false,
+            "width": "854px",
+            "height": "854px",
+            "aspectRatio": 1
+          }
+        }
+      ]
+    }
+  ]
+}

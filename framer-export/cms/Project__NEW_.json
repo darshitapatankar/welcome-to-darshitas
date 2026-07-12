@@ -1,0 +1,691 @@
+{
+  "id": "dATjMQiym",
+  "name": "Project (NEW)",
+  "slugFieldName": "Slug",
+  "fields": [
+    {
+      "id": "BXoVrFyQk",
+      "name": "Sr.No",
+      "type": "string"
+    },
+    {
+      "id": "yVUqlL4dL",
+      "name": "Thumbnail",
+      "type": "image"
+    },
+    {
+      "id": "ZOqP1GMcE",
+      "name": "Thumbnail Video",
+      "type": "file"
+    },
+    {
+      "id": "RDue5mOXU",
+      "name": "Video Thumbnail",
+      "type": "boolean"
+    },
+    {
+      "id": "xgKVuRUvg",
+      "name": "Title",
+      "type": "string"
+    },
+    {
+      "id": "Q_49KZXmJ",
+      "name": "Description",
+      "type": "string"
+    },
+    {
+      "id": "veIqooo64",
+      "name": "Aspect Ratio",
+      "type": "enum"
+    },
+    {
+      "id": "EdjhFhPNZ",
+      "name": "Category",
+      "type": "enum"
+    },
+    {
+      "id": "Xv2WVzE0o",
+      "name": "Content",
+      "type": "formattedText"
+    },
+    {
+      "id": "w9nz5zVZ3",
+      "name": "alivn",
+      "type": "string"
+    }
+  ],
+  "items": [
+    {
+      "id": "TxdMJ10NK",
+      "slug": "code-busters",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[01]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "HY0ZqaVy1bFJsgPgU8Xe0wH0f6g.png",
+            "url": "https://framerusercontent.com/images/HY0ZqaVy1bFJsgPgU8Xe0wH0f6g.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/HY0ZqaVy1bFJsgPgU8Xe0wH0f6g.png?scale-down-to=512",
+            "altText": "Code Buster Thumbail",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Code Busters",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "Darshita Patankar is a visual designer crafting distinctive brands, digital experiences and illustrations.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "16:9"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "<p dir=\"auto\">Darshita Patankar is a visual designer crafting distinctive brands, digital experiences and illustrations.</p><h1 dir=\"auto\">Branding, Illustration &amp; Motion Design | 2024</h1><p dir=\"auto\"><br></p><p dir=\"auto\"><strong>Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.</strong></p>",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "lvXsGMODB",
+      "slug": "pondicherry-botanical-garden",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[02]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "wQ1HZDko9V9mn2s0C2WkPT4NVM.png",
+            "url": "https://framerusercontent.com/images/wQ1HZDko9V9mn2s0C2WkPT4NVM.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/wQ1HZDko9V9mn2s0C2WkPT4NVM.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file",
+          "value": {
+            "id": "cvaTXwP23zldm1T1sGQv7pSp20.mp4",
+            "url": "https://framerusercontent.com/assets/cvaTXwP23zldm1T1sGQv7pSp20.mp4",
+            "extension": "mp4"
+          }
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": true
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Pondicherry Botanical Garden",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.  The brand identity and website design transport viewers to the colonial era, mirroring the aesthetic of vintage newspapers and old-world charm. The color palette is inspired by the timeless facades of Pondicherry’s colonial architecture, lending an air of nostalgia.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "3:2"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Center",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "Bw0wzrdHB",
+      "slug": "wellim",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[03]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "pf0o8JnK3CLqKMC1duSpcZUMPw.png",
+            "url": "https://framerusercontent.com/images/pf0o8JnK3CLqKMC1duSpcZUMPw.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/pf0o8JnK3CLqKMC1duSpcZUMPw.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Wellim",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "3:2"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "End",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "StUXQ_8Wq",
+      "slug": "stack-results",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[04]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "DDgZgNaQC5dpWim9IlUOZlYVBUw.png",
+            "url": "https://framerusercontent.com/images/DDgZgNaQC5dpWim9IlUOZlYVBUw.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/DDgZgNaQC5dpWim9IlUOZlYVBUw.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Stack Results",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "16:9"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "AYPn3BJY5",
+      "slug": "wayground-ai",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[05]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "5XKP70dBLjrDqnU7OSTqPpd3is.png",
+            "url": "https://framerusercontent.com/images/5XKP70dBLjrDqnU7OSTqPpd3is.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/5XKP70dBLjrDqnU7OSTqPpd3is.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Wayground AI",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "16:9"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "BJRFUySqn",
+      "slug": "icons-at-wayground",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[06]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "dREHmBCyvGfsNUD4ohuSUeAvoOQ.png",
+            "url": "https://framerusercontent.com/images/dREHmBCyvGfsNUD4ohuSUeAvoOQ.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/dREHmBCyvGfsNUD4ohuSUeAvoOQ.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file",
+          "value": {
+            "id": "pGXbtQtr7sTTH4yhHrcRstz0hE.mp4",
+            "url": "https://framerusercontent.com/assets/pGXbtQtr7sTTH4yhHrcRstz0hE.mp4",
+            "extension": "mp4"
+          }
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": true
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Icons at Wayground",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "4:3"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Mains"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "OziGLujWZ",
+      "slug": "demure",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[07]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "DDgZgNaQC5dpWim9IlUOZlYVBUw.png",
+            "url": "https://framerusercontent.com/images/DDgZgNaQC5dpWim9IlUOZlYVBUw.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/DDgZgNaQC5dpWim9IlUOZlYVBUw.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file",
+          "value": {
+            "id": "3eN3i4RCOw1wfBYtuSMvttRY3k.mp4",
+            "url": "https://framerusercontent.com/assets/3eN3i4RCOw1wfBYtuSMvttRY3k.mp4",
+            "extension": "mp4"
+          }
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": true
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Demure",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "16:9"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "JjemA42hD",
+      "slug": "custom-typography",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[08]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "dREHmBCyvGfsNUD4ohuSUeAvoOQ.png",
+            "url": "https://framerusercontent.com/images/dREHmBCyvGfsNUD4ohuSUeAvoOQ.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/dREHmBCyvGfsNUD4ohuSUeAvoOQ.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Custom Typography",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "4:3"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "L52kKtN4P",
+      "slug": "36-days-of-type",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "[09]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "zHaLCYFvQXh7wjMnzDfS48yhEw.png",
+            "url": "https://framerusercontent.com/images/zHaLCYFvQXh7wjMnzDfS48yhEw.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/zHaLCYFvQXh7wjMnzDfS48yhEw.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "36 Days of Type",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "1:1"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "QzFKmDLse",
+      "slug": "illustrations",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "\\[10\\]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "N0NY6T3entMUuW1y3E8BDYePXc.png",
+            "url": "https://framerusercontent.com/images/N0NY6T3entMUuW1y3E8BDYePXc.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/N0NY6T3entMUuW1y3E8BDYePXc.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Illustrations",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "4:5"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    },
+    {
+      "id": "oFZxUZWgL",
+      "slug": "madhubani-x-art-nouveau",
+      "draft": false,
+      "fieldData": {
+        "BXoVrFyQk": {
+          "type": "string",
+          "value": "\\[11\\]",
+          "valueByLocale": {}
+        },
+        "yVUqlL4dL": {
+          "type": "image",
+          "value": {
+            "id": "iIF2atafYYkaSORCP9UOFtTbk.png",
+            "url": "https://framerusercontent.com/images/iIF2atafYYkaSORCP9UOFtTbk.png",
+            "thumbnailUrl": "https://framerusercontent.com/images/iIF2atafYYkaSORCP9UOFtTbk.png?scale-down-to=512",
+            "resolution": "auto"
+          }
+        },
+        "ZOqP1GMcE": {
+          "type": "file"
+        },
+        "RDue5mOXU": {
+          "type": "boolean",
+          "value": false
+        },
+        "xgKVuRUvg": {
+          "type": "string",
+          "value": "Madhubani x Art Nouveau",
+          "valueByLocale": {}
+        },
+        "Q_49KZXmJ": {
+          "type": "string",
+          "value": "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+          "valueByLocale": {}
+        },
+        "veIqooo64": {
+          "type": "enum",
+          "value": "16:9"
+        },
+        "EdjhFhPNZ": {
+          "type": "enum",
+          "value": "Sides"
+        },
+        "Xv2WVzE0o": {
+          "type": "formattedText",
+          "value": "",
+          "valueByLocale": {}
+        },
+        "w9nz5zVZ3": {
+          "type": "string",
+          "value": "Start",
+          "valueByLocale": {}
+        }
+      }
+    }
+  ]
+}

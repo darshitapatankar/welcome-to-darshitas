@@ -1,0 +1,219 @@
+{
+  "type": "WebPageNode",
+  "id": "ogGWd4aZR",
+  "name": "/36-days-of-type",
+  "variables": [],
+  "$parentId": "sn7IXw6X9",
+  "$breakpoints": [
+    {
+      "id": "aJPb8d02p",
+      "name": "Desktop"
+    }
+  ],
+  "attributes": {
+    "path": "/36-days-of-type"
+  },
+  "children": [
+    {
+      "type": "FrameNode",
+      "name": "Desktop",
+      "id": "aJPb8d02p",
+      "$isPrimary": true,
+      "attributes": {
+        "fill": "white",
+        "layout": "stack",
+        "stackDirection": "vertical",
+        "stackDistribution": "start",
+        "stackAlignment": "center",
+        "stackWrapEnabled": false,
+        "gap": 0,
+        "overflow": "hidden",
+        "left": "0px",
+        "right": "null",
+        "top": "0px",
+        "bottom": "null",
+        "centerAnchorX": "0%",
+        "centerAnchorY": "0%",
+        "constraintsLocked": false,
+        "width": "1420px",
+        "height": "auto",
+        "transition": "spring-duration 0.4s 0.2 0s"
+      },
+      "children": [
+        {
+          "type": "FrameNode",
+          "name": "Frame 2147224256",
+          "id": "V7vkeBp2n",
+          "attributes": {
+            "layout": "stack",
+            "stackDirection": "vertical",
+            "stackDistribution": "start",
+            "stackAlignment": "start",
+            "gap": 0,
+            "position": "relative",
+            "width": "1fr",
+            "height": "auto"
+          },
+          "children": [
+            {
+              "type": "FrameNode",
+              "name": "L",
+              "id": "tewLXGBAX",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/ACtc7zfAb5CxB39rymdklqtUIu8.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "E",
+              "id": "QCTwCFT69",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/CTNyMjhBtrQmn8vjBRpC2NaG4ss.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "Q",
+              "id": "dtFFPZjwQ",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/xBcCaQ6782COhj0e20OA9PRck0.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "I 1",
+              "id": "nC3NFgJDA",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/Gd9wxoEd2K6hXGenl6UrSMnWg4.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "U",
+              "id": "HT7zM7IX4",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/M7oe0uw56XNTEuLdS3lObCssZk.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "R",
+              "id": "Gmk0X2zyX",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/A3Cdzazj8KKIucWSacGD7gmClk.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "S",
+              "id": "LsxScB1Cw",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/XMCop598gFHYyDAMAN63Bqjluo4.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "D",
+              "id": "C8cj4LPRV",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/HpF7mv6JkxGqf298974kXwxA.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "G",
+              "id": "BFgofs6AL",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/xomo0dICDtDftm3kItIrHV4IxRw.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "K",
+              "id": "cdINMgeCu",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/qZQ4HM7QFQ1MISryL9N1EbxZ8.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "P",
+              "id": "BDR9EzBEK",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/Nd1eIZfkijRAcfTIRuRdNOVszqA.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "O",
+              "id": "e8HYCYGFY",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/uxLaYNY6gkuKGUnAF8iRch1Yf3g.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1420px",
+                "aspectRatio": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

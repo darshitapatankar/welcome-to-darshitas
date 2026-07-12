@@ -1,0 +1,154 @@
+{
+  "type": "WebPageNode",
+  "id": "vdjwceSfQ",
+  "name": "/pondicherry-botanical-garden",
+  "variables": [],
+  "$parentId": "sn7IXw6X9",
+  "$breakpoints": [
+    {
+      "id": "HtBE9HXow",
+      "name": "Desktop"
+    }
+  ],
+  "attributes": {
+    "path": "/pondicherry-botanical-garden"
+  },
+  "children": [
+    {
+      "type": "FrameNode",
+      "name": "Desktop",
+      "id": "HtBE9HXow",
+      "$isPrimary": true,
+      "attributes": {
+        "fill": "white",
+        "layout": "stack",
+        "stackDirection": "vertical",
+        "stackDistribution": "start",
+        "stackAlignment": "center",
+        "stackWrapEnabled": false,
+        "gap": 10,
+        "overflow": "hidden",
+        "left": "0px",
+        "right": "null",
+        "top": "0px",
+        "bottom": "null",
+        "centerAnchorX": "0%",
+        "centerAnchorY": "0%",
+        "constraintsLocked": false,
+        "width": "1420px",
+        "height": "auto",
+        "transition": "spring-duration 0.4s 0.2 0s"
+      },
+      "children": [
+        {
+          "type": "FrameNode",
+          "name": "Frame 2147224255",
+          "id": "xhXSxANmz",
+          "attributes": {
+            "layout": "stack",
+            "stackDirection": "vertical",
+            "stackDistribution": "start",
+            "stackAlignment": "start",
+            "gap": 0,
+            "position": "relative",
+            "width": "1fr",
+            "height": "auto"
+          },
+          "children": [
+            {
+              "type": "FrameNode",
+              "name": "1",
+              "id": "nPzNuyzbQ",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/qV4qiJTlQDszZgRInMJjKHw55kM.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "983.5px",
+                "aspectRatio": 1.44
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "2",
+              "id": "wgc83w9Rc",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/TvRCvTSCejQd4DlzlJ418t2OtU.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "614.5px",
+                "aspectRatio": 2.31
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "3",
+              "id": "pVznHMaHT",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/65p7uPUmrP8CV3XjFfUSwH6NdQo.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "960.5px",
+                "aspectRatio": 1.48
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "4",
+              "id": "US4TLlMv5",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/J2tWRnGX1magyfAXHHRWcrsND9M.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "2768px",
+                "aspectRatio": 0.51
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "4.1",
+              "id": "qmkArxGeM",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/dYFvQjWt1qJcgrHQuLwSg5NskNk.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1960px",
+                "aspectRatio": 0.72
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "5 1",
+              "id": "E6HCj11bW",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/4fCvym3a8dadYwwPFA1I4okM9o.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1848px",
+                "aspectRatio": 0.77
+              }
+            },
+            {
+              "type": "FrameNode",
+              "name": "6 1",
+              "id": "XEf8OOIG_",
+              "attributes": {
+                "fill": "https://framerusercontent.com/images/ffvrR8LpBKKYqaPPdTCe19l7tQ.png",
+                "layout": "null",
+                "position": "relative",
+                "width": "1fr",
+                "height": "1987px",
+                "aspectRatio": 0.72
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

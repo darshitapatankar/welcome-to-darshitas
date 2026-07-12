@@ -1,0 +1,188 @@
+{
+  "type": "WebPageNode",
+  "id": "i8q317Z2d",
+  "name": "/stack-results",
+  "variables": [],
+  "$parentId": "sn7IXw6X9",
+  "$breakpoints": [
+    {
+      "id": "aQPArIIMQ",
+      "name": "Desktop"
+    }
+  ],
+  "attributes": {
+    "path": "/stack-results"
+  },
+  "children": [
+    {
+      "type": "FrameNode",
+      "name": "Desktop",
+      "id": "aQPArIIMQ",
+      "$isPrimary": true,
+      "attributes": {
+        "fill": "rgb(255, 254, 240)",
+        "layout": "stack",
+        "stackDirection": "vertical",
+        "stackDistribution": "start",
+        "stackAlignment": "center",
+        "stackWrapEnabled": false,
+        "gap": 0,
+        "overflow": "hidden",
+        "left": "0px",
+        "right": "null",
+        "top": "0px",
+        "bottom": "null",
+        "centerAnchorX": "0%",
+        "centerAnchorY": "0%",
+        "constraintsLocked": false,
+        "width": "1420px",
+        "height": "auto",
+        "transition": "spring-duration 0.4s 0.2 0s"
+      },
+      "children": [
+        {
+          "type": "FrameNode",
+          "id": "LMk2r2D3c",
+          "attributes": {
+            "fill": "rgb(255, 254, 240)",
+            "layout": "stack",
+            "stackDirection": "vertical",
+            "stackDistribution": "center",
+            "stackAlignment": "center",
+            "stackWrapEnabled": false,
+            "gap": 200,
+            "padding": "0px 0px 40px 0px",
+            "position": "relative",
+            "width": "1fr",
+            "height": "auto",
+            "zIndex": "1"
+          },
+          "children": [
+            {
+              "type": "FrameNode",
+              "id": "PAh5ux5s0",
+              "attributes": {
+                "layout": "stack",
+                "stackDirection": "vertical",
+                "stackDistribution": "center",
+                "stackAlignment": "center",
+                "stackWrapEnabled": false,
+                "gap": 10,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": "1fr",
+                "height": "auto"
+              },
+              "children": [
+                {
+                  "type": "SVGNode",
+                  "name": "Group 3427",
+                  "id": "EqAIod99j",
+                  "attributes": {
+                    "position": "relative",
+                    "width": "1fr",
+                    "height": "800px"
+                  }
+                },
+                {
+                  "type": "SVGNode",
+                  "name": "Twitter post - 3",
+                  "id": "motYqT5hT",
+                  "attributes": {
+                    "position": "relative",
+                    "width": "1fr",
+                    "height": "916px"
+                  }
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "image 475",
+                  "id": "biMtQCIQa",
+                  "attributes": {
+                    "fill": "https://framerusercontent.com/images/OSRf9r54tVuLBwYvl4kszkYJ1C0.png",
+                    "layout": "null",
+                    "position": "relative",
+                    "width": "1fr",
+                    "height": "870.5px",
+                    "aspectRatio": 1.63
+                  }
+                }
+              ]
+            },
+            {
+              "type": "FrameNode",
+              "id": "bhWh38HL9",
+              "attributes": {
+                "fill": "rgb(255, 254, 240)",
+                "layout": "stack",
+                "stackDirection": "vertical",
+                "stackDistribution": "center",
+                "stackAlignment": "center",
+                "stackWrapEnabled": false,
+                "gap": 200,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": "1fr",
+                "height": "auto"
+              },
+              "children": [
+                {
+                  "type": "FrameNode",
+                  "name": "Slide 16_9 - 38 1",
+                  "id": "f2g5uI5Yk",
+                  "attributes": {
+                    "fill": "https://framerusercontent.com/images/xbinIDL5ykUUdqOrGGA0wLj7hnc.png",
+                    "layout": "null",
+                    "position": "relative",
+                    "width": "1298.5px",
+                    "height": "1002.5px",
+                    "aspectRatio": 1.3
+                  }
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "Stack Results LP 1",
+                  "id": "SMMuEKKyH",
+                  "attributes": {
+                    "fill": "https://framerusercontent.com/images/j5cH9qvVXnloSoWitgwSu0hOg.png",
+                    "layout": "null",
+                    "position": "relative",
+                    "width": "1260px",
+                    "height": "4096px",
+                    "aspectRatio": 0.31
+                  }
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "Group 3426 1",
+                  "id": "X99Ao8MgK",
+                  "attributes": {
+                    "fill": "https://framerusercontent.com/images/hAAoWZNvYmo5fjrg6QSdxfSoL34.png",
+                    "layout": "null",
+                    "position": "relative",
+                    "width": "1172px",
+                    "height": "1481.5px",
+                    "aspectRatio": 0.79
+                  }
+                },
+                {
+                  "type": "FrameNode",
+                  "name": "Group 3425 1",
+                  "id": "oJVrgIaTC",
+                  "attributes": {
+                    "fill": "https://framerusercontent.com/images/QuljbNsumkegu1IGMWkakJEWHA.png",
+                    "layout": "null",
+                    "position": "relative",
+                    "width": "1344px",
+                    "height": "888px",
+                    "aspectRatio": 1.51
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
