@@ -17,13 +17,15 @@ const ABOUT_UNICORN_PROJECT_ID = "uZFQTrR4JDEDONaCWbI1";
 function CardLink({
   card,
   className,
+  cardClassName,
 }: {
   card: ProjectCardData;
   className?: string;
+  cardClassName?: string;
 }) {
   return (
     <div className={className}>
-      <ProjectCard card={card} />
+      <ProjectCard card={card} className={cardClassName} />
     </div>
   );
 }
@@ -37,26 +39,31 @@ export default function WorkGrid() {
       {/* Mains */}
       <div className="relative">
         <div className="sticky top-0 z-[1] h-screen">
-          <GridBg gradient="up" flicker />
+          <GridBg gradient="up" pixels="mains" />
         </div>
-        <div className="relative z-[2] flex flex-col gap-5 px-6 pb-40 md:px-20">
+        <div className="relative z-[2] flex flex-col gap-10 px-6 md:gap-0 md:px-20">
           <div className="pb-11">
             <CardLink card={MAINS_HERO_CARD} className="max-w-[800px]" />
           </div>
-          <div className="flex flex-col gap-10 md:flex-row md:gap-[120px]">
+          <div className="flex flex-col gap-10 md:flex-row md:justify-center md:gap-[120px]">
             <div className="md:w-[519px] md:shrink-0 md:pl-[130px]">
               <CardLink card={MAINS_ROWS[0][0]} />
             </div>
             <div className="md:pt-[159px]">
-              <CardLink card={MAINS_ROWS[0][1]} className="md:w-[500px]" />
+              <CardLink card={MAINS_ROWS[0][1]} className="md:w-[480px]" />
             </div>
           </div>
-          <div className="flex flex-col gap-10 md:flex-row md:gap-[317px]">
+          <div className="flex flex-col gap-10 md:flex-row md:justify-center md:gap-[317px]">
             <div className="md:pl-10">
               <CardLink card={MAINS_ROWS[1][0]} className="md:w-[367px]" />
             </div>
             <div className="md:pt-[65px]">
-              <CardLink card={MAINS_ROWS[1][1]} className="md:w-[508px]" />
+              {/* Framer forces this instance to 489px tall, content centered */}
+              <CardLink
+                card={MAINS_ROWS[1][1]}
+                className="md:w-[508px]"
+                cardClassName="md:h-[489px] md:justify-center"
+              />
             </div>
           </div>
           <div className="md:pl-40">
@@ -68,9 +75,9 @@ export default function WorkGrid() {
       {/* Sides */}
       <div className="relative">
         <div className="sticky top-0 z-[1] h-screen">
-          <GridBg gradient="none" flicker />
+          <GridBg gradient="none" pixels="sides" />
         </div>
-        <div className="relative z-[2] flex flex-col gap-3 px-6 pb-40 md:px-20">
+        <div className="relative z-[2] flex flex-col gap-10 px-6 md:gap-3 md:px-20">
           <div className="pb-16">
             <CardLink
               card={SIDES_HERO_CARD}
@@ -82,7 +89,7 @@ export default function WorkGrid() {
               <CardLink card={SIDES_ROWS[0][0]} />
             </div>
             <div className="md:pt-[159px]">
-              <CardLink card={SIDES_ROWS[0][1]} className="md:w-[440px]" />
+              <CardLink card={SIDES_ROWS[0][1]} className="md:w-[454px]" />
             </div>
           </div>
           <div className="flex flex-col gap-10 md:flex-row md:gap-[273px]">
@@ -90,7 +97,12 @@ export default function WorkGrid() {
               <CardLink card={SIDES_ROWS[1][0]} className="md:w-[367px]" />
             </div>
             <div className="md:pt-[106px]">
-              <CardLink card={SIDES_ROWS[1][1]} className="md:w-[508px]" />
+              {/* Framer forces this instance to 489px tall, content centered */}
+              <CardLink
+                card={SIDES_ROWS[1][1]}
+                className="md:w-[508px]"
+                cardClassName="md:h-[489px] md:justify-center"
+              />
             </div>
           </div>
         </div>
@@ -99,7 +111,7 @@ export default function WorkGrid() {
       {/* Stack — Chef's note / about */}
       <div id="about" className="relative h-screen">
         <GridBg gradient="none" />
-        <div className="relative z-[1] flex h-full flex-col items-center overflow-hidden px-6 pt-[120px] pb-20 md:px-[50px]">
+        <div className="relative z-[4] flex h-full flex-col items-center overflow-hidden px-6 pt-[120px] pb-20 md:px-[50px]">
           <UnicornScene
             projectId={ABOUT_UNICORN_PROJECT_ID}
             className="absolute inset-0 h-full w-full"
