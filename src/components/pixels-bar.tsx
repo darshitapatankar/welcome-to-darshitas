@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 
 // Exact port of the Framer "Pixels Bar" component: a 24×2 grid of square
 // flicker cells bounded by 1px rules, cycling through the component's six
-// variant patterns once per second (onAppear SET_VARIANT cycle, delay 1s),
+// variant patterns every 4 seconds,
 // with the section's script-lettering title overlaid inside the band.
 // Mains title sits right: 260px; Sides title sits left: 260px.
 const RULE = "rgb(37, 37, 51)";
+const TILE_FRAME_INTERVAL_MS = 4000;
 
 const CELL_COLORS: Record<string, string> = {
   H: "rgb(76, 20, 56)",
@@ -32,7 +33,7 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
   useEffect(() => {
     const id = setInterval(
       () => setFrame((f) => (f + 1) % PATTERNS.length),
-      1000,
+      TILE_FRAME_INTERVAL_MS,
     );
     return () => clearInterval(id);
   }, []);

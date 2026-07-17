@@ -76,7 +76,7 @@ const PIECES = [
 
 export default function CustomTypePage() {
   return (
-    <main className="min-h-dvh bg-black">
+    <main className="min-h-dvh bg-black" data-theme="dark">
       <FreeformCanvas designWidth={CANVAS.width} designHeight={CANVAS.height}>
         {PIECES.map(({ name, ...piece }) => (
           <FreeformImage

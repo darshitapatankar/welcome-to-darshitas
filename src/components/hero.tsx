@@ -1,5 +1,6 @@
 import HeroVideo from "@/components/hero-video";
 import UnicornScene from "@/components/unicorn-scene";
+import styles from "./hero.module.css";
 
 const UNICORN_PROJECT_ID = "mPHFzyZKCxuOXMRyVwvX";
 
@@ -8,13 +9,19 @@ export default function Hero() {
   // create a stacking context (no z-index), or mix-blend on the video can't
   // reach the Unicorn canvas behind it.
   return (
-    <section className="relative isolate flex min-h-screen items-center justify-center overflow-hidden">
+    <section
+      className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-black"
+      data-theme="dark"
+    >
       <UnicornScene
         projectId={UNICORN_PROJECT_ID}
-        className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-700 data-[loaded=true]:opacity-100"
+        className={`${styles.backgroundArtwork} absolute inset-0 h-full w-full opacity-0 transition-opacity duration-700 data-[loaded=true]:opacity-100`}
         altText="Darshita's portfolio hero background"
       />
-      <div className="relative flex w-full flex-col items-center gap-4 px-6 text-center">
+      <div
+        className="relative flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
+        data-crt-safe-content
+      >
         {/* mix-blend-screen drops the video's black background against
             the Unicorn backdrop while keeping the animation readable */}
         <HeroVideo

@@ -16,6 +16,7 @@ export function WellimWordmarkSlide() {
       role="img"
       aria-label="Wellim wordmark artwork"
       className="w-full [&>svg]:block [&>svg]:h-auto [&>svg]:w-full"
+      data-theme="light"
       dangerouslySetInnerHTML={{ __html: SVG_WELLIMWORDMARKSLIDE }}
     />
   );

@@ -21,7 +21,7 @@ const IMAGES = [
 // /pondicherry-botanical-garden page tree: a vertical stack of boards.
 export default function PondicherryBotanicalGardenPage() {
   return (
-    <main className="flex min-h-dvh flex-col bg-white">
+    <main className="flex min-h-dvh flex-col bg-white" data-theme="light">
       {IMAGES.map((src, i) => (
         <ProjectImage
           key={src}

@@ -6,7 +6,8 @@ export default function Ticker() {
   return (
     <section
       aria-hidden="true"
-      className="relative z-[1] flex flex-col items-center justify-center gap-6 overflow-clip p-10 md:flex-row"
+      className="relative z-[1] flex flex-col items-center justify-center gap-6 overflow-clip bg-black p-10 md:flex-row"
+      data-theme="dark"
     >
       {VIDEOS.map((src) => (
         <video

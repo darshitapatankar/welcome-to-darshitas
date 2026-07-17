@@ -35,13 +35,20 @@ function CardLink({
 // by the "Stack" block (Chef's note / about image over a Unicorn scene).
 export default function WorkGrid() {
   return (
-    <section id="work" className="relative flex flex-col overflow-clip">
+    <section
+      id="work"
+      className="relative flex flex-col overflow-clip bg-black"
+      data-theme="dark"
+    >
       {/* Mains */}
-      <div className="relative">
-        <div className="sticky top-0 z-[1] h-screen">
+      <div id="mains" className="relative" data-card-section>
+        <div
+          className="sticky top-0 z-[1] h-screen"
+          data-card-section-background
+        >
           <GridBg gradient="up" pixels="mains" />
         </div>
-        <div className="relative z-[2] flex flex-col gap-10 px-6 md:gap-0 md:px-20">
+        <div className="project-card-grid relative z-[2] -mt-[100vh] flex flex-col gap-10 pt-[260px] md:gap-0 md:pt-[280px]">
           <div className="pb-11">
             <CardLink card={MAINS_HERO_CARD} className="max-w-[800px]" />
           </div>
@@ -73,11 +80,14 @@ export default function WorkGrid() {
       </div>
 
       {/* Sides */}
-      <div className="relative">
-        <div className="sticky top-0 z-[1] h-screen">
+      <div className="relative" data-card-section>
+        <div
+          className="sticky top-0 z-[1] h-screen"
+          data-card-section-background
+        >
           <GridBg gradient="none" pixels="sides" />
         </div>
-        <div className="relative z-[2] flex flex-col gap-10 px-6 md:gap-3 md:px-20">
+        <div className="project-card-grid relative z-[2] -mt-[100vh] flex flex-col gap-10 pt-[260px] md:gap-3 md:pt-[280px]">
           <div className="pb-16">
             <CardLink
               card={SIDES_HERO_CARD}

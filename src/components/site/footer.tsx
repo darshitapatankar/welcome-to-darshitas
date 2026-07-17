@@ -32,7 +32,8 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative flex h-screen flex-col items-center justify-center overflow-hidden"
+      className="relative flex h-screen flex-col items-center justify-center overflow-hidden bg-black"
+      data-theme="dark"
     >
       <UnicornScene
         projectId={FOOTER_UNICORN_PROJECT_ID}

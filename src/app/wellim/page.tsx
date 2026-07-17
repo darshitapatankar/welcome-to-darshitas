@@ -12,10 +12,16 @@ export const metadata: Metadata = {
 // Case-study showcase page, mirrored from the Framer /wellim page tree.
 export default function WellimPage() {
   return (
-    <main className="flex min-h-dvh flex-col items-center bg-[rgb(8,8,10)]">
+    <main
+      className="flex min-h-dvh flex-col items-center bg-[rgb(8,8,10)]"
+      data-theme="dark"
+    >
       <div className="flex w-full flex-col items-center gap-[7vw]">
         {/* Intro slides */}
-        <section className="flex w-full flex-col items-center">
+        <section
+          className="flex w-full flex-col items-center"
+          data-theme="dark"
+        >
           <div className="relative flex aspect-[1420/799] w-full items-center justify-center bg-[#1C1A17]">
             <ProjectImage
               src="https://framerusercontent.com/images/aSahr26fhmxdXg25wQ0vlz3SU.png"
@@ -25,7 +31,10 @@ export default function WellimPage() {
           </div>
           <WellimWordmarkSlide />
           {/* Eclipse: sun and moon imagery layered inside a cropped frame */}
-          <div className="relative aspect-[1420/811] w-full overflow-hidden bg-white">
+          <div
+            className="relative aspect-[1420/811] w-full overflow-hidden bg-white"
+            data-theme="light"
+          >
             <ProjectImage
               src="https://framerusercontent.com/images/ATAhSUmerwkmS04KkF7WDwsb0o.png"
               alt="Wellim sun artwork"
@@ -37,7 +46,10 @@ export default function WellimPage() {
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
-          <div className="flex w-full items-center justify-center bg-[#FBF6EE] px-[8.7vw] py-[9vw]">
+          <div
+            className="flex w-full items-center justify-center bg-[#FBF6EE] px-[8.7vw] py-[9vw]"
+            data-theme="light"
+          >
             <div
               className={`${dmSans.className} w-full max-w-[1140px] text-[clamp(16px,1.7vw,24px)] leading-[1.2] font-light tracking-[-0.02em] text-[#1C1A17]`}
             >
@@ -66,7 +78,10 @@ export default function WellimPage() {
 
         <ProjectVideo src="https://framerusercontent.com/assets/h0VsODHDTfecjyQOTZwYsx5Ig0.mp4" />
 
-        <section className="flex w-full items-center justify-center">
+        <section
+          className="flex w-full items-center justify-center"
+          data-theme="dark"
+        >
           <ProjectImage
             src="https://framerusercontent.com/images/pzfoskdVvtKR2mSV6TsORV0WZLc.png"
             alt="Wellim visual"
@@ -79,7 +94,10 @@ export default function WellimPage() {
           />
         </section>
 
-        <section className="flex w-full flex-col items-center gap-[7vw]">
+        <section
+          className="flex w-full flex-col items-center gap-[7vw]"
+          data-theme="dark"
+        >
           <ProjectImage
             src="https://framerusercontent.com/images/z1IjhNLeVXxpTmKASwBtIg8vzo.png"
             alt="Wellim brand collage"
