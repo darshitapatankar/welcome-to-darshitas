@@ -429,12 +429,20 @@ html[data-crt-power="boot"] body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--project-gap);
+  height: calc(
+    (
+        100vw - var(--fixed-ui-inset-left) - var(--fixed-ui-inset-right)
+      ) /
+      1.7
+  );
   align-items: stretch;
 }
 
 .custom-type-gallery-motion-frame {
-  aspect-ratio: 1680 / 2004;
+  width: 100%;
+  height: 100%;
   min-width: 0;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -510,6 +518,14 @@ html[data-crt-power="boot"] body {
   .custom-type-gallery-motion-row,
   .illustrations-gallery-pair {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .custom-type-gallery-motion-row {
+    height: auto;
+  }
+
+  .custom-type-gallery-motion-frame {
+    aspect-ratio: 1680 / 2004;
   }
 
   .custom-type-gallery-stack {
