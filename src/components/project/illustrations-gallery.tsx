@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DeferredVideo } from "@/components/project/deferred-video";
 
 type Illustration = {
   src: string;
@@ -87,7 +88,7 @@ function GalleryVideo({
 }) {
   return (
     <figure className="illustrations-gallery-image">
-      <video
+      <DeferredVideo
         src={src}
         width={width}
         height={height}

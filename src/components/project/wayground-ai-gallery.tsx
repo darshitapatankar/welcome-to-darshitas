@@ -49,7 +49,6 @@ function GalleryImage({
         width={image.width}
         height={image.height}
         loading={eager ? "eager" : "lazy"}
-        unoptimized
         sizes="calc(100vw - var(--fixed-ui-inset-left) - var(--fixed-ui-inset-right))"
       />
     </figure>

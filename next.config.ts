@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [{ hostname: "framerusercontent.com" }],
+    formats: ["image/avif", "image/webp"],
   },
 };
 

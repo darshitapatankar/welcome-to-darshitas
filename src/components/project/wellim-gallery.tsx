@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { workSans } from "@/app/fonts";
+import { DeferredVideo } from "@/components/project/deferred-video";
 
 type GalleryImage = {
   src: string;
@@ -128,7 +129,7 @@ function GalleryImage({ image }: { image: GalleryImage }) {
 
 function GalleryVideo({ video }: { video: GalleryVideo }) {
   return (
-    <video
+    <DeferredVideo
       src={video.src}
       width={video.width}
       height={video.height}
@@ -229,7 +230,7 @@ export default function WellimGallery() {
           <div className="project-video-pair">
             {[VIDEOS.fullyAlive, VIDEOS.waitlist].map((video) => (
               <div key={video.src} className="project-video-pair-frame">
-                <video
+                <DeferredVideo
                   src={video.src}
                   autoPlay
                   loop

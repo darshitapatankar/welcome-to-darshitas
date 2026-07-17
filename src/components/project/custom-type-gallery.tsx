@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DeferredVideo } from "@/components/project/deferred-video";
 
 type GalleryImage = {
   src: string;
@@ -96,7 +97,7 @@ function GalleryImage({
 function GalleryVideo() {
   return (
     <figure className="custom-type-gallery-image">
-      <video
+      <DeferredVideo
         src="/projects/custom-type-gallery/13-animated-lettering.mp4"
         width={1680}
         height={2004}

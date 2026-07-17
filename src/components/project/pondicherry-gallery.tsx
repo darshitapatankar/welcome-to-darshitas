@@ -53,7 +53,6 @@ function PairImage({ image }: { image: GalleryImage }) {
         src={image.src}
         alt={image.alt}
         fill
-        unoptimized
         sizes="(max-width: 899px) calc(100vw - (2 * var(--project-gap))), calc((100vw - (3 * var(--project-gap))) / 2)"
       />
     </figure>
@@ -68,7 +67,6 @@ function FullImage({ image }: { image: GalleryImage }) {
         alt={image.alt}
         width={image.width}
         height={image.height}
-        unoptimized
         sizes="calc(100vw - (2 * var(--project-gap)))"
       />
     </figure>
