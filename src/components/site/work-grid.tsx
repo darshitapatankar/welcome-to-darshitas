@@ -73,9 +73,6 @@ export default function WorkGrid() {
               />
             </div>
           </div>
-          <div className="md:pl-40">
-            <CardLink card={MAINS_ROWS[2][0]} className="md:w-[427px]" />
-          </div>
         </div>
       </div>
 

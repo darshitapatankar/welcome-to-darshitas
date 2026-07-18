@@ -58,18 +58,6 @@ export const MAINS_ROWS: ProjectCardData[][] = [
       aspect: "16:9",
     },
   ],
-  [
-    {
-      srNo: "[05]",
-      title: "Icons at Wayground",
-      href: "/projects/icons-at-wayground",
-      subtext: "Wellim is a hospitality brand built on the idea of perfect.",
-      tags: ["Icon Design"],
-      thumbnail: "/work/icons-wayground.png",
-      thumbnailVideo: "/work/icons-wayground.mp4",
-      aspect: "4:3",
-    },
-  ],
 ];
 
 export const SIDES_HERO_CARD: ProjectCardData = {
