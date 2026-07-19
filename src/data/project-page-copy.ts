@@ -125,13 +125,12 @@ export const PROJECT_PAGE_COPY: Record<string, ProjectPageCopy> = {
     title: "Custom Typography",
     field: "Typography · Lettering",
     client: "Self-initiated",
-    year: "2024",
+    year: "Ongoing",
     role: "Lettering and Type Design",
     leadHtml:
-      "<em>Custom Typogrpahy is an ongoing collection of lettering experiments.</em>",
+      "Custom Typography is an ongoing collection of lettering experiments across Devanagari and Latin scripts.",
     introHtml: [
-      "Each piece begins with a word and a question: what form could make it feel distinct? Some explore the relationship between Devanagari and Latin scripts, while others focus on texture, structure, rhythm, and shape.",
-      "The collection is not held together by one visual style, but by a consistent way of thinking. Every piece is developed until the letterforms carry a character of their own. It is an ongoing practice that sharpens my eye for typography and gives me room to explore language through form.",
+      "Each piece begins with a word and develops through explorations of texture, structure, rhythm, and shape. The collection is connected not by one visual style, but by a consistent way of thinking.",
     ],
   },
   "36-days-of-type": {

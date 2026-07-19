@@ -313,9 +313,15 @@ export default async function ProjectPage({
     : (pageCopy?.leadHtml ?? cardDescription ?? project.description);
   const previousOverviewCopy =
     PROJECT_OVERVIEW_COPY[slug] ?? (pageCopy ? [] : [project.description]);
+  const descriptionCopy =
+    slug === "custom-type" ? (pageCopy?.introHtml ?? []) : [];
+  const descriptionCandidates =
+    CARD_DESCRIPTION_PROJECTS.has(slug) && previousOverviewCopy.length >= 2
+      ? previousOverviewCopy
+      : [overviewDescription, ...descriptionCopy, ...previousOverviewCopy];
   const overviewParagraphs = Array.from(
-    new Set([overviewDescription, ...previousOverviewCopy]),
-  );
+    new Set(descriptionCandidates),
+  ).slice(0, 2);
 
   const sourceBlocks = project.blocks.length
     ? project.blocks
@@ -358,7 +364,8 @@ export default async function ProjectPage({
         </section>
         {pageCopy &&
           slug !== "pondicherry-botanical" &&
-          slug !== "stack-results" && (
+          slug !== "stack-results" &&
+          slug !== "custom-type" && (
             <ProjectNarrative
               copy={pageCopy}
               hiddenParagraphs={previousOverviewCopy}

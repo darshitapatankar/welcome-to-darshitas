@@ -8,14 +8,20 @@ import {
   useEffect,
   useRef,
   type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
 } from "react";
 
-import { startCardDither, stopCardDither } from "@/components/card-dither";
+import {
+  startCardDither,
+  stopCardDither,
+  updateCardDitherPointer,
+} from "@/components/card-dither";
 import { playCardHoverSound } from "@/components/site-sound";
 import {
   applySampledCardGlow,
   CARD_HOVER_CONFIG,
 } from "@/components/card-hover-glow";
+import { rememberWorkReturnPosition } from "@/lib/work-return-position";
 
 export type ProjectCardData = {
   srNo: string;
@@ -135,20 +141,50 @@ export default function ProjectCard({
     return () => poster.removeEventListener("load", samplePoster);
   }, [card.thumbnail]);
 
-  const handlePointerEnter = useCallback(() => {
-    const cardElement = cardRef.current;
-    const thumbnailElement = thumbnailRef.current;
-    const source = videoRef.current ?? imageRef.current;
-    if (!cardElement || !thumbnailElement || !source || !isVisibleRef.current) {
-      return;
-    }
-    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches)
-      return;
-    playCardHoverSound();
-    cardElement.dataset.cardHovered = "true";
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    startCardDither(cardElement, thumbnailElement, source);
-  }, []);
+  const updateDitherPointer = useCallback(
+    (event: ReactPointerEvent<HTMLElement>) => {
+      const cardElement = cardRef.current;
+      const thumbnailElement = thumbnailRef.current;
+      if (!cardElement || !thumbnailElement) return;
+      const rect = thumbnailElement.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = (1 - (event.clientY - rect.top) / rect.height) * 2 - 1;
+      updateCardDitherPointer(cardElement, x, y);
+    },
+    [],
+  );
+
+  const handlePointerEnter = useCallback(
+    (event: ReactPointerEvent<HTMLElement>) => {
+      const cardElement = cardRef.current;
+      const thumbnailElement = thumbnailRef.current;
+      const source = videoRef.current ?? imageRef.current;
+      if (
+        !cardElement ||
+        !thumbnailElement ||
+        !source ||
+        !isVisibleRef.current
+      ) {
+        return;
+      }
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches)
+        return;
+      playCardHoverSound();
+      cardElement.dataset.cardHovered = "true";
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      startCardDither(cardElement, thumbnailElement, source);
+      updateDitherPointer(event);
+    },
+    [updateDitherPointer],
+  );
+
+  const handlePointerMove = useCallback(
+    (event: ReactPointerEvent<HTMLElement>) => {
+      updateDitherPointer(event);
+    },
+    [updateDitherPointer],
+  );
 
   const handlePointerLeave = useCallback(() => {
     const cardElement = cardRef.current;
@@ -159,14 +195,21 @@ export default function ProjectCard({
 
   const handleProjectClick = useCallback(
     (event: ReactMouseEvent<HTMLAnchorElement>) => {
+      const isStandardNavigation =
+        !event.defaultPrevented &&
+        event.button === 0 &&
+        !event.metaKey &&
+        !event.ctrlKey &&
+        !event.shiftKey &&
+        !event.altKey;
+
+      if (card.href && isStandardNavigation) {
+        rememberWorkReturnPosition();
+      }
+
       if (
         !card.href ||
-        event.defaultPrevented ||
-        event.button !== 0 ||
-        event.metaKey ||
-        event.ctrlKey ||
-        event.shiftKey ||
-        event.altKey ||
+        !isStandardNavigation ||
         event.detail === 0 ||
         window.matchMedia("(prefers-reduced-motion: reduce)").matches
       ) {
@@ -281,9 +324,15 @@ export default function ProjectCard({
         className={`${classes} no-underline`}
         onClick={handleProjectClick}
         onPointerEnter={handlePointerEnter}
+        onPointerMove={handlePointerMove}
         onPointerLeave={handlePointerLeave}
       >
-        {content}
+        <div
+          className="project-card-surface flex flex-col gap-2.5"
+          data-project-card-surface
+        >
+          {content}
+        </div>
       </Link>
     );
   }
@@ -293,9 +342,15 @@ export default function ProjectCard({
       data-project-card
       className={classes}
       onPointerEnter={handlePointerEnter}
+      onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
     >
-      {content}
+      <div
+        className="project-card-surface flex flex-col gap-2.5"
+        data-project-card-surface
+      >
+        {content}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { MouseEvent } from "react";
 
 import { playCardHoverSound } from "@/components/site-sound";
+import { requestWorkReturn } from "@/lib/work-return-position";
 
 // Static oval chrome around the independently animated signal-decode label.
 
@@ -50,18 +52,42 @@ export default function HoverDrawNavItem({
   label,
   href,
   scrollMotion = false,
+  restoreWorkPosition = false,
 }: {
   label: string;
   href: string;
   scrollMotion?: boolean;
+  restoreWorkPosition?: boolean;
 }) {
+  const router = useRouter();
+
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (scrollMotion) scrollToPageAnchor(event);
+
+    if (
+      event.defaultPrevented ||
+      !restoreWorkPosition ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey ||
+      !requestWorkReturn()
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+    router.push("/", { scroll: false });
+  };
+
   return (
     <Link
       href={href}
       className="inline-flex no-underline"
       aria-label={label}
       onPointerEnter={playCardHoverSound}
-      onClick={scrollMotion ? scrollToPageAnchor : undefined}
+      onClick={handleClick}
     >
       <span className="type-chrome chrome-primary relative inline-flex items-center justify-center px-[33px] py-[13px] whitespace-nowrap">
         <svg

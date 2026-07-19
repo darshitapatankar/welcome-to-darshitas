@@ -147,6 +147,7 @@ export default function Nav() {
               label={link.label}
               href={link.href}
               scrollMotion={link.label === "WORK"}
+              restoreWorkPosition={isProjectPage && link.label === "WORK"}
             />
           ))}
           <SoundToggle />

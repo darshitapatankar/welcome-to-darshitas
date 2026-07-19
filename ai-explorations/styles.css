@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@700;800;900&display=swap");
+
+:root {
+  --ink: #181816;
+  --paper: #eeeae0;
+  --panel: #f5f1e8;
+  --stage: #6b0505;
+  --type-color: #ff9bda;
+  --line: rgba(24, 24, 22, 0.24);
+  --muted: rgba(24, 24, 22, 0.52);
+  --accent: #d63b27;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* { box-sizing: border-box; }
+
+html,
+body { min-height: 100%; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input { font: inherit; }
+
+button { -webkit-tap-highlight-color: transparent; }
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+}
+
+.playground {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 96px minmax(0, 1fr);
+  padding: 0 18px 18px;
+  background: var(--paper);
+}
+
+.playground-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.playground-header h1 {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.playground-header h1 > span {
+  max-width: 105px;
+  color: var(--muted);
+  font: 500 8px/1.35 DM Mono, monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.playground-header strong {
+  font: 400 40px/0.9 "Instrument Serif", Georgia, serif;
+  letter-spacing: -0.04em;
+}
+
+.playground-header em {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.playground-header > p {
+  margin: 0;
+  color: var(--muted);
+  font: 400 8px/1.5 DM Mono, monospace;
+  letter-spacing: 0.04em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.type-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(24, 24, 22, 0.72);
+  background-color: var(--stage);
+  transition: background-color 180ms ease;
+  touch-action: none;
+}
+
+.type-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size: 12.5% 25%;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.45), transparent 72%);
+}
+
+.type-stage[data-mode="centre"] { background-image: none; }
+.type-stage[data-mode="word"] { cursor: ew-resize; }
+.type-stage[data-mode="drag"] .glyph-slot { cursor: grab; }
+.type-stage[data-mode="drag"] .glyph-slot:active { cursor: grabbing; }
+
+.stage-note {
+  position: absolute;
+  z-index: 3;
+  inset: 19px 21px auto;
+  display: flex;
+  justify-content: space-between;
+  color: color-mix(in srgb, var(--type-color) 78%, transparent);
+  font: 500 8px/1 DM Mono, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stage-note span:first-child::before {
+  content: "01 — ";
+  opacity: .58;
+}
+
+.type-stage[data-mode="letter"] .stage-note span:first-child::before { content: "02 — "; }
+.type-stage[data-mode="centre"] .stage-note span:first-child::before { content: "03 — "; }
+.type-stage[data-mode="drag"] .stage-note span:first-child::before { content: "04 — "; }
+
+.type-rig {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--type-color);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  user-select: none;
+  white-space: nowrap;
+  will-change: transform;
+  cursor: ew-resize;
+}
+
+.glyph-slot {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: inherit;
+  line-height: 0.72;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  touch-action: none;
+}
+
+.glyph-surface {
+  display: block;
+  color: var(--type-color);
+  font-size: var(--type-size, 180px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  transform: scale(1);
+  transform-origin: center;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.glyph-slot:first-child .glyph-surface { letter-spacing: -0.03em; }
+
+.hint {
+  position: absolute;
+  z-index: 3;
+  left: 21px;
+  bottom: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: color-mix(in srgb, var(--type-color) 78%, transparent);
+  font: 500 8px/1 DM Mono, monospace;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: opacity 180ms ease;
+}
+
+.hint::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.controls {
+  position: relative;
+  z-index: 6;
+  min-width: 0;
+  overflow-y: auto;
+  border-left: 1px solid var(--ink);
+  background: var(--panel);
+}
+
+.controls-heading {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.controls-heading > span {
+  display: grid;
+  gap: 7px;
+  font: 400 24px/1 "Instrument Serif", Georgia, serif;
+  letter-spacing: -0.025em;
+}
+
+.controls-heading small {
+  color: var(--muted);
+  font: 500 8px/1 DM Mono, monospace;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.controls-heading button {
+  padding: 0 0 3px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--muted);
+  font: 500 8px/1 DM Mono, monospace;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 160ms ease, transform 140ms var(--ease-out);
+}
+
+.controls-heading button:hover { color: var(--accent); }
+.controls-heading button:active,
+.mode-button:active,
+.swatch:active { transform: scale(.97); }
+
+.field {
+  min-width: 0;
+  margin: 0;
+  padding: 20px 22px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.field > span,
+.field legend {
+  display: block;
+  width: 100%;
+  margin: 0 0 13px;
+  padding: 0;
+  color: var(--muted);
+  font: 500 8px/1 DM Mono, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.text-field { display: block; }
+
+.text-field input {
+  width: 100%;
+  padding: 0 0 7px;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 400 30px/1 "Instrument Serif", Georgia, serif;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.text-field input:focus { outline: 0; border-bottom-color: var(--accent); }
+
+.mode-field { padding-bottom: 8px; }
+
+.mode-grid { display: grid; }
+
+.mode-button {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 33px 1fr auto;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 400 17px/1 "Instrument Serif", Georgia, serif;
+  text-align: left;
+  cursor: pointer;
+  transition: color 160ms ease, padding-left 180ms var(--ease-out), transform 140ms var(--ease-out);
+}
+
+.mode-button:last-child { border-bottom: 1px solid var(--line); }
+
+.mode-button i {
+  color: var(--muted);
+  font: 400 8px/1 DM Mono, monospace;
+  font-style: normal;
+}
+
+.mode-button.is-active {
+  padding-left: 7px;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.mode-button.is-active::after {
+  content: "↗";
+  justify-self: end;
+  margin-right: 5px;
+  grid-column: 3;
+  font: 400 12px/1 DM Mono, monospace;
+}
+
+.swatches {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.swatch,
+.custom-color {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  flex: 0 0 auto;
+  border-radius: 0;
+}
+
+.swatch {
+  border: 1px solid rgba(24,24,22,.28);
+  background: var(--swatch);
+  cursor: pointer;
+  transition: transform 140ms var(--ease-out), box-shadow 160ms ease;
+}
+
+.swatch.is-active { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--ink); }
+
+.custom-color {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.custom-color input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-color span { pointer-events: none; font: 400 13px/1 DM Mono, monospace; }
+
+.range-field > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range-field b { font: inherit; }
+.range-field output { color: var(--ink); }
+
+input[type="range"] {
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  cursor: ew-resize;
+}
+
+input[type="range"]::-webkit-slider-runnable-track { height: 1px; background: var(--ink); }
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 11px;
+  height: 11px;
+  margin-top: -5px;
+  appearance: none;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--panel);
+}
+
+.control-note {
+  margin: 0;
+  padding: 20px 22px 28px;
+  color: var(--muted);
+  font: 400 9px/1.6 DM Mono, monospace;
+}
+
+.control-note::before {
+  content: "Editor’s note";
+  display: block;
+  margin-bottom: 9px;
+  color: var(--accent);
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .swatch:hover { transform: translateY(-2px); }
+  .mode-button:hover { color: var(--accent); }
+}
+
+@media (max-width: 760px) {
+  body { overflow: auto; }
+
+  .app-shell {
+    min-height: 100svh;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(64svh, 1fr) auto;
+  }
+
+  .playground {
+    min-height: 64svh;
+    grid-template-rows: 82px minmax(0, 1fr);
+    padding: 0 10px 10px;
+  }
+
+  .playground-header h1 > span,
+  .playground-header > p { display: none; }
+
+  .playground-header strong { font-size: 35px; }
+  .type-stage { margin-top: 10px; min-height: 53svh; }
+
+  .controls {
+    overflow: visible;
+    border-top: 1px solid var(--ink);
+    border-left: 0;
+  }
+
+  .controls-heading { height: 82px; }
+  .glyph-surface { font-size: min(var(--type-size, 180px), 25vw); }
+  .field { padding-block: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .type-stage,
+  .controls-heading button,
+  .mode-button,
+  .swatch,
+  .hint { transition-duration: .01ms; }
+}

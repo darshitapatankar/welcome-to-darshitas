@@ -74,6 +74,24 @@ body {
   font-family: var(--font-sans);
 }
 
+.footer-text-glow,
+.footer-social-link {
+  text-shadow:
+    0 0 5px rgb(255 196 121 / 78%),
+    0 0 13px rgb(255 166 58 / 38%);
+}
+
+.footer-social-link {
+  transition: text-shadow 200ms ease;
+}
+
+.footer-social-link:hover {
+  text-shadow:
+    0 0 8px rgb(255 214 151 / 100%),
+    0 0 20px rgb(255 181 70 / 82%),
+    0 0 34px rgb(255 135 30 / 45%);
+}
+
 em,
 i {
   font-style: normal;
@@ -149,6 +167,12 @@ i {
   pointer-events: none;
 }
 
+.project-card-surface {
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: transform 260ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 [data-card-tag] {
   transition: border-color 200ms ease;
 }
@@ -167,6 +191,11 @@ i {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  [data-project-card][data-card-hovered] .project-card-surface {
+    will-change: transform;
+    transition-duration: 0ms;
+  }
+
   [data-project-card][data-card-hovered] .card-thumbnail-shell::before {
     opacity: var(--card-glow-opacity, 0.34);
     transition-duration: 250ms;
@@ -179,6 +208,11 @@ i {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .project-card-surface {
+    transform: none !important;
+    transition-duration: 0ms !important;
+  }
+
   .card-thumbnail-shell::before {
     transition-duration: 0ms !important;
   }
@@ -290,7 +324,7 @@ html[data-crt-power="boot"] body {
 
 .project-overview {
   padding-block-start: calc(var(--fixed-ui-inset-top) + 96px);
-  padding-block-end: 24px;
+  padding-block-end: 70px;
 }
 
 .pondicherry-project-gallery {
@@ -430,10 +464,7 @@ html[data-crt-power="boot"] body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--project-gap);
   height: calc(
-    (
-        100vw - var(--fixed-ui-inset-left) - var(--fixed-ui-inset-right)
-      ) /
-      1.7
+    (100vw - var(--fixed-ui-inset-left) - var(--fixed-ui-inset-right)) / 1.7
   );
   align-items: stretch;
 }
@@ -470,6 +501,10 @@ html[data-crt-power="boot"] body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.custom-type-gallery-stack > :last-child img {
+  object-position: center bottom;
 }
 
 .illustrations-project-gallery {
@@ -580,7 +615,7 @@ html[data-crt-power="boot"] body {
 
   .project-overview {
     padding-block-start: 112px;
-    padding-block-end: 20px;
+    padding-block-end: 70px;
   }
 
   .project-page-gutter {

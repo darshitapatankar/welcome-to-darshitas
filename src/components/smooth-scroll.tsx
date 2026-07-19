@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { consumeWorkReturnPosition } from "@/lib/work-return-position";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,6 +82,34 @@ export default function SmoothScroll({
   }, []);
 
   useEffect(() => {
+    if (pathname === "/") {
+      const returnY = consumeWorkReturnPosition();
+      if (returnY === null) return;
+
+      const restoreWorkPosition = () => {
+        window.scrollTo(0, returnY);
+        lenisRef.current?.scrollTo(returnY, {
+          immediate: true,
+          force: true,
+        });
+        ScrollTrigger.update();
+      };
+
+      restoreWorkPosition();
+      let remainingFrames = 3;
+      let restoreFrame = 0;
+      const holdPosition = () => {
+        restoreWorkPosition();
+        remainingFrames -= 1;
+        if (remainingFrames > 0) {
+          restoreFrame = window.requestAnimationFrame(holdPosition);
+        }
+      };
+      restoreFrame = window.requestAnimationFrame(holdPosition);
+
+      return () => window.cancelAnimationFrame(restoreFrame);
+    }
+
     if (!pathname.startsWith("/projects/")) return;
 
     const resetProjectScroll = () => {

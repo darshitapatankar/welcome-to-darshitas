@@ -27,15 +27,15 @@ export type CrtConfig = {
 };
 
 export const DEFAULT_CRT_CONFIG: CrtConfig = {
-  scanlineStrength: 0.26,
+  scanlineStrength: 0.12,
   scanlinePitchPx: 5,
   scanlineGamma: 1.8,
   driftSpeed: 12,
   rollPeriod: 8,
-  grainStrength: 0.085,
+  grainStrength: 0.04,
   aberrationPx: 1.8,
   glitchIntensity: 1,
-  vignette: 0.15,
+  vignette: 0.045,
   // Tunable in development at `?crt-debug`; matched to the bezel cutout.
   barrel: 0.05,
 };

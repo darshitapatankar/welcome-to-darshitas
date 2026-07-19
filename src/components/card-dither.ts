@@ -9,6 +9,14 @@ export type CardDitherConfig = {
   ditherMotionSpeed: number;
   parallaxStrength: number;
   textureZoom: number;
+  hoverDepthStrength: number;
+  hoverHighlightStrength: number;
+  hoverDitherStrength: number;
+  hoverSpringStiffness: number;
+  hoverSpringDamping: number;
+  cardPerspectivePx: number;
+  cardTiltDeg: number;
+  cardLiftPx: number;
   fadeInMs: number;
   fadeOutMs: number;
 };
@@ -24,6 +32,14 @@ export const CARD_DITHER_CONFIG: CardDitherConfig = {
   ditherMotionSpeed: 0.85,
   parallaxStrength: 0,
   textureZoom: 1,
+  hoverDepthStrength: 0.018,
+  hoverHighlightStrength: 0.055,
+  hoverDitherStrength: 0.045,
+  hoverSpringStiffness: 145,
+  hoverSpringDamping: 19,
+  cardPerspectivePx: 1100,
+  cardTiltDeg: 1.8,
+  cardLiftPx: 2,
   fadeInMs: 200,
   fadeOutMs: 300,
 };
@@ -34,6 +50,7 @@ type ActiveCard = {
   card: HTMLElement;
   container: HTMLElement;
   grid: HTMLElement | null;
+  surface: HTMLElement | null;
   source: TextureSource;
 };
 
@@ -71,6 +88,11 @@ const FRAGMENT_SHADER = `
   uniform float u_parallaxStrength;
   uniform float u_textureZoom;
   uniform float u_aberrationPx;
+  uniform vec2 u_hoverPointer;
+  uniform float u_hoverAmount;
+  uniform float u_hoverDepthStrength;
+  uniform float u_hoverHighlightStrength;
+  uniform float u_hoverDitherStrength;
   varying vec2 v_uv;
 
   float bayerDigit(float xBit, float yBit) {
@@ -113,7 +135,17 @@ const FRAGMENT_SHADER = `
       -verticalMargin,
       verticalMargin
     );
-    vec2 uv = 0.5 + (v_uv - 0.5) * zoomedUvScale;
+    vec2 centeredUv = v_uv - 0.5;
+    float edgeGuard =
+      smoothstep(0.0, 0.12, v_uv.x) *
+      smoothstep(0.0, 0.12, 1.0 - v_uv.x) *
+      smoothstep(0.0, 0.12, v_uv.y) *
+      smoothstep(0.0, 0.12, 1.0 - v_uv.y);
+    float perspective = dot(centeredUv, u_hoverPointer);
+    vec2 depthOffset = (
+      centeredUv * perspective + u_hoverPointer * 0.16
+    ) * u_hoverDepthStrength * edgeGuard * u_hoverAmount;
+    vec2 uv = 0.5 + (centeredUv + depthOffset) * zoomedUvScale;
     uv.y += parallaxOffset;
     float edge = smoothstep(0.18, 0.72, length(v_uv - 0.5) * 1.45);
     vec2 aberration = vec2(u_aberrationPx / u_resolution.x, 0.0) * edge;
@@ -123,6 +155,13 @@ const FRAGMENT_SHADER = `
       centerSample.g,
       texture2D(u_texture, uv - aberration).b
     );
+
+    vec2 pointerUv = u_hoverPointer * 0.5 + 0.5;
+    vec2 pointerDelta = (v_uv - pointerUv) * vec2(1.0, 1.18);
+    float pointerFalloff = 1.0 - smoothstep(0.08, 0.62, length(pointerDelta));
+    float highlight = pointerFalloff * u_hoverAmount;
+    sourceColor = 1.0 - (1.0 - sourceColor) *
+      (1.0 - vec3(highlight * u_hoverHighlightStrength));
 
     float luminance = dot(sourceColor, vec3(0.2126, 0.7152, 0.0722));
     vec3 saturated = clamp(
@@ -145,9 +184,16 @@ const FRAGMENT_SHADER = `
     float thresholdMotion = (
       mix(randomNow, randomNext, motionBlend) * 2.0 - 1.0
     ) * u_ditherMotionStrength;
+    float localRandom = randomCell(
+      ditherCell + vec2(73.0, 29.0),
+      motionSlice + 11.0
+    ) * 2.0 - 1.0;
+    float localDisturbance = localRandom * highlight * u_hoverDitherStrength;
     float levelCount = max(u_levels - 1.0, 1.0);
     vec3 thresholded = clamp(
-      contrasted + vec3((centeredThreshold + thresholdMotion) / levelCount),
+      contrasted + vec3(
+        (centeredThreshold + thresholdMotion + localDisturbance) / levelCount
+      ),
       0.0,
       1.0
     );
@@ -215,6 +261,11 @@ class CardDitherRenderer {
     parallaxStrength: WebGLUniformLocation | null;
     textureZoom: WebGLUniformLocation | null;
     aberrationPx: WebGLUniformLocation | null;
+    hoverPointer: WebGLUniformLocation | null;
+    hoverAmount: WebGLUniformLocation | null;
+    hoverDepthStrength: WebGLUniformLocation | null;
+    hoverHighlightStrength: WebGLUniformLocation | null;
+    hoverDitherStrength: WebGLUniformLocation | null;
   };
   private active: ActiveCard | null = null;
   private cleanupTimer: number | null = null;
@@ -225,6 +276,12 @@ class CardDitherRenderer {
   private parallaxFrameRequest: number | null = null;
   private parallaxListening = false;
   private readonly reducedMotionQuery: MediaQueryList;
+  private pointerTarget = { x: 0, y: 0 };
+  private pointerCurrent = { x: 0, y: 0 };
+  private pointerVelocity = { x: 0, y: 0 };
+  private hoverAmount = 0;
+  private hoverVelocity = 0;
+  private lastDrawTime = 0;
 
   constructor() {
     this.canvas = document.createElement("canvas");
@@ -290,6 +347,20 @@ class CardDitherRenderer {
       ),
       textureZoom: gl.getUniformLocation(this.program, "u_textureZoom"),
       aberrationPx: gl.getUniformLocation(this.program, "u_aberrationPx"),
+      hoverPointer: gl.getUniformLocation(this.program, "u_hoverPointer"),
+      hoverAmount: gl.getUniformLocation(this.program, "u_hoverAmount"),
+      hoverDepthStrength: gl.getUniformLocation(
+        this.program,
+        "u_hoverDepthStrength",
+      ),
+      hoverHighlightStrength: gl.getUniformLocation(
+        this.program,
+        "u_hoverHighlightStrength",
+      ),
+      hoverDitherStrength: gl.getUniformLocation(
+        this.program,
+        "u_hoverDitherStrength",
+      ),
     };
   }
 
@@ -303,8 +374,12 @@ class CardDitherRenderer {
     this.stopDitherMotionLoop();
 
     const grid = card.closest<HTMLElement>(".project-card-grid");
-    this.active = { card, container, grid, source };
+    const surface = card.querySelector<HTMLElement>(
+      "[data-project-card-surface]",
+    );
+    this.active = { card, container, grid, surface, source };
     this.textureReady = false;
+    this.resetPointerMotion();
     card.dataset.ditherHovered = "true";
     if (grid) grid.dataset.cardHoverActive = "true";
     container.appendChild(this.canvas);
@@ -327,6 +402,7 @@ class CardDitherRenderer {
 
   stop(card: HTMLElement) {
     if (this.active?.card !== card) return;
+    this.resetCardPerspective();
     this.canvas.style.transition = `opacity ${CARD_DITHER_CONFIG.fadeOutMs}ms ease`;
     this.canvas.style.opacity = "0";
     if (
@@ -342,6 +418,12 @@ class CardDitherRenderer {
     this.cleanupTimer = window.setTimeout(() => {
       if (this.active?.card === card) this.finishActive();
     }, CARD_DITHER_CONFIG.fadeOutMs);
+  }
+
+  setPointer(card: HTMLElement, x: number, y: number) {
+    if (this.active?.card !== card || this.reducedMotionQuery.matches) return;
+    this.pointerTarget.x = Math.max(-1, Math.min(1, x));
+    this.pointerTarget.y = Math.max(-1, Math.min(1, y));
   }
 
   private reveal(card: HTMLElement, canvasWasConnected: boolean) {
@@ -430,6 +512,8 @@ class CardDitherRenderer {
         : source.naturalHeight;
     if (!sourceWidth || !sourceHeight) return;
 
+    this.updatePointerMotion(timeSeconds);
+
     const sourceAspect = sourceWidth / sourceHeight;
     const canvasAspect = this.canvas.width / this.canvas.height;
     const uvScaleX =
@@ -468,7 +552,78 @@ class CardDitherRenderer {
     );
     gl.uniform1f(this.uniforms.textureZoom, CARD_DITHER_CONFIG.textureZoom);
     gl.uniform1f(this.uniforms.aberrationPx, 1.25);
+    gl.uniform2f(
+      this.uniforms.hoverPointer,
+      this.pointerCurrent.x,
+      this.pointerCurrent.y,
+    );
+    gl.uniform1f(this.uniforms.hoverAmount, this.hoverAmount);
+    gl.uniform1f(
+      this.uniforms.hoverDepthStrength,
+      CARD_DITHER_CONFIG.hoverDepthStrength,
+    );
+    gl.uniform1f(
+      this.uniforms.hoverHighlightStrength,
+      CARD_DITHER_CONFIG.hoverHighlightStrength,
+    );
+    gl.uniform1f(
+      this.uniforms.hoverDitherStrength,
+      CARD_DITHER_CONFIG.hoverDitherStrength,
+    );
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
+
+  private updatePointerMotion(timeSeconds: number) {
+    if (!this.lastDrawTime) this.lastDrawTime = timeSeconds;
+    const delta = Math.min(Math.max(timeSeconds - this.lastDrawTime, 0), 0.032);
+    this.lastDrawTime = timeSeconds;
+    if (!delta) return;
+
+    const stiffness = CARD_DITHER_CONFIG.hoverSpringStiffness;
+    const damping = Math.exp(-CARD_DITHER_CONFIG.hoverSpringDamping * delta);
+    this.pointerVelocity.x =
+      (this.pointerVelocity.x +
+        (this.pointerTarget.x - this.pointerCurrent.x) * stiffness * delta) *
+      damping;
+    this.pointerVelocity.y =
+      (this.pointerVelocity.y +
+        (this.pointerTarget.y - this.pointerCurrent.y) * stiffness * delta) *
+      damping;
+    this.pointerCurrent.x += this.pointerVelocity.x * delta;
+    this.pointerCurrent.y += this.pointerVelocity.y * delta;
+
+    this.hoverVelocity =
+      (this.hoverVelocity + (1 - this.hoverAmount) * stiffness * delta) *
+      damping;
+    this.hoverAmount = Math.min(
+      1,
+      this.hoverAmount + this.hoverVelocity * delta,
+    );
+    this.updateCardPerspective();
+  }
+
+  private updateCardPerspective() {
+    const surface = this.active?.surface;
+    if (!surface || this.reducedMotionQuery.matches) return;
+    const rotateX = -this.pointerCurrent.y * CARD_DITHER_CONFIG.cardTiltDeg;
+    const rotateY = this.pointerCurrent.x * CARD_DITHER_CONFIG.cardTiltDeg;
+    const lift = this.hoverAmount * CARD_DITHER_CONFIG.cardLiftPx;
+    surface.style.transform = `perspective(${CARD_DITHER_CONFIG.cardPerspectivePx}px) translate3d(0, ${-lift}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  }
+
+  private resetCardPerspective() {
+    const surface = this.active?.surface;
+    if (!surface) return;
+    surface.style.transform = "";
+  }
+
+  private resetPointerMotion() {
+    this.pointerTarget = { x: 0, y: 0 };
+    this.pointerCurrent = { x: 0, y: 0 };
+    this.pointerVelocity = { x: 0, y: 0 };
+    this.hoverAmount = 0;
+    this.hoverVelocity = 0;
+    this.lastDrawTime = window.performance.now() * 0.001;
   }
 
   private readonly queueParallaxDraw = () => {
@@ -520,10 +675,9 @@ class CardDitherRenderer {
   private startVideoFrameLoop() {
     if (!(this.active?.source instanceof HTMLVideoElement)) return;
     const source = this.active.source;
-    const renderFrame = (time: number) => {
+    const renderFrame = () => {
       if (this.active?.source !== source) return;
       this.uploadTexture();
-      this.draw(time * 0.001);
       this.videoFrameRequest = source.requestVideoFrameCallback(renderFrame);
     };
     this.videoFrameRequest = source.requestVideoFrameCallback(renderFrame);
@@ -540,11 +694,7 @@ class CardDitherRenderer {
   }
 
   private startDitherMotionLoop() {
-    if (
-      !this.active ||
-      this.active.source instanceof HTMLVideoElement ||
-      this.ditherMotionFrameRequest !== null
-    ) {
+    if (!this.active || this.ditherMotionFrameRequest !== null) {
       return;
     }
 
@@ -584,6 +734,7 @@ class CardDitherRenderer {
     this.stopVideoFrameLoop();
     this.stopDitherMotionLoop();
     this.stopParallaxUpdates();
+    this.resetCardPerspective();
     delete this.active.card.dataset.ditherHovered;
     if (this.active.grid) delete this.active.grid.dataset.cardHoverActive;
     if (
@@ -620,4 +771,12 @@ export function startCardDither(
 
 export function stopCardDither(card: HTMLElement) {
   sharedRenderer?.stop(card);
+}
+
+export function updateCardDitherPointer(
+  card: HTMLElement,
+  x: number,
+  y: number,
+) {
+  sharedRenderer?.setPointer(card, x, y);
 }
