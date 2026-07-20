@@ -12,7 +12,6 @@ import SmoothScroll from "@/components/smooth-scroll";
 import Nav from "@/components/site/nav";
 import Footer from "@/components/site/footer";
 import CrtEffect from "@/components/crt-effect";
-import CrtBezel from "@/components/crt-bezel";
 import EscapeToHome from "@/components/escape-to-home";
 import SignalDecoder from "@/components/signal-decoder";
 import { LEGACY_PROJECT_PATHS } from "@/lib/project-routes";
@@ -82,13 +81,6 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          as="image"
-          href="/crt/bezel.avif"
-          type="image/avif"
-          media="(min-width: 768px)"
-        />
-        <link
-          rel="preload"
           as="audio"
           href="/crt/tv-power-on.mp3"
           type="audio/mpeg"
@@ -115,7 +107,6 @@ export default function RootLayout({
         {process.env.NODE_ENV === "development" && <Agentation />}
         <CrtEffect />
         <SignalDecoder />
-        <CrtBezel />
       </body>
     </html>
   );

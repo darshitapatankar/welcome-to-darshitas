@@ -1,6 +1,5 @@
 import BottomBar from "@/components/bottom-bar";
 import Hero from "@/components/hero";
-import Ticker from "@/components/site/ticker";
 import WorkGrid from "@/components/site/work-grid";
 
 export default function Home() {
@@ -11,7 +10,6 @@ export default function Home() {
       <div id="hero">
         <Hero />
       </div>
-      <Ticker />
       <WorkGrid />
       <BottomBar />
     </main>

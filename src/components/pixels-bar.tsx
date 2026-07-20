@@ -62,7 +62,7 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
       </div>
       {title === "mains" ? (
         <Image
-          src="/work/mains-title.png"
+          src="/work/mains-title-v2.png"
           alt=""
           width={387}
           height={155}
@@ -70,11 +70,11 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
         />
       ) : (
         <Image
-          src="/work/sides-title.png"
+          src="/work/sides-title-v2.png"
           alt=""
           width={377}
           height={180}
-          className="absolute top-1/2 left-[260px] z-[3] h-auto w-[159px] -translate-y-1/2"
+          className="absolute top-1/2 left-[260px] z-[3] h-auto w-[180px] -translate-y-1/2"
         />
       )}
     </div>

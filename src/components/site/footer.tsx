@@ -35,7 +35,7 @@ export default function Footer() {
       data-theme="dark"
     >
       <div
-        className="absolute top-[3%] left-0 z-[1] h-[47%] w-full overflow-hidden md:top-[10%] md:h-[78%] md:w-[59%]"
+        className="absolute top-[-0.525%] left-[-7.5%] z-[1] h-[54.05%] w-[115%] overflow-hidden md:top-[4.15%] md:left-[-4.425%] md:h-[89.7%] md:w-[67.85%]"
         data-footer-mirror-ball-frame
       >
         <iframe
@@ -45,13 +45,13 @@ export default function Footer() {
           loading="lazy"
           allow="autoplay; fullscreen"
           data-footer-spline
-          className="absolute inset-0 z-[1] h-full w-full opacity-90 mix-blend-screen motion-reduce:hidden"
+          className="absolute inset-0 z-[1] h-full w-full translate-y-[30px] scale-110 opacity-90 mix-blend-screen motion-reduce:hidden"
         />
         <Image
           src="/footer/disco-ball-poster.jpg"
           alt=""
           fill
-          sizes="(min-width: 768px) 59vw, 100vw"
+          sizes="(min-width: 768px) 67.85vw, 115vw"
           className="pointer-events-none z-[1] hidden object-contain opacity-90 mix-blend-screen motion-reduce:block"
         />
       </div>
@@ -90,13 +90,18 @@ export default function Footer() {
       />
 
       <div className="absolute right-[7%] bottom-[8%] z-[3] flex w-[86%] flex-col items-end md:right-[12.5%] md:bottom-[18.9%] md:w-auto">
-        <Image
-          src="/footer/thank-you-visit-again.png"
-          alt="Thank you, visit again"
-          width={468}
-          height={196}
-          className="mb-8 w-[82%] max-w-[453px] md:mb-[43px] md:w-[453px]"
-        />
+        <div className="relative mb-8 aspect-[468/196] w-[82%] max-w-[453px] md:mb-[43px] md:w-[453px]">
+          <video
+            src="/footer/thank-you-visit-again.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-label="Thank you, visit again"
+            className="absolute inset-0 h-full w-full object-contain"
+          />
+        </div>
         <nav
           aria-label="Social"
           className="flex w-max flex-nowrap items-center gap-9 whitespace-nowrap"

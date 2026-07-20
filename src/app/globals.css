@@ -4,21 +4,21 @@
   /* Home Desktop frame fill is rgb(0,0,0); text defaults to white. */
   --background: #000000;
   --foreground: #ffffff;
-  /* Safe rectangle inside the new bezel's thinner, curved opening. */
-  --bezel-inset-top: 7.4dvh;
-  --bezel-inset-right: 6.2vw;
-  --bezel-inset-bottom: 8.3dvh;
-  --bezel-inset-left: 6vw;
+  /* The CRT treatment is now screen-only; content uses the full viewport. */
+  --bezel-inset-top: 0px;
+  --bezel-inset-right: 0px;
+  --bezel-inset-bottom: 0px;
+  --bezel-inset-left: 0px;
   --card-grid-gutter: 24px;
   /* Measured centerline opening used by the recessed-tube shadow. */
-  --bezel-opening-top: 5dvh;
-  --bezel-opening-right: 4.8vw;
-  --bezel-opening-bottom: 6.2dvh;
-  --bezel-opening-left: 4.4vw;
-  --fixed-ui-inset-top: calc(var(--bezel-inset-top) + 18px);
-  --fixed-ui-inset-right: calc(var(--bezel-inset-right) + 14px);
-  --fixed-ui-inset-bottom: calc(var(--bezel-inset-bottom) + 18px);
-  --fixed-ui-inset-left: calc(var(--bezel-inset-left) + 14px);
+  --bezel-opening-top: 0px;
+  --bezel-opening-right: 0px;
+  --bezel-opening-bottom: 0px;
+  --bezel-opening-left: 0px;
+  --fixed-ui-inset-top: clamp(24px, 2.5vw, 40px);
+  --fixed-ui-inset-right: clamp(24px, 3vw, 48px);
+  --fixed-ui-inset-bottom: clamp(24px, 2.5vw, 40px);
+  --fixed-ui-inset-left: clamp(24px, 3vw, 48px);
   --type-mono-family: var(--font-mono);
   --type-card-title-family: var(--font-work-sans);
   --type-card-title-size: 18px;
