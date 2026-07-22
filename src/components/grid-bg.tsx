@@ -30,7 +30,7 @@ export default function GridBg({
         className="pointer-events-none absolute inset-0 z-[2] flex"
         style={mask ? { WebkitMaskImage: mask, maskImage: mask } : undefined}
       >
-        <div className="w-[181px] shrink-0" />
+        <div className="w-10 shrink-0 md:w-[181px]" />
         {Array.from({ length: 3 }, (_, i) => (
           <div
             key={i}
@@ -39,7 +39,7 @@ export default function GridBg({
           />
         ))}
         <div
-          className="w-[180px] shrink-0 border-l"
+          className="w-10 shrink-0 border-l md:w-[180px]"
           style={{ borderColor: COLUMN_LINE }}
         />
       </div>

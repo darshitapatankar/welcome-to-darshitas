@@ -6,13 +6,11 @@ import { useChromeTheme } from "@/components/use-chrome-theme";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-// Site nav from the Framer canvas redesign: short bio on the left, three
-// oval-outlined links on the right (Geist Mono, white).
+// Site nav from the Framer canvas redesign: short bio on the left and an
+// oval-outlined work link on the right (Geist Mono, white).
 // Section themes keep it legible over both light and dark content.
 const LINKS = [
   { label: "WORK", href: "/#mains" },
-  { label: "ABOUT", href: "/#about" },
-  { label: "CONTACT", href: "/#contact" },
 ];
 
 const HERO_INTRO =

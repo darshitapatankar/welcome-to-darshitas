@@ -374,9 +374,7 @@ class CardDitherRenderer {
     this.stopDitherMotionLoop();
 
     const grid = card.closest<HTMLElement>(".project-card-grid");
-    const surface = card.querySelector<HTMLElement>(
-      "[data-project-card-surface]",
-    );
+    const surface = card.querySelector<HTMLElement>("[data-card-thumbnail]");
     this.active = { card, container, grid, surface, source };
     this.textureReady = false;
     this.resetPointerMotion();

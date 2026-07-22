@@ -55,7 +55,10 @@ export default function Footer() {
           className="pointer-events-none z-[1] hidden object-contain opacity-90 mix-blend-screen motion-reduce:block"
         />
       </div>
-      <div className="absolute top-[50%] right-[7%] z-[3] flex items-center gap-2 font-mono text-[13px] leading-normal text-[#FFC479] md:top-[19.1%] md:right-[12.5%] md:gap-6 md:text-base">
+      <div
+        className="absolute top-[52%] right-6 left-6 z-[3] flex items-start gap-3 font-mono text-[13px] leading-normal text-[#FFC479] md:top-[19.1%] md:right-[12.5%] md:left-auto md:items-center md:gap-6 md:text-base"
+        data-footer-credits
+      >
         <Image
           src="/footer/seal.png"
           alt=""
@@ -67,10 +70,10 @@ export default function Footer() {
           data-footer-seal
         />
         <div className="footer-text-glow flex flex-col items-start gap-1.5 text-left">
-          <p className="whitespace-nowrap">
+          <p className="md:whitespace-nowrap">
             Designed and served by Darshita Patankar
           </p>
-          <div className="flex w-full items-center justify-start gap-[35px] whitespace-nowrap">
+          <div className="flex w-full items-center justify-start gap-5 whitespace-nowrap md:gap-[35px]">
             <span>Bengaluru, India</span>
             <Diamond />
             <span>EST. 2021</span>
@@ -89,8 +92,11 @@ export default function Footer() {
         data-footer-eclipse
       />
 
-      <div className="absolute right-[7%] bottom-[8%] z-[3] flex w-[86%] flex-col items-end md:right-[12.5%] md:bottom-[18.9%] md:w-auto">
-        <div className="relative mb-8 aspect-[468/196] w-[82%] max-w-[453px] md:mb-[43px] md:w-[453px]">
+      <div
+        className="absolute right-6 bottom-24 left-6 z-[3] flex flex-col items-center md:right-[12.5%] md:bottom-[18.9%] md:left-auto md:w-auto md:items-end"
+        data-footer-actions
+      >
+        <div className="relative mb-6 aspect-[468/196] w-full max-w-[340px] md:mb-[43px] md:w-[453px] md:max-w-[453px]">
           <video
             src="/footer/thank-you-visit-again.mp4"
             autoPlay
@@ -104,7 +110,7 @@ export default function Footer() {
         </div>
         <nav
           aria-label="Social"
-          className="flex w-max flex-nowrap items-center gap-9 whitespace-nowrap"
+          className="flex w-full flex-nowrap items-center justify-between whitespace-nowrap md:w-max md:gap-9"
           data-footer-socials
         >
           {FOOTER_LINKS.map((link, i) => (

@@ -327,12 +327,7 @@ export default function ProjectCard({
         onPointerMove={handlePointerMove}
         onPointerLeave={handlePointerLeave}
       >
-        <div
-          className="project-card-surface flex flex-col gap-2.5"
-          data-project-card-surface
-        >
-          {content}
-        </div>
+        <div className="flex flex-col gap-2.5">{content}</div>
       </Link>
     );
   }
@@ -345,12 +340,7 @@ export default function ProjectCard({
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
     >
-      <div
-        className="project-card-surface flex flex-col gap-2.5"
-        data-project-card-surface
-      >
-        {content}
-      </div>
+      <div className="flex flex-col gap-2.5">{content}</div>
     </div>
   );
 }

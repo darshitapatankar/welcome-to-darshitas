@@ -90,7 +90,7 @@
   box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
   color: #fff;
   font:
-    11px/1.35 var(--font-fira-mono),
+    11px/1.35 var(--font-geist-mono),
     ui-monospace,
     monospace;
   backdrop-filter: blur(12px);

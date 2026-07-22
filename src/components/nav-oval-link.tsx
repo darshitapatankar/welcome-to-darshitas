@@ -13,7 +13,7 @@ export default function NavOvalLink({
     <a
       href={href}
       aria-label={label}
-      className="type-chrome chrome-primary group relative inline-flex items-center justify-center px-[33px] py-[13px] whitespace-nowrap no-underline"
+      className="type-chrome chrome-primary group relative inline-flex h-[42px] w-[108px] shrink-0 items-center justify-center whitespace-nowrap no-underline"
       onPointerEnter={playCardHoverSound}
     >
       <svg

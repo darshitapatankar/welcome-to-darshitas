@@ -1,8 +1,7 @@
 import Image from "next/image";
 import GridBg from "@/components/grid-bg";
-import PixelReveal from "@/components/pixel-reveal";
 import ProjectCard, { type ProjectCardData } from "@/components/project-card";
-import UnicornScene from "@/components/unicorn-scene";
+import { UnicornStudioEmbed } from "@/components/unicorn-scene";
 import {
   MAINS_HERO_CARD,
   MAINS_ROWS,
@@ -10,7 +9,8 @@ import {
   SIDES_ROWS,
 } from "@/data/projects";
 
-const ABOUT_UNICORN_PROJECT_ID = "uZFQTrR4JDEDONaCWbI1";
+const ABOUT_UNICORN_PROJECT_ID = "SmbaAswh4nJ05rz1HdvE";
+const SHOW_ABOUT_HTML_CARDS = true;
 
 // Positioning wrapper only — ProjectCard links itself via card.href, so this
 // must never add another <a> around it (nested anchors break hydration).
@@ -50,7 +50,7 @@ export default function WorkGrid() {
         </div>
         <div className="project-card-grid relative z-[2] -mt-[100vh] flex flex-col gap-10 pt-[260px] md:gap-0 md:pt-[280px]">
           <div className="pb-11">
-            <CardLink card={MAINS_HERO_CARD} className="max-w-[800px]" />
+            <CardLink card={MAINS_HERO_CARD} className="ml-2 max-w-[800px]" />
           </div>
           <div className="flex flex-col gap-10 md:flex-row md:justify-center md:gap-[120px]">
             <div className="md:w-[519px] md:shrink-0 md:pl-[130px]">
@@ -116,23 +116,45 @@ export default function WorkGrid() {
       </div>
 
       {/* Stack — Chef's note / about */}
-      <div id="about" className="relative h-screen">
+      <div id="about" className="relative min-h-[720px] md:min-h-[900px]">
         <GridBg gradient="none" />
-        <div className="relative z-[4] flex h-full flex-col items-center overflow-hidden px-6 pt-[120px] pb-20 md:px-[50px]">
-          <UnicornScene
+        <div className="relative z-[4] flex min-h-[720px] items-start justify-center overflow-hidden px-6 pt-24 pb-20 md:min-h-[900px] md:px-[50px] md:pt-[133px]">
+          <UnicornStudioEmbed
             projectId={ABOUT_UNICORN_PROJECT_ID}
-            className="absolute inset-0 h-full w-full"
-            altText="Animated background"
+            width={1440}
+            height={900}
+            className="absolute top-0 left-1/2 max-w-none -translate-x-1/2"
           />
-          <PixelReveal className="relative w-full max-w-[900px]">
-            <Image
-              src="/about.png"
-              alt="Chef's note — about Darshita"
-              width={900}
-              height={774}
-              className="h-auto w-full"
-            />
-          </PixelReveal>
+          {SHOW_ABOUT_HTML_CARDS && (
+            <div className="relative flex w-full max-w-[856px] flex-col items-center justify-center gap-6 md:flex-row md:items-start md:gap-12">
+              <div
+                className="relative aspect-[404/600] w-full max-w-[404px] shrink-0 overflow-hidden"
+                data-about-html-card
+              >
+                <Image
+                  src="/about-card-profile.png"
+                  alt="About Darshita Patankar, a visual designer from India"
+                  fill
+                  sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+              <div
+                className="relative aspect-[404/600] w-full max-w-[404px] shrink-0 overflow-hidden md:mt-[134px]"
+                data-about-html-card
+              >
+                <Image
+                  src="/about-card-practice.png"
+                  alt="Darshita Patankar's design practice, interests, and availability"
+                  fill
+                  sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   DM_Sans,
-  Fira_Mono,
   Fragment_Mono,
   Inter,
   Montserrat,
@@ -28,10 +27,65 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const firaMono = Fira_Mono({
-  variable: "--font-fira-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+const geistMono = localFont({
+  src: [
+    { path: "./font-files/GeistMono-Thin.ttf", weight: "100" },
+    { path: "./font-files/GeistMono-ExtraLight.ttf", weight: "200" },
+    { path: "./font-files/GeistMono-Light.ttf", weight: "300" },
+    { path: "./font-files/GeistMono-Regular.ttf", weight: "400" },
+    { path: "./font-files/GeistMono-Medium.ttf", weight: "500" },
+    { path: "./font-files/GeistMono-SemiBold.ttf", weight: "600" },
+    { path: "./font-files/GeistMono-Bold.ttf", weight: "700" },
+    { path: "./font-files/GeistMono-ExtraBold.ttf", weight: "800" },
+    { path: "./font-files/GeistMono-Black.ttf", weight: "900" },
+    {
+      path: "./font-files/GeistMono-ThinItalic.ttf",
+      weight: "100",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-ExtraLightItalic.ttf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-SemiBoldItalic.ttf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-ExtraBoldItalic.ttf",
+      weight: "800",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-BlackItalic.ttf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-geist-mono",
+  display: "swap",
 });
 
 const fragmentMono = Fragment_Mono({
@@ -71,7 +125,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${dmSans.variable} ${montserrat.variable} ${firaMono.variable} ${fragmentMono.variable} ${inter.variable} ${workSans.variable} ${gambarino.variable} antialiased`}
+      className={`${dmSans.variable} ${montserrat.variable} ${geistMono.variable} ${fragmentMono.variable} ${inter.variable} ${workSans.variable} ${gambarino.variable} antialiased`}
     >
       <head>
         <script

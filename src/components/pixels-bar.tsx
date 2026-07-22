@@ -66,7 +66,7 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
           alt=""
           width={387}
           height={155}
-          className="absolute top-1/2 right-[260px] z-[3] h-auto w-[189.5px] -translate-y-1/2"
+          className="absolute top-1/2 right-5 z-[3] h-auto w-[150px] -translate-y-1/2 md:right-[260px] md:w-[189.5px]"
         />
       ) : (
         <Image
@@ -74,7 +74,7 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
           alt=""
           width={377}
           height={180}
-          className="absolute top-1/2 left-[260px] z-[3] h-auto w-[180px] -translate-y-1/2"
+          className="absolute top-1/2 left-5 z-[3] h-auto w-[145px] -translate-y-1/2 md:left-[260px] md:w-[180px]"
         />
       )}
     </div>
