@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import {
-  DM_Sans,
-  Fragment_Mono,
-  Inter,
-  Montserrat,
-} from "next/font/google";
+import { DM_Sans, Fragment_Mono, Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
-import { Agentation } from "agentation";
 import SmoothScroll from "@/components/smooth-scroll";
 import Nav from "@/components/site/nav";
 import Footer from "@/components/site/footer";
 import CrtEffect from "@/components/crt-effect";
+import DevelopmentAgentation from "@/components/development-agentation";
 import EscapeToHome from "@/components/escape-to-home";
 import SignalDecoder from "@/components/signal-decoder";
 import { LEGACY_PROJECT_PATHS } from "@/lib/project-routes";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import { workSans } from "./fonts";
 import "./globals.css";
 
@@ -108,8 +104,42 @@ const gambarino = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Darshita's Portfolio",
-  description: "Creative portfolio of Darshita",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: `${SITE_NAME} Portfolio`,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "Design portfolio",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@_darshi",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -158,7 +188,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <EscapeToHome />
-        {process.env.NODE_ENV === "development" && <Agentation />}
+        {process.env.NODE_ENV === "development" && <DevelopmentAgentation />}
         <CrtEffect />
         <SignalDecoder />
       </body>

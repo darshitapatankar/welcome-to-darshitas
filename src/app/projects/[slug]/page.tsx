@@ -61,10 +61,19 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
   const pageCopy = getProjectPageCopy(slug);
+  const title = pageCopy?.title ?? project.title;
+  const description =
+    pageCopy?.leadHtml.replace(/<[^>]+>/g, "") ?? project.description;
   return {
-    title: `${pageCopy?.title ?? project.title} - Darshita Patankar`,
-    description:
-      pageCopy?.leadHtml.replace(/<[^>]+>/g, "") ?? project.description,
+    title,
+    description,
+    alternates: { canonical: `/projects/${slug}` },
+    openGraph: {
+      type: "article",
+      url: `/projects/${slug}`,
+      title: `${title} — Darshita Patankar`,
+      description,
+    },
   };
 }
 
@@ -135,6 +144,119 @@ function ProjectNarrative({
   );
 }
 
+function ProjectCopySection({
+  heading,
+  paragraphs,
+}: {
+  heading?: string;
+  paragraphs: string[];
+}) {
+  return (
+    <section className="project-page-gutter">
+      <div className="max-w-[820px]">
+        {heading && (
+          <h2
+            className={`${workSans.className} pb-5 text-[28px] leading-[34px] font-light tracking-[-0.02em] text-white`}
+          >
+            {heading}
+          </h2>
+        )}
+        <div className="flex flex-col gap-5">
+          {paragraphs.map((html) => (
+            <p
+              key={html}
+              className="font-mono text-sm leading-relaxed text-white/70"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CodeBustersGallery({ copy }: { copy: ProjectPageCopy }) {
+  const [challenge, direction] = copy.sections ?? [];
+  const directionParagraphs = direction?.paragraphsHtml ?? [];
+
+  return (
+    <div
+      className="flex flex-col gap-20 pb-16 md:gap-28"
+      data-project-gallery="code-busters"
+    >
+      <div className="project-page-gutter">
+        <Image
+          src="/projects/code-busters/hero.png"
+          alt="Code Busters gameplay showing a handheld password device, illuminated vault, score, and player ranking"
+          width={1920}
+          height={1080}
+          className="h-auto w-full"
+          sizes="100vw"
+        />
+      </div>
+
+      {challenge && (
+        <ProjectCopySection
+          heading={challenge.heading}
+          paragraphs={challenge.paragraphsHtml}
+        />
+      )}
+
+      <div className="project-page-gutter">
+        <Image
+          src="/projects/code-busters/vault-study.png"
+          alt="Illuminated Code Busters vault inside a blue security room"
+          width={1920}
+          height={1080}
+          className="h-auto w-full"
+          sizes="100vw"
+        />
+      </div>
+
+      {direction && (
+        <ProjectCopySection
+          heading={direction.heading}
+          paragraphs={directionParagraphs.slice(0, 1)}
+        />
+      )}
+
+      <div className="project-page-gutter grid grid-cols-1 gap-6 md:grid-cols-2">
+        <Image
+          src="/projects/code-busters/password-setup.png"
+          alt="Blue Code Busters interface for setting a three-digit vault password"
+          width={1440}
+          height={1440}
+          className="h-auto w-full"
+          sizes="(max-width: 767px) 100vw, 50vw"
+        />
+        <Image
+          src="/projects/code-busters/handheld-reveal.png"
+          alt="Code Busters handheld password device with the reveal control highlighted"
+          width={1440}
+          height={1440}
+          className="h-auto w-full"
+          sizes="(max-width: 767px) 100vw, 50vw"
+        />
+      </div>
+
+      {directionParagraphs.length > 1 && (
+        <ProjectCopySection paragraphs={directionParagraphs.slice(1)} />
+      )}
+
+      <div className="project-page-gutter flex justify-center">
+        <Image
+          src="/projects/code-busters/rewards-and-ranking.png"
+          alt="Code Busters gem balance, progress indicator, and player ranking interface"
+          width={600}
+          height={600}
+          className="h-auto w-full max-w-[600px]"
+          sizes="(max-width: 767px) calc(100vw - 48px), 600px"
+        />
+      </div>
+    </div>
+  );
+}
+
 function ProjectMetadata({
   descriptionHtml,
   field,
@@ -191,7 +313,7 @@ function Block({ block }: { block: ProjectBlock }) {
     case "imagePair":
       return (
         <div
-          className="project-page-gutter grid grid-cols-2 gap-6 pb-6"
+          className="project-page-gutter grid grid-cols-1 gap-6 pb-6 md:grid-cols-2"
           data-project-gallery-media
           data-project-gallery-kind="image"
           data-project-gallery-layout="pair"
@@ -319,9 +441,10 @@ export default async function ProjectPage({
     CARD_DESCRIPTION_PROJECTS.has(slug) && previousOverviewCopy.length >= 2
       ? previousOverviewCopy
       : [overviewDescription, ...descriptionCopy, ...previousOverviewCopy];
-  const overviewParagraphs = Array.from(
-    new Set(descriptionCandidates),
-  ).slice(0, 2);
+  const overviewParagraphs = Array.from(new Set(descriptionCandidates)).slice(
+    0,
+    2,
+  );
 
   const sourceBlocks = project.blocks.length
     ? project.blocks
@@ -342,13 +465,13 @@ export default async function ProjectPage({
 
   return (
     <main
-      className="flex min-h-screen flex-col bg-[#0A0A0A] font-sans"
+      className="flex min-h-screen flex-col bg-black font-sans"
       data-theme="dark"
     >
       <div className="flex flex-col gap-0 pb-10">
-        <section className="project-page-gutter project-overview grid gap-12 md:grid-cols-[minmax(0,1fr)_minmax(360px,520px)] md:gap-16">
+        <section className="project-page-gutter project-overview grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(360px,520px)] md:gap-16">
           <h1
-            className={`${workSans.className} text-[52px] leading-[56px] font-light tracking-[-2px] text-white uppercase md:text-[64px] md:leading-[68px]`}
+            className={`${workSans.className} max-w-full text-[clamp(42px,13.35vw,52px)] leading-[1.08] font-light tracking-[-2px] text-white uppercase md:text-[64px] md:leading-[68px]`}
           >
             {displayTitle}
           </h1>
@@ -363,6 +486,7 @@ export default async function ProjectPage({
           </div>
         </section>
         {pageCopy &&
+          slug !== "code-busters" &&
           slug !== "pondicherry-botanical" &&
           slug !== "stack-results" &&
           slug !== "custom-type" && (
@@ -371,7 +495,9 @@ export default async function ProjectPage({
               hiddenParagraphs={previousOverviewCopy}
             />
           )}
-        {slug === "wayground-ai" ? (
+        {slug === "code-busters" && pageCopy ? (
+          <CodeBustersGallery copy={pageCopy} />
+        ) : slug === "wayground-ai" ? (
           <WaygroundAiGallery />
         ) : slug === "custom-type" ? (
           <CustomTypeGallery />

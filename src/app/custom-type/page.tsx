@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Custom Type",
   description:
     "A deep dive into custom type design experimenting with different styles, textures, and cultural influences.",
+  alternates: { canonical: "/projects/custom-type" },
 };
 
 // Freeform collage mirrored from the Framer /custom-type page tree

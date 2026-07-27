@@ -10,7 +10,7 @@ export default function Hero() {
   // reach the Unicorn canvas behind it.
   return (
     <section
-      className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-black"
+      className="relative isolate flex min-h-svh items-center justify-center overflow-hidden bg-black md:min-h-screen"
       data-theme="dark"
     >
       <UnicornScene
@@ -19,9 +19,12 @@ export default function Hero() {
         altText="Darshita's portfolio hero background"
       />
       <div
-        className="relative flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
+        className="relative flex min-h-svh w-full flex-col items-center justify-center gap-4 text-center md:min-h-screen"
         data-crt-safe-content
       >
+        <h1 className="sr-only">
+          Darshita Patankar — Visual Designer and Illustrator
+        </h1>
         {/* mix-blend-screen drops the video's black background against
             the Unicorn backdrop while keeping the animation readable */}
         <HeroVideo

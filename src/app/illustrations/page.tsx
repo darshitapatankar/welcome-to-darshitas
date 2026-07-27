@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Illustrations",
   description:
     "Illustration work by Darshita Patankar, including a fusion of Art Nouveau and Madhubani styles.",
+  alternates: { canonical: "/projects/illustrations" },
 };
 
 // Mirrored from the Framer /illustrations page tree. The two Lottie

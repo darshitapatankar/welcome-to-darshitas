@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Pondicherry Botanical Garden",
   description:
     "A reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi.",
+  alternates: { canonical: "/projects/pondicherry-botanical" },
 };
 
 const IMAGES = [

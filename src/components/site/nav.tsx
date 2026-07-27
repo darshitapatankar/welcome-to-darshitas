@@ -9,9 +9,7 @@ import { useEffect, useState } from "react";
 // Site nav from the Framer canvas redesign: short bio on the left and an
 // oval-outlined work link on the right (Geist Mono, white).
 // Section themes keep it legible over both light and dark content.
-const LINKS = [
-  { label: "WORK", href: "/#mains" },
-];
+const LINKS = [{ label: "WORK", href: "/#mains" }];
 
 const HERO_INTRO =
   "Darshita Patankar is a visual designer crafting distinctive brands, digital experiences and illustrations.";
@@ -103,7 +101,7 @@ export default function Nav() {
       data-chrome-theme={theme}
       data-nav-hidden={isHidden ? "" : undefined}
     >
-      <div className="flex flex-col items-center gap-6 px-8 pt-8 pb-4 md:flex-row md:items-center md:justify-between md:gap-2.5">
+      <div className="flex flex-col items-center gap-6 px-4 pt-8 pb-4 md:flex-row md:items-center md:justify-between md:gap-2.5 md:px-8">
         {isProjectPage ? (
           <a
             href="mailto:dpatankar21@gmail.com"
@@ -120,7 +118,7 @@ export default function Nav() {
             </span>
           </a>
         ) : (
-          <p className="type-intro chrome-intro max-w-[815px] text-center md:text-left">
+          <p className="type-intro chrome-intro w-full max-w-[815px] text-left">
             <span className="sr-only">{HERO_INTRO}</span>
             <span
               className="inline-block"

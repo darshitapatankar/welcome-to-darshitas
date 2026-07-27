@@ -27,7 +27,7 @@ export default function GridBg({
     <div className="absolute inset-0 overflow-hidden bg-black">
       {pixels && <PixelsBar title={pixels} />}
       <div
-        className="pointer-events-none absolute inset-0 z-[2] flex"
+        className="pointer-events-none absolute inset-0 z-[2] hidden md:flex"
         style={mask ? { WebkitMaskImage: mask, maskImage: mask } : undefined}
       >
         <div className="w-10 shrink-0 md:w-[181px]" />
@@ -44,7 +44,7 @@ export default function GridBg({
         />
       </div>
       <div
-        className="absolute inset-x-0 bottom-0 z-[3] h-[140px] border-t"
+        className="absolute inset-x-0 bottom-0 z-[3] hidden h-[140px] border-t md:block"
         style={{ borderColor: RULE }}
       />
     </div>

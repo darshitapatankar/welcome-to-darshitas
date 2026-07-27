@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Demure",
   description:
     "Demure is a typeface with soft curves and delicate serifs, balancing warmth and refinement.",
+  alternates: { canonical: "/projects/demure" },
 };
 
 // Type-specimen page mirrored from the Framer /demure tree: a stack of

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Stack Results",
   description:
     "Stack Results is a branding project rooted in transparency, connection, and community-powered wellness.",
+  alternates: { canonical: "/projects/stack-results" },
 };
 
 // Case-study showcase page, mirrored from the Framer /stack-results page tree.

@@ -7,7 +7,7 @@ const FOOTER_LINKS = [
   { label: "Twitter", href: "https://x.com/_darshi" },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/10GmoGQzz25hW-WJpPtC0iNtGUbxNqEyK/view?usp=sharing",
+    href: "/resume.pdf",
   },
 ];
 
@@ -31,11 +31,11 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative h-screen min-h-[720px] overflow-hidden bg-black"
+      className="relative h-svh min-h-[720px] overflow-hidden bg-black md:h-screen"
       data-theme="dark"
     >
       <div
-        className="absolute top-[-0.525%] left-[-7.5%] z-[1] h-[54.05%] w-[115%] overflow-hidden md:top-[4.15%] md:left-[-4.425%] md:h-[89.7%] md:w-[67.85%]"
+        className="absolute top-6 left-1/2 z-[1] aspect-square h-auto w-[calc(100%_-_48px)] -translate-x-1/2 overflow-visible md:top-[4.15%] md:left-[-4.425%] md:h-[89.7%] md:w-[67.85%] md:translate-x-0 md:overflow-hidden"
         data-footer-mirror-ball-frame
       >
         <iframe
@@ -45,14 +45,14 @@ export default function Footer() {
           loading="lazy"
           allow="autoplay; fullscreen"
           data-footer-spline
-          className="absolute inset-0 z-[1] h-full w-full translate-y-[30px] scale-110 opacity-90 mix-blend-screen motion-reduce:hidden"
+          className="absolute inset-0 z-[1] hidden h-full w-full translate-y-[30px] scale-110 opacity-90 mix-blend-screen motion-reduce:hidden md:block"
         />
         <Image
           src="/footer/disco-ball-poster.jpg"
           alt=""
           fill
-          sizes="(min-width: 768px) 67.85vw, 115vw"
-          className="pointer-events-none z-[1] hidden object-contain opacity-90 mix-blend-screen motion-reduce:block"
+          sizes="(min-width: 768px) 67.85vw, calc(100vw - 48px)"
+          className="pointer-events-none z-0 block object-contain opacity-90 mix-blend-screen"
         />
       </div>
       <div

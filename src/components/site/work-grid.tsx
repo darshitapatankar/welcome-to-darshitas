@@ -31,24 +31,24 @@ function CardLink({
 }
 
 // Work Section from the Framer home page: two stacked sub-sections (Mains,
-// Sides) of project cards scrolling over a pinned grid background, followed
-// by the "Stack" block (Chef's note / about image over a Unicorn scene).
+// Sides) of project cards. The grid background is pinned on desktop and
+// scrolls naturally on mobile, followed by the "Stack" block.
 export default function WorkGrid() {
   return (
     <section
       id="work"
-      className="relative flex flex-col overflow-clip bg-black"
+      className="relative flex flex-col overflow-clip bg-black pb-24 md:pb-32"
       data-theme="dark"
     >
       {/* Mains */}
       <div id="mains" className="relative" data-card-section>
         <div
-          className="sticky top-0 z-[1] h-screen"
+          className="relative z-[1] h-svh md:sticky md:top-0 md:h-screen"
           data-card-section-background
         >
           <GridBg gradient="up" pixels="mains" />
         </div>
-        <div className="project-card-grid relative z-[2] -mt-[100vh] flex flex-col gap-10 pt-[260px] md:gap-0 md:pt-[280px]">
+        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-12 pt-[220px] md:-mt-[100vh] md:gap-0 md:pt-[280px]">
           <div className="pb-11">
             <CardLink card={MAINS_HERO_CARD} className="ml-2 max-w-[800px]" />
           </div>
@@ -79,12 +79,12 @@ export default function WorkGrid() {
       {/* Sides */}
       <div className="relative" data-card-section>
         <div
-          className="sticky top-0 z-[1] h-screen"
+          className="relative z-[1] h-svh md:sticky md:top-0 md:h-screen"
           data-card-section-background
         >
-          <GridBg gradient="none" pixels="sides" />
+          <GridBg gradient="down" pixels="sides" />
         </div>
-        <div className="project-card-grid relative z-[2] -mt-[100vh] flex flex-col gap-10 pt-[260px] md:gap-3 md:pt-[280px]">
+        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-12 pt-[220px] md:-mt-[100vh] md:gap-3 md:pt-[280px]">
           <div className="pb-16">
             <CardLink
               card={SIDES_HERO_CARD}
@@ -116,8 +116,10 @@ export default function WorkGrid() {
       </div>
 
       {/* Stack — Chef's note / about */}
-      <div id="about" className="relative min-h-[720px] md:min-h-[900px]">
-        <GridBg gradient="none" />
+      <div
+        id="about"
+        className="relative mt-24 min-h-[720px] md:mt-32 md:min-h-[900px]"
+      >
         <div className="relative z-[4] flex min-h-[720px] items-start justify-center overflow-hidden px-6 pt-24 pb-20 md:min-h-[900px] md:px-[50px] md:pt-[133px]">
           <UnicornStudioEmbed
             projectId={ABOUT_UNICORN_PROJECT_ID}
@@ -126,9 +128,9 @@ export default function WorkGrid() {
             className="absolute top-0 left-1/2 max-w-none -translate-x-1/2"
           />
           {SHOW_ABOUT_HTML_CARDS && (
-            <div className="relative flex w-full max-w-[856px] flex-col items-center justify-center gap-6 md:flex-row md:items-start md:gap-12">
+            <div className="relative flex w-full max-w-[404px] flex-col items-center justify-center gap-6 md:max-w-[856px] md:flex-row md:items-start md:gap-12">
               <div
-                className="relative aspect-[404/600] w-full max-w-[404px] shrink-0 overflow-hidden"
+                className="relative aspect-[404/600] w-full shrink-0 overflow-hidden md:max-w-[404px]"
                 data-about-html-card
               >
                 <Image
@@ -137,11 +139,12 @@ export default function WorkGrid() {
                   fill
                   sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
                   className="object-cover"
+                  draggable={false}
                   unoptimized
                 />
               </div>
               <div
-                className="relative aspect-[404/600] w-full max-w-[404px] shrink-0 overflow-hidden md:mt-[134px]"
+                className="relative aspect-[404/600] w-full shrink-0 overflow-hidden md:mt-[134px] md:max-w-[404px]"
                 data-about-html-card
               >
                 <Image
@@ -150,6 +153,7 @@ export default function WorkGrid() {
                   fill
                   sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
                   className="object-cover"
+                  draggable={false}
                   unoptimized
                 />
               </div>

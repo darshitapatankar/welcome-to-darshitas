@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Wellim",
   description:
     "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek.",
+  alternates: { canonical: "/projects/wellim" },
 };
 
 // Case-study showcase page, mirrored from the Framer /wellim page tree.
