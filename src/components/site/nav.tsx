@@ -101,7 +101,7 @@ export default function Nav() {
       data-chrome-theme={theme}
       data-nav-hidden={isHidden ? "" : undefined}
     >
-      <div className="flex flex-col items-center gap-6 px-4 pt-8 pb-4 md:flex-row md:items-center md:justify-between md:gap-2.5 md:px-8">
+      <div className="flex flex-col items-start gap-4 px-4 pt-8 pb-4 md:flex-row md:items-center md:justify-between md:gap-2.5 md:px-8">
         {isProjectPage ? (
           <a
             href="mailto:dpatankar21@gmail.com"
@@ -135,7 +135,7 @@ export default function Nav() {
         )}
         <nav
           aria-label="Primary"
-          className="flex flex-wrap items-center justify-center gap-5"
+          className="flex w-full flex-wrap items-center justify-start gap-5 md:w-auto md:justify-center"
         >
           {LINKS.map((link) => (
             <HoverDrawNavItem

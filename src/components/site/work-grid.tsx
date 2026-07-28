@@ -48,9 +48,12 @@ export default function WorkGrid() {
         >
           <GridBg gradient="up" pixels="mains" />
         </div>
-        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-12 pt-[220px] md:-mt-[100vh] md:gap-0 md:pt-[280px]">
-          <div className="pb-11">
-            <CardLink card={MAINS_HERO_CARD} className="ml-2 max-w-[800px]" />
+        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-10 pt-72 md:-mt-[100vh] md:gap-0 md:pt-[280px]">
+          <div className="md:pb-11">
+            <CardLink
+              card={MAINS_HERO_CARD}
+              className="max-w-[800px] md:ml-2"
+            />
           </div>
           <div className="flex flex-col gap-10 md:flex-row md:justify-center md:gap-[120px]">
             <div className="md:w-[519px] md:shrink-0 md:pl-[130px]">
@@ -77,15 +80,15 @@ export default function WorkGrid() {
       </div>
 
       {/* Sides */}
-      <div className="relative" data-card-section>
+      <div id="sides" className="relative" data-card-section>
         <div
           className="relative z-[1] h-svh md:sticky md:top-0 md:h-screen"
           data-card-section-background
         >
           <GridBg gradient="down" pixels="sides" />
         </div>
-        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-12 pt-[220px] md:-mt-[100vh] md:gap-3 md:pt-[280px]">
-          <div className="pb-16">
+        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-10 pt-72 md:-mt-[100vh] md:gap-3 md:pt-[280px]">
+          <div className="md:pb-16">
             <CardLink
               card={SIDES_HERO_CARD}
               className="md:ml-auto md:w-[740px]"

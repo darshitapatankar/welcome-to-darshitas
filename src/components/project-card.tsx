@@ -281,7 +281,7 @@ export default function ProjectCard({
       >
         {thumbnail}
       </div>
-      <div className="flex flex-col gap-4 p-2.5">
+      <div className="flex flex-col gap-4 py-2.5 md:p-2.5">
         <div className="flex flex-col gap-2.5">
           <h3 className="type-card-title font-normal text-[#F2F2F2] uppercase">
             {card.title}
