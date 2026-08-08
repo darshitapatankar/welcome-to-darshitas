@@ -24,7 +24,7 @@ function CardLink({
   cardClassName?: string;
 }) {
   return (
-    <div className={className}>
+    <div className={`min-w-0 ${className ?? ""}`}>
       <ProjectCard card={card} className={cardClassName} />
     </div>
   );
@@ -48,31 +48,40 @@ export default function WorkGrid() {
         >
           <GridBg gradient="up" pixels="mains" />
         </div>
-        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-10 pt-72 md:-mt-[100vh] md:gap-0 md:pt-[280px]">
+        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-10 pt-72 min-[900px]:gap-0 md:-mt-[100vh] md:pt-[280px]">
           <div className="md:pb-11">
             <CardLink
               card={MAINS_HERO_CARD}
               className="max-w-[800px] md:ml-2"
             />
           </div>
-          <div className="flex flex-col gap-10 md:flex-row md:justify-center md:gap-[120px]">
-            <div className="md:w-[519px] md:shrink-0 md:pl-[130px]">
-              <CardLink card={MAINS_ROWS[0][0]} />
+          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,8vw,120px)] min-[900px]:gap-y-0 2xl:flex 2xl:justify-center 2xl:gap-[120px]">
+            <div className="min-w-0 2xl:w-[519px] 2xl:shrink-0 2xl:pl-[130px]">
+              <CardLink
+                card={MAINS_ROWS[0][0]}
+                className="w-full min-[900px]:ml-auto min-[900px]:max-w-[389px] 2xl:max-w-none"
+              />
             </div>
-            <div className="md:pt-[159px]">
-              <CardLink card={MAINS_ROWS[0][1]} className="md:w-[480px]" />
+            <div className="min-w-0 min-[900px]:pt-[159px]">
+              <CardLink
+                card={MAINS_ROWS[0][1]}
+                className="w-full min-[900px]:max-w-[480px]"
+              />
             </div>
           </div>
-          <div className="flex flex-col gap-10 md:flex-row md:justify-center md:gap-[317px]">
-            <div className="md:pl-10">
-              <CardLink card={MAINS_ROWS[1][0]} className="md:w-[367px]" />
+          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,18vw,317px)] min-[900px]:gap-y-0 2xl:flex 2xl:justify-center 2xl:gap-[317px]">
+            <div className="min-w-0 2xl:pl-10">
+              <CardLink
+                card={MAINS_ROWS[1][0]}
+                className="w-full min-[900px]:ml-auto min-[900px]:max-w-[367px]"
+              />
             </div>
-            <div className="md:pt-[65px]">
+            <div className="min-w-0 min-[900px]:pt-[65px]">
               {/* Framer forces this instance to 489px tall, content centered */}
               <CardLink
                 card={MAINS_ROWS[1][1]}
-                className="md:w-[508px]"
-                cardClassName="md:h-[489px] md:justify-center"
+                className="w-full min-[900px]:max-w-[508px]"
+                cardClassName="min-[900px]:h-[489px] min-[900px]:justify-center"
               />
             </div>
           </div>
@@ -87,31 +96,40 @@ export default function WorkGrid() {
         >
           <GridBg gradient="down" pixels="sides" />
         </div>
-        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-10 pt-72 md:-mt-[100vh] md:gap-3 md:pt-[280px]">
+        <div className="project-card-grid relative z-[2] -mt-[100svh] flex flex-col gap-10 pt-72 min-[900px]:gap-3 md:-mt-[100vh] md:pt-[280px]">
           <div className="md:pb-16">
             <CardLink
               card={SIDES_HERO_CARD}
-              className="md:ml-auto md:w-[740px]"
+              className="w-full md:ml-auto md:max-w-[740px]"
             />
           </div>
-          <div className="flex flex-col gap-10 md:flex-row md:gap-[180px]">
-            <div className="md:w-[494px] md:shrink-0 md:pl-[100px]">
-              <CardLink card={SIDES_ROWS[0][0]} />
+          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,11vw,180px)] min-[900px]:gap-y-0 2xl:flex 2xl:gap-[180px]">
+            <div className="min-w-0 2xl:w-[494px] 2xl:shrink-0 2xl:pl-[100px]">
+              <CardLink
+                card={SIDES_ROWS[0][0]}
+                className="w-full min-[900px]:ml-auto min-[900px]:max-w-[394px]"
+              />
             </div>
-            <div className="md:pt-[159px]">
-              <CardLink card={SIDES_ROWS[0][1]} className="md:w-[454px]" />
+            <div className="min-w-0 min-[900px]:pt-[159px]">
+              <CardLink
+                card={SIDES_ROWS[0][1]}
+                className="w-full min-[900px]:max-w-[454px]"
+              />
             </div>
           </div>
-          <div className="flex flex-col gap-10 md:flex-row md:gap-[273px]">
-            <div className="md:pl-[86px]">
-              <CardLink card={SIDES_ROWS[1][0]} className="md:w-[367px]" />
+          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,16vw,273px)] min-[900px]:gap-y-0 2xl:flex 2xl:gap-[273px]">
+            <div className="min-w-0 2xl:pl-[86px]">
+              <CardLink
+                card={SIDES_ROWS[1][0]}
+                className="w-full min-[900px]:ml-auto min-[900px]:max-w-[367px]"
+              />
             </div>
-            <div className="md:pt-[106px]">
+            <div className="min-w-0 min-[900px]:pt-[106px]">
               {/* Framer forces this instance to 489px tall, content centered */}
               <CardLink
                 card={SIDES_ROWS[1][1]}
-                className="md:w-[508px]"
-                cardClassName="md:h-[489px] md:justify-center"
+                className="w-full min-[900px]:max-w-[508px]"
+                cardClassName="min-[900px]:h-[489px] min-[900px]:justify-center"
               />
             </div>
           </div>
@@ -124,12 +142,15 @@ export default function WorkGrid() {
         className="relative mt-24 min-h-[720px] md:mt-32 md:min-h-[900px]"
       >
         <div className="relative z-[4] flex min-h-[720px] items-start justify-center overflow-hidden px-6 pt-24 pb-20 md:min-h-[900px] md:px-[50px] md:pt-[133px]">
-          <UnicornStudioEmbed
-            projectId={ABOUT_UNICORN_PROJECT_ID}
-            width={1440}
-            height={900}
-            className="absolute top-0 left-1/2 max-w-none -translate-x-1/2"
-          />
+          <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
+            <UnicornStudioEmbed
+              projectId={ABOUT_UNICORN_PROJECT_ID}
+              width={1440}
+              height={900}
+              fitWidthBelow={768}
+              className="max-w-none shrink-0"
+            />
+          </div>
           {SHOW_ABOUT_HTML_CARDS && (
             <div className="relative flex w-full max-w-[404px] flex-col items-center justify-center gap-6 md:max-w-[856px] md:flex-row md:items-start md:gap-12">
               <div

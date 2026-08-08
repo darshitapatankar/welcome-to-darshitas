@@ -135,7 +135,7 @@ export default function Nav() {
         )}
         <nav
           aria-label="Primary"
-          className="flex w-full flex-wrap items-center justify-start gap-5 md:w-auto md:justify-center"
+          className="flex w-full shrink-0 flex-nowrap items-center justify-start gap-5 md:w-auto md:justify-center"
         >
           {LINKS.map((link) => (
             <HoverDrawNavItem

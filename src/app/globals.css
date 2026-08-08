@@ -74,6 +74,16 @@ body {
   font-family: var(--font-sans);
 }
 
+img,
+video,
+canvas,
+svg,
+iframe {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 .footer-text-glow,
 .footer-social-link {
   text-shadow:

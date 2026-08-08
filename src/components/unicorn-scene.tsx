@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 const SCRIPT_SRC =
   "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.8/dist/unicornStudio.umd.js";
@@ -27,14 +27,36 @@ export function UnicornStudioEmbed({
   projectId,
   width,
   height,
+  fitWidthBelow,
   className,
 }: {
   projectId: string;
   width: number;
   height: number;
+  fitWidthBelow?: number;
   className?: string;
 }) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [fitScale, setFitScale] = useState(fitWidthBelow ? 0 : 1);
+
+  useLayoutEffect(() => {
+    if (!fitWidthBelow) return;
+    const container = containerRef.current;
+    const parent = container?.parentElement;
+    if (!container || !parent) return;
+
+    const updateScale = () => {
+      const parentWidth = parent.getBoundingClientRect().width;
+      setFitScale(
+        parentWidth < fitWidthBelow ? Math.min(1, parentWidth / width) : 1,
+      );
+    };
+    const observer = new ResizeObserver(updateScale);
+    observer.observe(parent);
+    updateScale();
+    return () => observer.disconnect();
+  }, [fitWidthBelow, width]);
 
   useEffect(() => {
     let cancelled = false;
@@ -55,7 +77,13 @@ export function UnicornStudioEmbed({
 
   return (
     <div
-      style={{ width, height }}
+      ref={containerRef}
+      style={{
+        width,
+        height,
+        scale: fitScale,
+        transformOrigin: "top center",
+      }}
       data-us-project={projectId}
       data-loaded={loaded}
       className={className}
