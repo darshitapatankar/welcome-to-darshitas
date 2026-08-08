@@ -74,6 +74,32 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Keep the portfolio's pointer as sparkles on precise pointing devices. The
+   native grab cursor takes over for the interactive Spline mirror ball so its
+   draggable behavior is obvious before the visitor starts moving it. */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  body *,
+  body *::before,
+  body *::after {
+    cursor:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctext x='1' y='25' font-size='24'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E")
+        16 16,
+      auto !important;
+  }
+
+  [data-footer-mirror-ball-frame],
+  [data-footer-spline] {
+    cursor: grab !important;
+  }
+
+  [data-footer-mirror-ball-frame]:active,
+  [data-footer-spline]:active {
+    cursor: grabbing !important;
+  }
+}
+
 img,
 video,
 canvas,

@@ -162,7 +162,7 @@ export default function WorkGrid() {
                   alt="About Darshita Patankar, a visual designer from India"
                   fill
                   sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
-                  className="scale-[1.13] object-cover"
+                  className="scale-[1.13] object-cover md:scale-100"
                   draggable={false}
                   unoptimized
                 />
