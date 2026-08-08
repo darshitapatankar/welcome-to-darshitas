@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Illustrations",
   description:
     "Illustration work by Darshita Patankar, including a fusion of Art Nouveau and Madhubani styles.",
+  alternates: { canonical: "/projects/illustrations" },
 };
 
 // Mirrored from the Framer /illustrations page tree. The two Lottie
@@ -42,9 +43,12 @@ function Caption({
 
 export default function IllustrationsPage() {
   return (
-    <main className="flex min-h-dvh flex-col bg-white">
+    <main className="flex min-h-dvh flex-col bg-white" data-theme="light">
       {/* Hero */}
-      <section className="flex w-full flex-col items-center overflow-hidden bg-[#610035] px-[7vw] pt-[7vw]">
+      <section
+        className="flex w-full flex-col items-center overflow-hidden bg-[#610035] px-[7vw] pt-[7vw]"
+        data-theme="dark"
+      >
         <ProjectImage
           src="https://framerusercontent.com/images/3dI6e9jrn00iqtj4IaOX1E4I.png"
           alt="Illustration pattern"
@@ -59,7 +63,10 @@ export default function IllustrationsPage() {
       />
 
       {/* About the painting */}
-      <section className="flex w-full justify-center bg-white py-[6vw]">
+      <section
+        className="flex w-full justify-center bg-white py-[6vw]"
+        data-theme="light"
+      >
         <div
           className={`${montserrat.className} flex w-[70%] max-w-[990px] flex-col gap-[2.5vw] text-[clamp(12px,1.67vw,23.67px)] leading-[1.2] text-black`}
         >

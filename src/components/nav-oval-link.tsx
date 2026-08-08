@@ -1,14 +1,20 @@
+import { playCardHoverSound } from "@/components/site-sound";
+
 export default function NavOvalLink({
   href,
   label,
+  signalDecode = false,
 }: {
   href: string;
   label: string;
+  signalDecode?: boolean;
 }) {
   return (
     <a
       href={href}
-      className="group relative inline-flex items-center justify-center px-[33px] py-[13px] font-mono text-[15px] leading-none whitespace-nowrap text-white no-underline"
+      aria-label={label}
+      className="type-chrome chrome-primary group relative inline-flex h-[42px] w-[108px] shrink-0 items-center justify-center whitespace-nowrap no-underline"
+      onPointerEnter={playCardHoverSound}
     >
       <svg
         aria-hidden="true"
@@ -25,10 +31,17 @@ export default function NavOvalLink({
           stroke="currentColor"
           strokeWidth="1"
           vectorEffect="non-scaling-stroke"
-          className="[filter:drop-shadow(0_0_8px_#fff)] transition-[filter] duration-500 ease-in-out group-hover:[filter:drop-shadow(0_0_15px_#fff)_drop-shadow(0_0_7px_#fff)]"
         />
       </svg>
-      {label}
+      <span
+        className="inline-block"
+        aria-hidden="true"
+        data-signal-decode={signalDecode ? "" : undefined}
+        data-signal-group={signalDecode ? "footer" : undefined}
+        data-signal-hover={signalDecode ? "" : undefined}
+      >
+        {label}
+      </span>
     </a>
   );
 }

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Demure",
   description:
     "Demure is a typeface with soft curves and delicate serifs, balancing warmth and refinement.",
+  alternates: { canonical: "/projects/demure" },
 };
 
 // Type-specimen page mirrored from the Framer /demure tree: a stack of
@@ -22,7 +23,10 @@ function vw(px: number) {
 
 function Board({ children }: { children: React.ReactNode }) {
   return (
-    <section className="relative aspect-[1420/800] w-full overflow-hidden bg-[#C20100] [font-family:Demure,ui-serif,Georgia,serif] text-white">
+    <section
+      className="relative aspect-[1420/800] w-full overflow-hidden bg-[#C20100] [font-family:Demure,ui-serif,Georgia,serif] text-white"
+      data-theme="dark"
+    >
       {children}
     </section>
   );
@@ -63,7 +67,7 @@ const SPECIMEN =
 
 export default function DemurePage() {
   return (
-    <main className="flex min-h-dvh flex-col bg-white">
+    <main className="flex min-h-dvh flex-col bg-white" data-theme="light">
       <Board>
         <Text text="demure" left={397} top={273} size={193.97} />
       </Board>

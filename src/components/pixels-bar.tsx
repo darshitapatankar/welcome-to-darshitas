@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// Exact port of the Framer "Pixels Bar" component: a 24×2 grid of square
-// flicker cells bounded by 1px rules, cycling through the component's six
-// variant patterns once per second (onAppear SET_VARIANT cycle, delay 1s),
+// Responsive port of the Framer "Pixels Bar" component: a 16×3 mobile grid
+// and 24×2 desktop grid of square flicker cells bounded by 1px rules, cycling
+// through the component's six variant patterns every 4 seconds,
 // with the section's script-lettering title overlaid inside the band.
 // Mains title sits right: 260px; Sides title sits left: 260px.
 const RULE = "rgb(37, 37, 51)";
+const TILE_FRAME_INTERVAL_MS = 4000;
 
 const CELL_COLORS: Record<string, string> = {
   H: "rgb(76, 20, 56)",
@@ -32,7 +33,7 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
   useEffect(() => {
     const id = setInterval(
       () => setFrame((f) => (f + 1) % PATTERNS.length),
-      1000,
+      TILE_FRAME_INTERVAL_MS,
     );
     return () => clearInterval(id);
   }, []);
@@ -41,14 +42,11 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
 
   return (
     <div
-      className="absolute inset-x-0 top-[140px] border-y"
+      className="absolute inset-x-0 top-[140px] overflow-hidden border-y"
       style={{ borderColor: RULE }}
       aria-hidden="true"
     >
-      <div
-        className="grid"
-        style={{ gridTemplateColumns: "repeat(24, minmax(0, 1fr))" }}
-      >
+      <div className="grid grid-cols-[repeat(16,minmax(0,1fr))] md:grid-cols-[repeat(24,minmax(0,1fr))]">
         {Array.from({ length: 48 }, (_, i) => (
           <div
             key={i}
@@ -61,19 +59,19 @@ export default function PixelsBar({ title }: { title: "mains" | "sides" }) {
       </div>
       {title === "mains" ? (
         <Image
-          src="/work/mains-title.png"
+          src="/work/mains-title-v2.png"
           alt=""
           width={387}
           height={155}
-          className="absolute top-1/2 right-[260px] z-[3] h-auto w-[189.5px] -translate-y-1/2"
+          className="absolute top-1/2 right-5 z-[3] h-[calc(100%_-_4px)] w-auto max-w-none -translate-y-1/2 md:right-[260px] md:h-auto md:w-[189.5px]"
         />
       ) : (
         <Image
-          src="/work/sides-title.png"
+          src="/work/sides-title-v2.png"
           alt=""
           width={377}
           height={180}
-          className="absolute top-1/2 left-[260px] z-[3] h-auto w-[159px] -translate-y-1/2"
+          className="absolute top-1/2 left-5 z-[3] h-[calc(100%_-_4px)] w-auto max-w-none -translate-y-1/2 md:left-[260px] md:h-auto md:w-[180px]"
         />
       )}
     </div>

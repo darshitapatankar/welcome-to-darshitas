@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Pondicherry Botanical Garden",
   description:
     "A reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi.",
+  alternates: { canonical: "/projects/pondicherry-botanical" },
 };
 
 const IMAGES = [
@@ -21,7 +22,7 @@ const IMAGES = [
 // /pondicherry-botanical-garden page tree: a vertical stack of boards.
 export default function PondicherryBotanicalGardenPage() {
   return (
-    <main className="flex min-h-dvh flex-col bg-white">
+    <main className="flex min-h-dvh flex-col bg-white" data-theme="light">
       {IMAGES.map((src, i) => (
         <ProjectImage
           key={src}

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Custom Type",
   description:
     "A deep dive into custom type design experimenting with different styles, textures, and cultural influences.",
+  alternates: { canonical: "/projects/custom-type" },
 };
 
 // Freeform collage mirrored from the Framer /custom-type page tree
@@ -76,7 +77,7 @@ const PIECES = [
 
 export default function CustomTypePage() {
   return (
-    <main className="min-h-dvh bg-black">
+    <main className="min-h-dvh bg-black" data-theme="dark">
       <FreeformCanvas designWidth={CANVAS.width} designHeight={CANVAS.height}>
         {PIECES.map(({ name, ...piece }) => (
           <FreeformImage

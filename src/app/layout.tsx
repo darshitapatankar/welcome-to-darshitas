@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import {
-  DM_Sans,
-  Fira_Mono,
-  Fragment_Mono,
-  Inter,
-  Montserrat,
-} from "next/font/google";
+import { DM_Sans, Fragment_Mono, Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
-import { Agentation } from "agentation";
 import SmoothScroll from "@/components/smooth-scroll";
 import Nav from "@/components/site/nav";
 import Footer from "@/components/site/footer";
-import { geistMono, workSans } from "./fonts";
+import CrtEffect from "@/components/crt-effect";
+import DevelopmentAgentation from "@/components/development-agentation";
+import EscapeToHome from "@/components/escape-to-home";
+import SignalDecoder from "@/components/signal-decoder";
+import { LEGACY_PROJECT_PATHS } from "@/lib/project-routes";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { workSans } from "./fonts";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -24,10 +23,65 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const firaMono = Fira_Mono({
-  variable: "--font-fira-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+const geistMono = localFont({
+  src: [
+    { path: "./font-files/GeistMono-Thin.ttf", weight: "100" },
+    { path: "./font-files/GeistMono-ExtraLight.ttf", weight: "200" },
+    { path: "./font-files/GeistMono-Light.ttf", weight: "300" },
+    { path: "./font-files/GeistMono-Regular.ttf", weight: "400" },
+    { path: "./font-files/GeistMono-Medium.ttf", weight: "500" },
+    { path: "./font-files/GeistMono-SemiBold.ttf", weight: "600" },
+    { path: "./font-files/GeistMono-Bold.ttf", weight: "700" },
+    { path: "./font-files/GeistMono-ExtraBold.ttf", weight: "800" },
+    { path: "./font-files/GeistMono-Black.ttf", weight: "900" },
+    {
+      path: "./font-files/GeistMono-ThinItalic.ttf",
+      weight: "100",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-ExtraLightItalic.ttf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-SemiBoldItalic.ttf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-ExtraBoldItalic.ttf",
+      weight: "800",
+      style: "italic",
+    },
+    {
+      path: "./font-files/GeistMono-BlackItalic.ttf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-geist-mono",
+  display: "swap",
 });
 
 const fragmentMono = Fragment_Mono({
@@ -50,8 +104,42 @@ const gambarino = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Darshita's Portfolio",
-  description: "Creative portfolio of Darshita",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: `${SITE_NAME} Portfolio`,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "Design portfolio",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@_darshi",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -59,22 +147,50 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const legacyProjectPaths = JSON.stringify(LEGACY_PROJECT_PATHS);
+
   // No h-full on <html>: a fixed-height root box stops Lenis's ResizeObserver
   // from seeing content growth, freezing its scroll limit.
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${montserrat.variable} ${firaMono.variable} ${fragmentMono.variable} ${inter.variable} ${workSans.variable} ${gambarino.variable} ${geistMono.variable} antialiased`}
+      suppressHydrationWarning
+      className={`${dmSans.variable} ${montserrat.variable} ${geistMono.variable} ${fragmentMono.variable} ${inter.variable} ${workSans.variable} ${gambarino.variable} antialiased`}
     >
-      {/* Nav and Footer stay direct children of <body> — do NOT wrap them (or
-          children) in a positioned/z-indexed container: blend-mode elements
-          (nav uses mix-blend-difference, hero blends onto the Unicorn canvas)
-          must not be trapped inside a new stacking context. */}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var root=document.documentElement;var pathname=window.location.pathname;var legacy=${legacyProjectPaths};var isProject=pathname.indexOf('/projects/')===0||legacy.indexOf(pathname)!==-1;root.dataset.crtMode=isProject?'project':'home';if('scrollRestoration'in history){history.scrollRestoration='manual';}window.scrollTo(0,0);window.addEventListener('pageshow',function(){window.scrollTo(0,0);},{once:true});if(!isProject&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){root.dataset.crtPower='boot';window.__crtPowerFailsafe=window.setTimeout(function(){if(root.dataset.crtPower==='boot'){window.scrollTo(0,0);delete root.dataset.crtPower;window.scrollTo(0,0);window.dispatchEvent(new CustomEvent('crt:power-on-complete'));}},2000);}}catch(error){}})();`,
+          }}
+        />
+        <link
+          rel="preload"
+          as="audio"
+          href="/crt/tv-power-on.mp3"
+          type="audio/mpeg"
+          media="(prefers-reduced-motion: no-preference)"
+        />
+        <link
+          rel="preload"
+          as="audio"
+          href="/audio/card-hover.mp3"
+          type="audio/mpeg"
+          media="(hover: hover) and (pointer: fine)"
+        />
+      </head>
+      {/* This wrapper intentionally has no position, transform, opacity, or
+          z-index, so it does not create a stacking context around the site's
+          blend-mode elements. It is only the source for brief glitch slices. */}
       <body className="flex min-h-dvh flex-col bg-black font-sans text-white">
-        <Nav />
-        <SmoothScroll>{children}</SmoothScroll>
-        <Footer />
-        {process.env.NODE_ENV === "development" && <Agentation />}
+        <div className="flex min-h-dvh flex-1 flex-col" data-crt-content>
+          <Nav />
+          <SmoothScroll>{children}</SmoothScroll>
+          <Footer />
+        </div>
+        <EscapeToHome />
+        {process.env.NODE_ENV === "development" && <DevelopmentAgentation />}
+        <CrtEffect />
+        <SignalDecoder />
       </body>
     </html>
   );

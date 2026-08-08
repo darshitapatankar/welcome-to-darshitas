@@ -6,8 +6,8 @@ export const MAINS_HERO_CARD: ProjectCardData = {
   title: "Code Busters",
   href: "/projects/code-busters",
   subtext:
-    "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek.",
-  tags: ["Game Art"],
+    "A multiplayer hacking game for classrooms, where students break into each other's vaults by cracking passwords.",
+  tags: ["Art Direction", "3D", "Game UI"],
   thumbnail: "/work/code-busters.png",
   aspect: "16:9",
 };
@@ -19,9 +19,10 @@ export const MAINS_ROWS: ProjectCardData[][] = [
       title: "Pondicherry Botanical Garden",
       href: "/projects/pondicherry-botanical",
       subtext:
-        "Wellim is a hospitality brand built on the idea of perfect alignment—connecting",
-      tags: ["Brand Design", "Illustration"],
+        "A speculative identity for the real Indian garden that, in Life of Pi, houses a zoo.",
+      tags: ["Branding", "Illustration"],
       thumbnail: "/work/pondicherry.png",
+      thumbnailVideo: "/work/pondicherry.mp4",
       aspect: "3:2",
     },
     {
@@ -29,8 +30,8 @@ export const MAINS_ROWS: ProjectCardData[][] = [
       title: "Wellim",
       href: "/projects/wellim",
       subtext:
-        "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate.",
-      tags: ["Branding", "Web Design", "Illustration"],
+        "A complete identity for a hospitality brand matching travellers to places by feel.",
+      tags: ["Branding", "Illustration", "Motion Design"],
       thumbnail: "/work/wellim.png",
       aspect: "3:2",
     },
@@ -41,8 +42,8 @@ export const MAINS_ROWS: ProjectCardData[][] = [
       title: "Stack Results",
       href: "/projects/stack-results",
       subtext:
-        "Wellim is a hospitality brand built on the idea of perfect alignment—connecting",
-      tags: ["Icon Design"],
+        "Identity for a community wellness platform where people share the supplements and habits they genuinely use.",
+      tags: ["Branding"],
       thumbnail: "/work/stack-results.png",
       aspect: "16:9",
     },
@@ -50,21 +51,11 @@ export const MAINS_ROWS: ProjectCardData[][] = [
       srNo: "[04]",
       title: "Wayground AI",
       href: "/projects/wayground-ai",
-      subtext: "Wellim is a hospitality brand built on the idea.",
-      tags: ["Branding", "Web Design"],
+      subtext:
+        "Wayground AI supports the full teaching loop, from creating resources to assessing responses and acting on classroom data.",
+      tags: ["Branding", "Motion Design"],
       thumbnail: "/work/wayground-ai.png",
       aspect: "16:9",
-    },
-  ],
-  [
-    {
-      srNo: "[05]",
-      title: "Icons at Wayground",
-      href: "/projects/icons-at-wayground",
-      subtext: "Wellim is a hospitality brand built on the idea of perfect.",
-      tags: ["Icon Design"],
-      thumbnail: "/work/icons-wayground.png",
-      aspect: "4:3",
     },
   ],
 ];
@@ -74,6 +65,7 @@ export const SIDES_HERO_CARD: ProjectCardData = {
   title: "Demure Typeface",
   href: "/projects/demure",
   thumbnail: "/work/demure.png",
+  thumbnailVideo: "/work/demure.mp4",
   aspect: "16:9",
 };
 
@@ -83,7 +75,7 @@ export const SIDES_ROWS: ProjectCardData[][] = [
       srNo: "[02]",
       title: "Custom Typography",
       href: "/projects/custom-type",
-      thumbnail: "/work/custom-typography.png",
+      thumbnail: "/work/custom-typography-20260713.png",
       aspect: "4:3",
     },
     {
@@ -91,6 +83,7 @@ export const SIDES_ROWS: ProjectCardData[][] = [
       title: "36 Days of Type",
       href: "/projects/36-days-of-type",
       thumbnail: "/work/36-days.png",
+      thumbnailVideo: "/work/36-days.mp4",
       aspect: "1:1",
     },
   ],
@@ -112,6 +105,13 @@ export const SIDES_ROWS: ProjectCardData[][] = [
   ],
 ];
 
+const PROJECT_CARDS: ProjectCardData[] = [
+  MAINS_HERO_CARD,
+  ...MAINS_ROWS.flat(),
+  SIDES_HERO_CARD,
+  ...SIDES_ROWS.flat(),
+];
+
 // ---------------------------------------------------------------------------
 // CMS data layer — generated from the Framer CMS dumps in framer-export/cms/
 // (Projects.json = detail content, Project__NEW_.json = card metadata).
@@ -120,9 +120,20 @@ export const SIDES_ROWS: ProjectCardData[][] = [
 
 export type ProjectBlock =
   | { type: "image"; src: string; alt?: string }
+  | {
+      type: "imagePair";
+      images: Array<{
+        src: string;
+        alt?: string;
+        width?: number;
+        height?: number;
+      }>;
+    }
   | { type: "video"; src: string }
+  | { type: "videoPair"; videos: string[] }
   | { type: "heading"; text: string }
   | { type: "paragraph"; html: string }
+  | { type: "caption"; html: string }
   | { type: "list"; items: string[] };
 
 export type ProjectCategory = "Mains" | "Sides" | "Drinks";
@@ -131,8 +142,9 @@ export type Project = {
   slug: string;
   title: string;
   description: string;
-  /** Byline shown under the title, e.g. "Branding | 2025". */
-  date?: string;
+  year: string;
+  field: string;
+  client: string;
   category: ProjectCategory;
   srNo?: string;
   aspect?: ProjectCardData["aspect"];
@@ -149,7 +161,9 @@ export const PROJECTS: Project[] = [
     title: "Wellim",
     description:
       "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.",
-    date: "Branding, Illustration & Motion Design | 2024",
+    year: "2024",
+    field: "Branding · Illustration · Motion Design",
+    client: "Wellim",
     category: "Mains",
     srNo: "[03]",
     aspect: "3:2",
@@ -158,47 +172,46 @@ export const PROJECTS: Project[] = [
     },
     blocks: [
       {
-        type: "image",
-        src: "https://framerusercontent.com/images/tLyp4zlZ3rjzePbpCYuz2JIKSko.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/S15KaMQ8MF8U5SYAmE5LOZ8zIDA.png",
+        type: "imagePair",
+        images: [
+          {
+            src: "/projects/wellim-gallery/01-symbol.png",
+            alt: "Wellim eclipse symbol on a dark background",
+          },
+          {
+            src: "/projects/wellim-gallery/02-wordmark.png",
+            alt: "Wellim wordmark on a warm white background",
+          },
+        ],
       },
       {
         type: "video",
         src: "https://framerusercontent.com/images/1HapnqwgLa3ADRUP1CE2vj2lMQ.mp4",
       },
-      { type: "heading", text: "Introduction" },
       {
-        type: "paragraph",
-        html: "Wellim is not just a luxury destination, it is an experience that embodies tranquility, renewal, and intentionality. Designed for discerning individuals who prioritise depth over opulence, Wellim positions itself as a brand that invites users to “transcend into better experiences.”",
-      },
-      { type: "heading", text: "Challenge" },
-      {
-        type: "paragraph",
-        html: "To craft a visual identity and communication strategy that reflects luxury without being loud, one that connects emotionally with modern travellers seeking quiet sophistication and soul-deep rest.",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/NfQIuf9zEztF2P3rhztey0eoEM.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/mckcsplnaLEYMVbqNl8fT1rHk.png",
+        type: "caption",
+        html: "The identity is built around alignment. The eclipse became the central device, with separate forms meeting to create one complete symbol. This idea carries through the logo, motion, and illustrations.",
       },
       {
         type: "image",
         src: "https://framerusercontent.com/images/30NergX8YWoDEF6B0jXGbtcp9A.png",
       },
-      { type: "heading", text: "Strategy" },
       {
-        type: "paragraph",
-        html: "By anchoring the brand in natural metaphors (eclipse, warm light, soft spaces), Wellim creates a feeling of calm anticipation. Every touchpoint, from website to social media evokes peace and exclusivity.",
+        type: "caption",
+        html: "Instead of signalling luxury through ornament, the visual language focuses on atmosphere. Warm light, restrained compositions, and considered movement allow each property to express its character while still belonging to Wellim.",
       },
       {
-        type: "image",
-        src: "https://framerusercontent.com/images/5ZReXpPhGKfkqjyMBZPNSvrGtI.png",
+        type: "imagePair",
+        images: [
+          {
+            src: "https://framerusercontent.com/images/5ZReXpPhGKfkqjyMBZPNSvrGtI.png",
+            alt: "Wellim hotel suite overlooking the sea",
+          },
+          {
+            src: "https://framerusercontent.com/images/oxqZUqGwUZsgcYWgZq9YXr28s4.png",
+            alt: "Wellim hotel room opening onto a tropical garden",
+          },
+        ],
       },
       {
         type: "video",
@@ -208,14 +221,9 @@ export const PROJECTS: Project[] = [
         type: "image",
         src: "https://framerusercontent.com/images/U0XrOIfadASucu1uVmSze4y0.png",
       },
-      { type: "heading", text: "Brand Essence" },
       {
-        type: "paragraph",
-        html: "Wellim is crafted for individuals who seek luxurious, meaningful escapes. It positions itself at the intersection of well-being and elevated living, targeting discerning travelers or clients who value immersive comfort and curated serenity.",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/oxqZUqGwUZsgcYWgZq9YXr28s4.png",
+        type: "caption",
+        html: "The system helps travellers understand a hotel through how it feels, not simply where it ranks.",
       },
       {
         type: "video",
@@ -226,16 +234,15 @@ export const PROJECTS: Project[] = [
         src: "https://framerusercontent.com/images/istuAYOsN8kHvJLtEFR4f6IZ7E.png",
       },
       {
-        type: "video",
-        src: "https://framerusercontent.com/images/uxzKkmT6Oh0Mju2Hcw8JTW88Yp8.mp4",
+        type: "videoPair",
+        videos: [
+          "https://framerusercontent.com/images/uxzKkmT6Oh0Mju2Hcw8JTW88Yp8.mp4",
+          "https://framerusercontent.com/images/uoRSjVfsUqwAJOXwrLwyjJ7mTU.mp4",
+        ],
       },
       {
         type: "image",
         src: "https://framerusercontent.com/images/LvSZ7xDekGGomqXJjIUQLr8TEaM.png",
-      },
-      {
-        type: "video",
-        src: "https://framerusercontent.com/images/uoRSjVfsUqwAJOXwrLwyjJ7mTU.mp4",
       },
       {
         type: "video",
@@ -248,7 +255,9 @@ export const PROJECTS: Project[] = [
     title: "Stack Results",
     description:
       "Stack Results is a branding project rooted in transparency, connection, and community-powered wellness. At the heart of the identity is a sun-like logo, built from individual squares that seem to gently fall into place — representing people coming together, sharing their health stacks to inspire others.  The coral tone brings a bright, energizing warmth to the brand, while the soft pastel system adds lightness and clarity. Together, they form a visual language that feels clean, minimal, and approachable — much like the journey toward better health when shared.",
-    date: "Branding | 2025",
+    year: "2025",
+    field: "Branding",
+    client: "Stack Results",
     category: "Mains",
     srNo: "[04]",
     aspect: "16:9",
@@ -332,6 +341,9 @@ export const PROJECTS: Project[] = [
     title: "Museo",
     description:
       "Museo is a no-code playground for creators to build bold, expressive digital products that shape internet culture. I was responsible for the brand identity. The brand blends digital nostalgia, rebellious energy, and self-expression to empower the next generation of creators.",
+    year: "—",
+    field: "Brand Identity · Digital Product Design",
+    client: "Museo",
     category: "Mains",
     thumbnail: {
       url: "https://framerusercontent.com/images/jDBkx9Xv9ftVCEbi8EUlARPxE.png",
@@ -396,7 +408,9 @@ export const PROJECTS: Project[] = [
     title: "Pondicherry Botanical",
     description:
       "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.  The brand identity and website design transport viewers to the colonial era, mirroring the aesthetic of vintage newspapers and old-world charm. The color palette is inspired by the timeless facades of Pondicherry’s colonial architecture, lending an air of nostalgia.",
-    date: "Branding & Illustration | 2022",
+    year: "2022",
+    field: "Branding · Illustration",
+    client: "Self-initiated",
     category: "Mains",
     srNo: "[02]",
     aspect: "3:2",
@@ -449,7 +463,9 @@ export const PROJECTS: Project[] = [
     title: "demure",
     description:
       "Demure is my first exploration into typeface design, created during an online course at Practica Program. With its soft curves and delicate serifs, it balances a sense of warmth and refinement. Designed with subtle contrasts and organic letterforms, Demure captures an understated charm, reminiscent of handwritten calligraphy yet structured enough for modern typography.",
-    date: "Typeface Design",
+    year: "2024",
+    field: "Typeface Design",
+    client: "Self-initiated",
     category: "Sides",
     srNo: "[07]",
     aspect: "16:9",
@@ -464,36 +480,57 @@ export const PROJECTS: Project[] = [
         src: "https://framerusercontent.com/images/wW2OAdZa1efTh8bDXYLRJL7Ow.png",
       },
       {
-        type: "image",
-        src: "https://framerusercontent.com/images/xfpB2K8d7QuYaY7ZmDEWtwAjxjM.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/59EFsSIHSVD7ByBOhnZLD9fkUw.png",
+        type: "imagePair",
+        images: [
+          {
+            src: "https://framerusercontent.com/images/xfpB2K8d7QuYaY7ZmDEWtwAjxjM.png",
+            width: 2840,
+            height: 1749,
+          },
+          {
+            src: "https://framerusercontent.com/images/59EFsSIHSVD7ByBOhnZLD9fkUw.png",
+            width: 2840,
+            height: 1749,
+          },
+        ],
       },
       {
         type: "image",
         src: "https://framerusercontent.com/images/74uRP4NW91pYoK62r6x8mNIb3M.png",
       },
       {
-        type: "image",
-        src: "https://framerusercontent.com/images/DhXK1xTAocro6fo5Nuy5jtRhR8.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/JpY8rFyndxQwXKJSFsLXJWYnNM.png",
+        type: "imagePair",
+        images: [
+          {
+            src: "https://framerusercontent.com/images/DhXK1xTAocro6fo5Nuy5jtRhR8.png",
+            width: 2840,
+            height: 1749,
+          },
+          {
+            src: "https://framerusercontent.com/images/JpY8rFyndxQwXKJSFsLXJWYnNM.png",
+            width: 2840,
+            height: 1749,
+          },
+        ],
       },
       {
         type: "image",
         src: "https://framerusercontent.com/images/6PdSBHYIW2BIbfe0PjG8iNItkeI.png",
       },
       {
-        type: "image",
-        src: "https://framerusercontent.com/images/6jExryeALL3Uky0KoWHCaH2gs.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/8UWIV9kOyq6CNVH6KWBaZS3LBjU.png",
+        type: "imagePair",
+        images: [
+          {
+            src: "https://framerusercontent.com/images/6jExryeALL3Uky0KoWHCaH2gs.png",
+            width: 2840,
+            height: 1748,
+          },
+          {
+            src: "https://framerusercontent.com/images/8UWIV9kOyq6CNVH6KWBaZS3LBjU.png",
+            width: 2840,
+            height: 1749,
+          },
+        ],
       },
     ],
   },
@@ -502,46 +539,25 @@ export const PROJECTS: Project[] = [
     title: "36 Days of Type",
     description:
       "36 Days of Type is an annual global challenge that brings together designers, illustrators, and artists to creatively interpret the Latin alphabet and numbers over 36 days. Having admired the incredible work shared during this event for years, I decided to take part and explore typography in my own way.  For this project, I experimented with Latin letterforms using bold colors, fluid shapes, and playful compositions. My focus was on bringing energy and vibrancy to each letter while exploring different styles and textures.",
-    date: "Typography | 2023",
+    year: "2023",
+    field: "Typography",
+    client: "36 Days of Type",
     category: "Sides",
     srNo: "[09]",
     aspect: "1:1",
     thumbnail: {
       url: "https://framerusercontent.com/images/lfOoe7TtOkvAAax1pJdUdELHB8.png",
     },
-    blocks: [
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/NkhBV2L5Yg4LrigZKlLqHXto.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/JLLT8Es8Axn2AAF3UUTLcR10U8g.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/w9msuWj43KVx2qXckg8E6zUC7s.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/4eKijyHzbdaJCxz4v4qCS43Lrbc.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/jn4DDB843SfHgi63xWGqSJUJgek.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/gP0rs5qZpZMuxrmNziHD5QEstU.png",
-      },
-    ],
+    blocks: [],
   },
   {
     slug: "custom-type",
     title: "Custom Type",
     description:
       "This project is a deep dive into custom type design experimenting with different styles, textures, and cultural influences. From elegant scripts to bold neon aesthetics, each type treatment tells its own story. Some designs draw inspiration from classic calligraphy, while others explore contemporary and experimental typography, integrating elements of Devanagari and Latin scripts.",
-    date: "Typography | 2024",
+    year: "2025",
+    field: "Typography",
+    client: "Self-initiated",
     category: "Sides",
     srNo: "[08]",
     aspect: "4:3",
@@ -588,7 +604,9 @@ export const PROJECTS: Project[] = [
     title: "Manavi x Madhubani",
     description:
       "Inspired by Alphonse Mucha’s Daydream, in this piece I merge the flowing elegance of Art Nouveau with the intricate storytelling of Madhubani. The soft, flowing color palette reflects the elegance of late 19th-century Art Nouveau, while the intricate patterns and storytelling elements embrace the essence of Madhubani folk art. At the heart of this composition is my dearest friend, Manavi, adorned in a Banarasi Sari and jasmine flowers.",
-    date: "Illustration | 2022",
+    year: "2023",
+    field: "Illustration",
+    client: "Self-initiated",
     category: "Drinks",
     srNo: "[11]",
     aspect: "16:9",
@@ -618,7 +636,9 @@ export const PROJECTS: Project[] = [
     slug: "gitpoap",
     title: "GitPOAP",
     description: "A collection all the POAPs I illustrated for GitPOAP.",
-    date: "Illustrations | 2022",
+    year: "2022",
+    field: "Illustration",
+    client: "GitPOAP",
     category: "Drinks",
     thumbnail: {
       url: "https://framerusercontent.com/images/joZTmwfeUMAWX5YuScKGwVSMEKA.png",
@@ -643,12 +663,15 @@ export const PROJECTS: Project[] = [
     title: "Code Busters",
     description:
       "Darshita Patankar is a visual designer crafting distinctive brands, digital experiences and illustrations.",
+    year: "2026",
+    field: "Art Direction · 3D · Game UI",
+    client: "Wayground",
     category: "Mains",
     srNo: "[01]",
     aspect: "16:9",
     thumbnail: {
-      url: "https://framerusercontent.com/images/HY0ZqaVy1bFJsgPgU8Xe0wH0f6g.png",
-      alt: "Code Buster Thumbail",
+      url: "/projects/code-busters/hero.png",
+      alt: "Code Busters vault and handheld password device",
     },
     blocks: [
       {
@@ -669,7 +692,10 @@ export const PROJECTS: Project[] = [
     slug: "wayground-ai",
     title: "Wayground AI",
     description:
-      "Wellim is a hospitality brand built on the idea of perfect alignment—connecting travelers to hotels that resonate with who they are and what they seek. The brand draws inspiration from the eclipse, a symbol of rare and seamless connection, reflected in its logo and visual language.  This project involved building the brand from the ground up—crafting the identity, motion design, website, and illustrations, all tied together through a cohesive strategy rooted in harmony and personalization.",
+      "Wayground AI supports the full teaching loop, from creating resources to assessing responses and acting on classroom data.",
+    year: "2026",
+    field: "Branding · Motion Design",
+    client: "Wayground",
     category: "Mains",
     srNo: "[05]",
     aspect: "16:9",
@@ -683,6 +709,9 @@ export const PROJECTS: Project[] = [
     title: "Icons at Wayground",
     description:
       "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+    year: "2026",
+    field: "Icon Design",
+    client: "Wayground",
     category: "Mains",
     srNo: "[06]",
     aspect: "4:3",
@@ -698,6 +727,9 @@ export const PROJECTS: Project[] = [
     title: "Illustrations",
     description:
       "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+    year: "Ongoing",
+    field: "Illustration",
+    client: "Self-initiated",
     category: "Sides",
     srNo: "[10]",
     aspect: "4:5",
@@ -713,6 +745,11 @@ export function getAllProjects(): Project[] {
 
 export function getProject(slug: string): Project | undefined {
   return PROJECTS.find((project) => project.slug === slug);
+}
+
+export function getProjectCardSubtext(slug: string): string | undefined {
+  return PROJECT_CARDS.find((card) => card.href === `/projects/${slug}`)
+    ?.subtext;
 }
 
 export function getProjectSlugs(): string[] {

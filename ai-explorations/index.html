@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A playful kinetic typography stretching experiment." />
+    <title>Stretch Type</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="playground" id="playground" aria-labelledby="page-title">
+        <header class="playground-header">
+          <h1 id="page-title">
+            <span>Interactive type studies · No. 01</span>
+            <strong>Stretch <em>Type</em></strong>
+          </h1>
+          <p>Four studies in width, gravity<br />and elastic form.</p>
+        </header>
+
+        <div class="type-stage" id="type-stage">
+          <div class="stage-note" aria-hidden="true">
+            <span id="mode-label">Word width</span>
+            <span id="interaction-label">Narrow ← cursor → extended</span>
+          </div>
+          <div class="type-rig" id="type-rig" aria-label="Interactive stretch type"></div>
+          <p class="hint" id="hint">Move across the canvas</p>
+        </div>
+      </section>
+
+      <aside class="controls" aria-label="Type controls">
+        <div class="controls-heading">
+          <span><small>Specimen controls</small>Edition 01</span>
+          <button id="reset" type="button">Reset</button>
+        </div>
+
+        <label class="field text-field">
+          <span>Text</span>
+          <input id="text-input" type="text" value="STRETCH" maxlength="10" autocomplete="off" />
+        </label>
+
+        <fieldset class="field mode-field">
+          <legend>Composition</legend>
+          <div class="mode-grid">
+            <button class="mode-button is-active" data-mode="word" type="button" aria-pressed="true"><i>01</i> Word width</button>
+            <button class="mode-button" data-mode="letter" type="button" aria-pressed="false"><i>02</i> Letter hover</button>
+            <button class="mode-button" data-mode="centre" type="button" aria-pressed="false"><i>03</i> Centre pull</button>
+            <button class="mode-button" data-mode="drag" type="button" aria-pressed="false"><i>04</i> Corner drag</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="field color-field">
+          <legend>Background</legend>
+          <div class="swatches" id="background-swatches">
+            <button class="swatch is-active" data-color="#6B0505" style="--swatch:#6B0505" type="button" aria-label="Deep red background"></button>
+            <button class="swatch" data-color="#FF5D3A" style="--swatch:#FF5D3A" type="button" aria-label="Coral background"></button>
+            <button class="swatch" data-color="#4E5BFF" style="--swatch:#4E5BFF" type="button" aria-label="Blue background"></button>
+            <button class="swatch" data-color="#FF1493" style="--swatch:#FF1493" type="button" aria-label="Hot pink background"></button>
+            <label class="custom-color" aria-label="Custom background color">
+              <input id="background-color" type="color" value="#6b0505" />
+              <span>+</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field color-field">
+          <legend>Type colour</legend>
+          <div class="swatches" id="ink-swatches">
+            <button class="swatch is-active" data-color="#FF9BDA" style="--swatch:#FF9BDA" type="button" aria-label="Pink type"></button>
+            <button class="swatch" data-color="#171714" style="--swatch:#171714" type="button" aria-label="Black type"></button>
+            <button class="swatch" data-color="#F6F4EB" style="--swatch:#F6F4EB" type="button" aria-label="Cream type"></button>
+            <button class="swatch" data-color="#FFE23A" style="--swatch:#FFE23A" type="button" aria-label="Yellow type"></button>
+            <label class="custom-color" aria-label="Custom type color">
+              <input id="ink-color" type="color" value="#ff9bda" />
+              <span>+</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="field range-field">
+          <span><b>Type size</b><output id="size-value">180</output></span>
+          <input id="type-size" type="range" min="90" max="260" value="180" />
+        </label>
+
+        <label class="field range-field">
+          <span><b>Maximum width</b><output id="stretch-value">2.4×</output></span>
+          <input id="stretch-limit" type="range" min="14" max="32" value="24" />
+        </label>
+
+        <label class="field range-field">
+          <span><b>Bounce</b><output id="bounce-value">42</output></span>
+          <input id="bounce" type="range" min="0" max="80" value="42" />
+        </label>
+
+        <p class="control-note">In Corner drag, grab any part of a letter. The nearest corner follows your pointer and springs back when released.</p>
+      </aside>
+    </main>
+  </body>
+</html>

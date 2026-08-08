@@ -9,14 +9,21 @@ export const metadata: Metadata = {
   title: "Stack Results",
   description:
     "Stack Results is a branding project rooted in transparency, connection, and community-powered wellness.",
+  alternates: { canonical: "/projects/stack-results" },
 };
 
 // Case-study showcase page, mirrored from the Framer /stack-results page tree.
 export default function StackResultsPage() {
   return (
-    <main className="flex min-h-dvh flex-col items-center bg-[#FFFEF0] pb-10">
+    <main
+      className="flex min-h-dvh flex-col items-center bg-[#FFFEF0] pb-10"
+      data-theme="light"
+    >
       <div className="flex w-full flex-col items-center gap-[14vw]">
-        <section className="flex w-full flex-col items-center gap-2.5">
+        <section
+          className="flex w-full flex-col items-center gap-2.5"
+          data-theme="light"
+        >
           <StackResultsLogo />
           <StackResultsWordmark />
           <ProjectImage
@@ -25,7 +32,10 @@ export default function StackResultsPage() {
           />
         </section>
 
-        <section className="flex w-full flex-col items-center gap-[14vw]">
+        <section
+          className="flex w-full flex-col items-center gap-[14vw]"
+          data-theme="light"
+        >
           <ProjectImage
             src="https://framerusercontent.com/images/xbinIDL5ykUUdqOrGGA0wLj7hnc.png"
             alt="Stack Results slide"

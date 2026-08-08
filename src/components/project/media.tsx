@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { DeferredVideo } from "@/components/project/deferred-video";
+
 // Plain <img>/<video> keeps these pages decoupled from next/image remote
 // pattern configuration; all media is served from framerusercontent.com.
 
@@ -34,7 +36,7 @@ export function ProjectVideo({
   className?: string;
 }) {
   return (
-    <video
+    <DeferredVideo
       src={src}
       autoPlay
       loop
