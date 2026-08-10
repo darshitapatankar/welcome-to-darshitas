@@ -9,6 +9,10 @@
   mix-blend-mode: multiply;
 }
 
+:global(html[data-crt-mode="project"]) .canvas {
+  opacity: 0.8;
+}
+
 .powerBlackout,
 .powerBeam {
   position: fixed;

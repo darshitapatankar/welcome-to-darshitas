@@ -39,22 +39,22 @@ export const MAINS_ROWS: ProjectCardData[][] = [
   [
     {
       srNo: "[05]",
+      title: "Icons at Wayground",
+      href: "/projects/icons-at-wayground",
+      subtext:
+        "A visual language for product tools, rewards, game mechanics, and student engagement across Wayground.",
+      tags: ["Icon Design", "Illustration"],
+      thumbnail: "/projects/icons-at-wayground-gallery/01-playground.png",
+      aspect: "1:1",
+    },
+    {
+      srNo: "[06]",
       title: "Stack Results",
       href: "/projects/stack-results",
       subtext:
         "Identity for a community wellness platform where people share the supplements and habits they genuinely use.",
       tags: ["Branding"],
       thumbnail: "/work/stack-results.png",
-      aspect: "16:9",
-    },
-    {
-      srNo: "[04]",
-      title: "Wayground AI",
-      href: "/projects/wayground-ai",
-      subtext:
-        "Wayground AI supports the full teaching loop, from creating resources to assessing responses and acting on classroom data.",
-      tags: ["Branding", "Motion Design"],
-      thumbnail: "/work/wayground-ai.png",
       aspect: "16:9",
     },
   ],
@@ -616,19 +616,7 @@ export const PROJECTS: Project[] = [
     blocks: [
       {
         type: "image",
-        src: "https://framerusercontent.com/images/qeaLpXISef1tTI3SPZeOHElFqZA.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/L3ww71jiAX258GMOBEC79Ka8Yc.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/lSuZo3p0GOTKMBUDJqO3ot5F5vs.png",
-      },
-      {
-        type: "image",
-        src: "https://framerusercontent.com/images/mxOXizu6TUit7YdGaR4tor00.png",
+        src: "/projects/madhubani-gallery/01-portrait-closeup.png",
       },
     ],
   },
@@ -708,18 +696,17 @@ export const PROJECTS: Project[] = [
     slug: "icons-at-wayground",
     title: "Icons at Wayground",
     description:
-      "This project is a reimagining of the Pondicherry Botanical Garden, drawing inspiration from its depiction in Life of Pi. While the real garden is a lush sanctuary of diverse flora, this concept embraces the novel’s fictional world—where it also housed a zoo.",
+      "A visual language for product tools, rewards, game mechanics, and student engagement across Wayground.",
     year: "2026",
-    field: "Icon Design",
+    field: "Icon Design · Illustration",
     client: "Wayground",
     category: "Mains",
     srNo: "[06]",
     aspect: "4:3",
     thumbnail: {
-      url: "https://framerusercontent.com/images/dREHmBCyvGfsNUD4ohuSUeAvoOQ.png",
+      url: "/projects/icons-at-wayground-gallery/01-playground.png",
+      alt: "Playground arcade illustration",
     },
-    thumbnailVideo:
-      "https://framerusercontent.com/assets/pGXbtQtr7sTTH4yhHrcRstz0hE.mp4",
     blocks: [],
   },
   {

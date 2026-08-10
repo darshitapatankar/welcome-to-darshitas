@@ -44,6 +44,24 @@ const IMAGES: Record<string, GalleryImage> = {
     width: 2107,
     height: 1171,
   },
+  website: {
+    src: "/projects/pondicherry-gallery/07-website-homepage.png",
+    alt: "Pondicherry Botanical Garden website homepage with illustrated animals",
+    width: 2107,
+    height: 1171,
+  },
+  tiger: {
+    src: "/projects/pondicherry-gallery/08-tiger-artwork.png",
+    alt: "Illustrated Bengal tiger feature on textured cream paper",
+    width: 2107,
+    height: 1171,
+  },
+  tigerMark: {
+    src: "/projects/pondicherry-gallery/09-tiger-mark.png",
+    alt: "Pondicherry Botanical Garden tiger mark on a textured brown background",
+    width: 2107,
+    height: 1171,
+  },
 };
 
 function PairImage({ image }: { image: GalleryImage }) {
@@ -73,14 +91,6 @@ function FullImage({ image }: { image: GalleryImage }) {
   );
 }
 
-function GalleryCaption({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="pondicherry-gallery-caption" data-pondicherry-gallery-caption>
-      {children}
-    </p>
-  );
-}
-
 export default function PondicherryGallery() {
   return (
     <section
@@ -91,28 +101,15 @@ export default function PondicherryGallery() {
         <PairImage image={IMAGES.cover} />
         <PairImage image={IMAGES.archway} />
       </div>
-      <GalleryCaption>
-        The identity brings the zoo and botanical garden together in one mark,
-        with Richard Parker beneath a tree. I drew the animals, map, and tickets
-        by hand so the system felt consistent with the illustrated world of the
-        story rather than a contemporary digital brand.
-      </GalleryCaption>
       <FullImage image={IMAGES.stamps} />
-      <div className="pondicherry-gallery-pair">
-        <PairImage image={IMAGES.animals} />
-        <PairImage image={IMAGES.tickets} />
-      </div>
-      <GalleryCaption>
-        The story in the movie and book is set in 1961 Pondicherry, before the
-        web. I designed the fictional Pondicherry Zoo website as a digital
-        newspaper, using editorial layouts, hand-drawn imagery, and references
-        from the city’s architecture to place it within the period.
-      </GalleryCaption>
+      <FullImage image={IMAGES.website} />
       <FullImage image={IMAGES.map} />
-      <GalleryCaption>
-        treated the zoo as a real institution within a fictional setting. Every
-        decision had to feel plausible for that place, period, and organisation.
-      </GalleryCaption>
+      <div className="pondicherry-gallery-pair">
+        <PairImage image={IMAGES.tickets} />
+        <PairImage image={IMAGES.animals} />
+      </div>
+      <FullImage image={IMAGES.tiger} />
+      <FullImage image={IMAGES.tigerMark} />
     </section>
   );
 }

@@ -73,15 +73,13 @@ export default function WorkGrid() {
             <div className="min-w-0 2xl:pl-10">
               <CardLink
                 card={MAINS_ROWS[1][0]}
-                className="w-full min-[900px]:ml-auto min-[900px]:max-w-[367px]"
+                className="w-4/5 min-[900px]:ml-auto min-[900px]:max-w-[406px]"
               />
             </div>
-            <div className="min-w-0 min-[900px]:pt-[65px]">
-              {/* Framer forces this instance to 489px tall, content centered */}
+            <div className="min-w-0 min-[900px]:pt-24">
               <CardLink
                 card={MAINS_ROWS[1][1]}
                 className="w-full min-[900px]:max-w-[508px]"
-                cardClassName="min-[900px]:h-[489px] min-[900px]:justify-center"
               />
             </div>
           </div>

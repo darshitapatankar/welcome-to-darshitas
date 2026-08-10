@@ -3,7 +3,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { workSans } from "@/app/fonts";
 import CustomTypeGallery from "@/components/project/custom-type-gallery";
+import IconsAtWaygroundGallery from "@/components/project/icons-at-wayground-gallery";
 import IllustrationsGallery from "@/components/project/illustrations-gallery";
+import MadhubaniGallery from "@/components/project/madhubani-gallery";
 import PondicherryGallery from "@/components/project/pondicherry-gallery";
 import StackResultsGallery from "@/components/project/stack-results-gallery";
 import ThirtySixDaysGallery from "@/components/project/thirty-six-days-gallery";
@@ -499,6 +501,8 @@ export default async function ProjectPage({
           <CodeBustersGallery copy={pageCopy} />
         ) : slug === "wayground-ai" ? (
           <WaygroundAiGallery />
+        ) : slug === "icons-at-wayground" ? (
+          <IconsAtWaygroundGallery />
         ) : slug === "custom-type" ? (
           <CustomTypeGallery />
         ) : slug === "illustrations" ? (
@@ -507,6 +511,8 @@ export default async function ProjectPage({
           <ThirtySixDaysGallery />
         ) : slug === "wellim" ? (
           <WellimGallery />
+        ) : slug === "manavi-x-madhubani" ? (
+          <MadhubaniGallery />
         ) : slug === "pondicherry-botanical" ? (
           <PondicherryGallery />
         ) : slug === "stack-results" ? (

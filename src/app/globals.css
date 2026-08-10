@@ -408,19 +408,6 @@ html[data-crt-power="boot"] body {
   border-radius: 0;
 }
 
-.pondicherry-gallery-caption {
-  width: min(100%, 600px);
-  margin-block-end: 36px;
-  font-family: var(--type-mono-family);
-  font-size: 16px;
-  line-height: 22px;
-  color: rgb(255 255 255 / 70%);
-}
-
-.pondicherry-gallery-caption:last-child {
-  margin-block-end: 60px;
-}
-
 .wayground-ai-project-gallery {
   --project-gap: 24px;
 
