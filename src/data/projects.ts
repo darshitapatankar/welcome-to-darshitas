@@ -8,7 +8,7 @@ export const MAINS_HERO_CARD: ProjectCardData = {
   subtext:
     "A multiplayer hacking game for classrooms, where students break into each other's vaults by cracking passwords.",
   tags: ["Art Direction", "3D", "Game UI"],
-  thumbnail: "/work/code-busters.png",
+  thumbnail: "/work/code-busters.webp",
   aspect: "16:9",
 };
 
@@ -658,8 +658,8 @@ export const PROJECTS: Project[] = [
     srNo: "[01]",
     aspect: "16:9",
     thumbnail: {
-      url: "/projects/code-busters/hero.png",
-      alt: "Code Busters vault and handheld password device",
+      url: "/work/code-busters.webp",
+      alt: "Code Busters mission screen with the vault, gem, and code-cracking device",
     },
     blocks: [
       {

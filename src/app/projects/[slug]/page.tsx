@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { workSans } from "@/app/fonts";
+import { DeferredVideo } from "@/components/project/deferred-video";
 import CustomTypeGallery from "@/components/project/custom-type-gallery";
 import IconsAtWaygroundGallery from "@/components/project/icons-at-wayground-gallery";
 import IllustrationsGallery from "@/components/project/illustrations-gallery";
@@ -32,8 +33,8 @@ const CARD_DESCRIPTION_PROJECTS = new Set([
 
 const PROJECT_OVERVIEW_COPY: Record<string, string[]> = {
   "code-busters": [
-    "Wayground is a classroom platform where teachers run quizzes and students earn coins for correct answers. Between question rounds, Energizers give students a few minutes of active play, helping maintain momentum and giving students another way to participate beyond test performance.",
-    "Code Busters is one of these Energizers. Each student is assigned a classmate’s vault and races to guess the password before another player breaks into theirs.",
+    "Code Busters is a competitive classroom Energizer for Wayground. Each student protects a personal vault code while racing to crack a classmate’s vault and steal their coins.",
+    "It turns the space between quiz rounds into a playful heist: answer accurately, break in faster, and protect your own score before someone else reaches it.",
   ],
   "pondicherry-botanical": [
     "The Pondicherry Botanical Garden is a real landmark in Pondicherry, India. In Life of Pi, it becomes home to a fictional zoo and Richard Parker, the Bengal tiger at the centre of the story.",
@@ -178,8 +179,7 @@ function ProjectCopySection({
 }
 
 function CodeBustersGallery({ copy }: { copy: ProjectPageCopy }) {
-  const [challenge, direction] = copy.sections ?? [];
-  const directionParagraphs = direction?.paragraphsHtml ?? [];
+  const [prototype, heist, consequences, stakes, payoff] = copy.sections ?? [];
 
   return (
     <div
@@ -188,71 +188,112 @@ function CodeBustersGallery({ copy }: { copy: ProjectPageCopy }) {
     >
       <div className="project-page-gutter">
         <Image
-          src="/projects/code-busters/hero.png"
-          alt="Code Busters gameplay showing a handheld password device, illuminated vault, score, and player ranking"
-          width={1920}
-          height={1080}
+          src="/projects/code-busters/01-mission.webp"
+          alt="Code Busters mission screen with the vault, gem reward, and code-cracking device"
+          width={1280}
+          height={600}
+          loading="eager"
           className="h-auto w-full"
           sizes="100vw"
         />
       </div>
 
-      {challenge && (
+      {prototype && (
         <ProjectCopySection
-          heading={challenge.heading}
-          paragraphs={challenge.paragraphsHtml}
+          heading={prototype.heading}
+          paragraphs={prototype.paragraphsHtml}
         />
       )}
 
       <div className="project-page-gutter">
         <Image
-          src="/projects/code-busters/vault-study.png"
-          alt="Illuminated Code Busters vault inside a blue security room"
-          width={1920}
-          height={1080}
+          src="/projects/code-busters/02-gameplay.webp"
+          alt="Code Busters gameplay with a handheld decoder, illuminated vault, gem score, and player ranking"
+          width={1280}
+          height={600}
+          loading="eager"
           className="h-auto w-full"
           sizes="100vw"
         />
       </div>
 
-      {direction && (
+      {heist && (
         <ProjectCopySection
-          heading={direction.heading}
-          paragraphs={directionParagraphs.slice(0, 1)}
+          heading={heist.heading}
+          paragraphs={heist.paragraphsHtml}
         />
-      )}
-
-      <div className="project-page-gutter grid grid-cols-1 gap-6 md:grid-cols-2">
-        <Image
-          src="/projects/code-busters/password-setup.png"
-          alt="Blue Code Busters interface for setting a three-digit vault password"
-          width={1440}
-          height={1440}
-          className="h-auto w-full"
-          sizes="(max-width: 767px) 100vw, 50vw"
-        />
-        <Image
-          src="/projects/code-busters/handheld-reveal.png"
-          alt="Code Busters handheld password device with the reveal control highlighted"
-          width={1440}
-          height={1440}
-          className="h-auto w-full"
-          sizes="(max-width: 767px) 100vw, 50vw"
-        />
-      </div>
-
-      {directionParagraphs.length > 1 && (
-        <ProjectCopySection paragraphs={directionParagraphs.slice(1)} />
       )}
 
       <div className="project-page-gutter flex justify-center">
+        <DeferredVideo
+          src="/projects/code-busters/03-vault-animation.mp4"
+          width={640}
+          height={480}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-label="Animated Code Busters vault opening"
+          className="h-auto w-full max-w-[1100px]"
+        />
+      </div>
+
+      {consequences && (
+        <ProjectCopySection
+          heading={consequences.heading}
+          paragraphs={consequences.paragraphsHtml}
+        />
+      )}
+
+      <div className="project-page-gutter">
         <Image
-          src="/projects/code-busters/rewards-and-ranking.png"
-          alt="Code Busters gem balance, progress indicator, and player ranking interface"
-          width={600}
+          src="/projects/code-busters/04-laser-defense.webp"
+          alt="Code Busters decoder and vault protected by crossing laser beams"
+          width={1280}
           height={600}
-          className="h-auto w-full max-w-[600px]"
-          sizes="(max-width: 767px) calc(100vw - 48px), 600px"
+          className="h-auto w-full"
+          sizes="100vw"
+        />
+      </div>
+
+      {stakes && (
+        <ProjectCopySection
+          heading={stakes.heading}
+          paragraphs={stakes.paragraphsHtml}
+        />
+      )}
+
+      <div className="project-page-gutter">
+        <Image
+          src="/projects/code-busters/06-vault-setup.webp"
+          alt="Code Busters interface for selecting a secret vault code"
+          width={1280}
+          height={600}
+          className="h-auto w-full"
+          sizes="100vw"
+        />
+      </div>
+
+      {payoff && (
+        <ProjectCopySection
+          heading={payoff.heading}
+          paragraphs={payoff.paragraphsHtml}
+        />
+      )}
+
+      <div className="project-page-gutter">
+        <DeferredVideo
+          src="/projects/code-busters/05-gem-reward.mp4"
+          width={1280}
+          height={600}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-label="Animated gem reward emerging from the Code Busters vault"
+          className="h-auto w-full"
         />
       </div>
     </div>
@@ -262,16 +303,19 @@ function CodeBustersGallery({ copy }: { copy: ProjectPageCopy }) {
 function ProjectMetadata({
   descriptionHtml,
   field,
+  role,
   client,
   year,
 }: {
   descriptionHtml: string[];
   field: string;
+  role?: string;
   client: string;
   year: string;
 }) {
   const rows = [
     { label: "Field", value: field },
+    ...(role ? [{ label: "Role", value: role }] : []),
     { label: "Client", value: client },
     { label: "Year", value: year },
   ];
@@ -482,6 +526,7 @@ export default async function ProjectPage({
             <ProjectMetadata
               descriptionHtml={overviewParagraphs}
               field={pageCopy?.field ?? project.field}
+              role={pageCopy?.role}
               client={pageCopy?.client ?? project.client}
               year={displayYear}
             />

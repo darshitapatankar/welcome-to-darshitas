@@ -20,22 +20,39 @@ export const PROJECT_PAGE_COPY: Record<string, ProjectPageCopy> = {
     year: "2026",
     role: "Art Direction, Game UI, 3D World Design",
     leadHtml:
-      "Wayground is a classroom platform where teachers run quizzes and students earn coins for correct answers. Between question rounds, Energizers give students a few minutes of active play, helping maintain momentum and giving students another way to participate beyond test performance.",
+      "Code Busters is a competitive classroom Energizer for Wayground. Each student protects a personal vault code while racing to crack a classmate’s vault and steal their coins.",
     introHtml: [
-      "Code Busters is one of these Energizers. Each student is assigned a classmate’s vault and races to guess the password before another player breaks into theirs.",
+      "It turns the space between quiz rounds into a playful heist: answer accurately, break in faster, and protect your own score before someone else reaches it.",
     ],
     sections: [
       {
-        heading: "The challenge: a mechanic without an identity",
+        heading: "From a working prototype to a world",
         paragraphsHtml: [
-          "When Code Busters reached me, the mechanic was already working: players entered a password into a handheld device to unlock a vault. Visually, it still relied on familiar hacker tropes, so I reframed it as a heist made for younger players, with tension but none of the severity of an adult crime world.",
+          "The developers had already proved the core mechanic in a basic prototype. My role was to turn it into a complete visual experience—building the art direction, story, 3D world, vault, and handheld hacking device so it felt like a game with its own identity.",
         ],
       },
       {
-        heading: "The direction: a friendly heist",
+        heading: "A heist built for kids",
         paragraphsHtml: [
-          "I built the art direction around the idea of a <strong>friendly heist</strong>. Chunky vaults, oversized controls, and rounded forms made the game tactile and easy to enter, while warning lights, lasers, and shifts in illumination carried the suspense.",
-          "The environment also became part of the feedback system. Wrong answers raised the alarm; correct ones advanced progress across the vault door. Connecting the game state to the world gave a simple password mechanic a distinct identity.",
+          "I reframed hacking as a <strong>playful heist</strong>. Chunky 3D forms, glowing controls, oversized devices, and saturated light make the world exciting and tactile without the severity of an adult crime story. The child is no longer just answering questions—they have a mission, a target, and a hacker persona.",
+        ],
+      },
+      {
+        heading: "Every answer changes the world",
+        paragraphsHtml: [
+          "A wrong answer triggers warning lights and lasers, separating the player from the vault. A correct answer moves the break-in forward. Feedback does not live only in the interface; the entire environment reacts, turning classroom accuracy into suspense.",
+        ],
+      },
+      {
+        heading: "Crack the vault. Take the coins.",
+        paragraphsHtml: [
+          "Every player protects a personal code while trying to break into someone else’s vault. The promise of stealing coins gives each answer a clear stake: crack faster, defend your score, and climb the class ranking.",
+        ],
+      },
+      {
+        heading: "The payoff",
+        paragraphsHtml: [
+          "When the code finally breaks, the gem emerging from the vault completes the arc: mission accepted, risk survived, reward earned.",
         ],
       },
     ],
