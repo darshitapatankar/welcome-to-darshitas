@@ -38,6 +38,12 @@ export const PROJECT_PAGE_COPY: Record<string, ProjectPageCopy> = {
         ],
       },
       {
+        heading: "A UI layer built to float",
+        paragraphsHtml: [
+          "The game world is dimensional and tactile, so I designed the interface as a lighter layer hovering above it. Luminous gradients, raised controls, clipped mechanical silhouettes, and subtly skewed panels make every interaction feel clickable while keeping the UI distinct from the 3D world beneath it.",
+        ],
+      },
+      {
         heading: "Every answer changes the world",
         paragraphsHtml: [
           "A wrong answer triggers warning lights and lasers, separating the player from the vault. A correct answer moves the break-in forward. Feedback does not live only in the interface; the entire environment reacts, turning classroom accuracy into suspense.",

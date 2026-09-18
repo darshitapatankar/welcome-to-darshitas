@@ -179,7 +179,8 @@ function ProjectCopySection({
 }
 
 function CodeBustersGallery({ copy }: { copy: ProjectPageCopy }) {
-  const [prototype, heist, consequences, stakes, payoff] = copy.sections ?? [];
+  const [prototype, heist, uiLayer, consequences, stakes, payoff] =
+    copy.sections ?? [];
 
   return (
     <div
@@ -236,6 +237,24 @@ function CodeBustersGallery({ copy }: { copy: ProjectPageCopy }) {
           preload="metadata"
           aria-label="Animated Code Busters vault opening"
           className="h-auto w-full max-w-[1100px]"
+        />
+      </div>
+
+      {uiLayer && (
+        <ProjectCopySection
+          heading={uiLayer.heading}
+          paragraphs={uiLayer.paragraphsHtml}
+        />
+      )}
+
+      <div className="project-page-gutter">
+        <Image
+          src="/projects/code-busters/07-ui-system.webp"
+          alt="Code Busters floating game UI system including mission, score, vault code, leaderboard, hacking device, and access-denied states"
+          width={1280}
+          height={600}
+          className="h-auto w-full"
+          sizes="100vw"
         />
       </div>
 
