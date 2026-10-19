@@ -101,8 +101,8 @@ export default function WorkGrid() {
               className="w-full md:ml-auto md:max-w-[740px]"
             />
           </div>
-          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,11vw,180px)] min-[900px]:gap-y-0 2xl:flex 2xl:gap-[180px]">
-            <div className="min-w-0 2xl:w-[494px] 2xl:shrink-0 2xl:pl-[100px]">
+          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,11vw,180px)] min-[900px]:gap-y-0">
+            <div className="min-w-0">
               <CardLink
                 card={SIDES_ROWS[0][0]}
                 className="w-full min-[900px]:ml-auto min-[900px]:max-w-[394px]"
@@ -115,8 +115,8 @@ export default function WorkGrid() {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,16vw,273px)] min-[900px]:gap-y-0 2xl:flex 2xl:gap-[273px]">
-            <div className="min-w-0 2xl:pl-[86px]">
+          <div className="grid grid-cols-1 gap-10 min-[900px]:grid-cols-2 min-[900px]:items-start min-[900px]:gap-x-[clamp(48px,16vw,273px)] min-[900px]:gap-y-0">
+            <div className="min-w-0">
               <CardLink
                 card={SIDES_ROWS[1][0]}
                 className="w-full min-[900px]:ml-auto min-[900px]:max-w-[367px]"
@@ -140,7 +140,7 @@ export default function WorkGrid() {
         className="relative mt-24 min-h-[720px] md:mt-32 md:min-h-[900px]"
       >
         <div className="relative z-[4] flex min-h-[720px] items-start justify-center overflow-hidden px-6 pt-24 pb-20 md:min-h-[900px] md:px-[50px] md:pt-[133px]">
-          <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
+          <div className="about-scene-ambient pointer-events-none absolute inset-x-0 top-0 flex justify-center">
             <UnicornStudioEmbed
               projectId={ABOUT_UNICORN_PROJECT_ID}
               width={1440}

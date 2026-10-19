@@ -154,6 +154,31 @@ i {
   font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+.about-scene-ambient {
+  opacity: 0.78;
+  -webkit-mask-image: radial-gradient(
+    ellipse 84% 88% at 50% 46%,
+    #000 0%,
+    #000 52%,
+    rgb(0 0 0 / 72%) 70%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 84% 88% at 50% 46%,
+    #000 0%,
+    #000 52%,
+    rgb(0 0 0 / 72%) 70%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .about-scene-ambient > [data-us-project] {
+    transform: scale(1.09);
+    transform-origin: 50% 46%;
+  }
+}
+
 [data-chrome-theme] {
   --chrome-primary: #ffffff;
   --chrome-intro: #ffffff;
