@@ -60,6 +60,7 @@ export default function HoverDrawNavItem({
   restoreWorkPosition?: boolean;
 }) {
   const router = useRouter();
+  const isExternal = href.startsWith("http");
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (scrollMotion) scrollToPageAnchor(event);
@@ -86,10 +87,12 @@ export default function HoverDrawNavItem({
       href={href}
       className="inline-flex no-underline"
       aria-label={label}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
       onPointerEnter={playCardHoverSound}
       onClick={handleClick}
     >
-      <span className="type-chrome chrome-primary relative inline-flex h-[42px] w-[108px] shrink-0 items-center justify-center whitespace-nowrap">
+      <span className="type-chrome chrome-primary relative inline-flex h-[42px] w-[92px] shrink-0 items-center justify-center text-[12px] whitespace-nowrap min-[360px]:w-[100px] min-[360px]:text-[14px] min-[390px]:w-[108px]">
         <svg
           aria-hidden="true"
           viewBox="0 0 122 42"

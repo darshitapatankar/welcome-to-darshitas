@@ -9,10 +9,14 @@ export default function NavOvalLink({
   label: string;
   signalDecode?: boolean;
 }) {
+  const isExternal = href.startsWith("http");
+
   return (
     <a
       href={href}
       aria-label={label}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
       className="type-chrome chrome-primary group relative inline-flex h-[42px] w-[108px] shrink-0 items-center justify-center whitespace-nowrap no-underline"
       onPointerEnter={playCardHoverSound}
     >

@@ -4,7 +4,7 @@ import NavOvalLink from "@/components/nav-oval-link";
 import { useChromeTheme } from "@/components/use-chrome-theme";
 import { useEffect, useState } from "react";
 
-// Fixed bottom bar from the Framer home page: email link + "CONTACT" oval.
+// Fixed bottom bar from the Framer home page: email link + booking oval.
 // Keep this container visually transparent; safe-area styles position it only.
 export default function BottomBar() {
   const { ref, theme } = useChromeTheme<HTMLDivElement>();
@@ -66,8 +66,8 @@ export default function BottomBar() {
           </span>
         </a>
         <NavOvalLink
-          href="mailto:dpatankar21@gmail.com"
-          label="CONTACT"
+          href="https://cal.com/darshi/30min"
+          label="BOOK A CALL"
           signalDecode
         />
       </div>

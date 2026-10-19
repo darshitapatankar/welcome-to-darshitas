@@ -9,7 +9,10 @@ import { useEffect, useState } from "react";
 // Site nav from the Framer canvas redesign: short bio on the left and an
 // oval-outlined work link on the right (Geist Mono, white).
 // Section themes keep it legible over both light and dark content.
-const LINKS = [{ label: "WORK", href: "/#mains" }];
+const LINKS = [
+  { label: "WORK", href: "/#mains" },
+  { label: "BOOK A CALL", href: "https://cal.com/darshi/30min" },
+];
 
 const HERO_INTRO =
   "Darshita Patankar is a visual designer crafting distinctive brands, digital experiences and illustrations.";
@@ -135,7 +138,7 @@ export default function Nav() {
         )}
         <nav
           aria-label="Primary"
-          className="flex w-full shrink-0 flex-nowrap items-center justify-start gap-5 md:w-auto md:justify-center"
+          className="flex w-full shrink-0 flex-nowrap items-center justify-start gap-1.5 min-[360px]:gap-2 md:w-auto md:justify-center md:gap-5"
         >
           {LINKS.map((link) => (
             <HoverDrawNavItem
