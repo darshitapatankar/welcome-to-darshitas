@@ -92,7 +92,7 @@ export default function HoverDrawNavItem({
       onPointerEnter={playCardHoverSound}
       onClick={handleClick}
     >
-      <span className="type-chrome chrome-primary relative inline-flex h-[42px] w-[92px] shrink-0 items-center justify-center text-[12px] whitespace-nowrap min-[360px]:w-[100px] min-[360px]:text-[14px] min-[390px]:w-[108px]">
+      <span className="type-chrome chrome-primary relative inline-flex h-[42px] w-[108px] shrink-0 items-center justify-center whitespace-nowrap">
         <svg
           aria-hidden="true"
           viewBox="0 0 122 42"

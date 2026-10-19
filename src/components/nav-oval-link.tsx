@@ -4,10 +4,12 @@ export default function NavOvalLink({
   href,
   label,
   signalDecode = false,
+  signalGroup = "footer",
 }: {
   href: string;
   label: string;
   signalDecode?: boolean;
+  signalGroup?: "footer" | "nav";
 }) {
   const isExternal = href.startsWith("http");
 
@@ -17,7 +19,7 @@ export default function NavOvalLink({
       aria-label={label}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noreferrer" : undefined}
-      className="type-chrome chrome-primary group relative inline-flex h-[42px] w-[108px] shrink-0 items-center justify-center whitespace-nowrap no-underline"
+      className="type-chrome chrome-primary group relative inline-flex h-[42px] w-[128px] shrink-0 items-center justify-center whitespace-nowrap no-underline"
       onPointerEnter={playCardHoverSound}
     >
       <svg
@@ -41,7 +43,7 @@ export default function NavOvalLink({
         className="inline-block"
         aria-hidden="true"
         data-signal-decode={signalDecode ? "" : undefined}
-        data-signal-group={signalDecode ? "footer" : undefined}
+        data-signal-group={signalDecode ? signalGroup : undefined}
         data-signal-hover={signalDecode ? "" : undefined}
       >
         {label}

@@ -69,6 +69,7 @@ export default function BottomBar() {
           href="https://cal.com/darshi/30min"
           label="BOOK A CALL"
           signalDecode
+          signalGroup="nav"
         />
       </div>
     </div>
