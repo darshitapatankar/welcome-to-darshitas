@@ -9,8 +9,7 @@ export const metadata: Metadata = {
 
 // Type-specimen page mirrored from the Framer /demure tree: a stack of
 // 1420x800 crimson boards with white settings of the Demure typeface.
-// The original page uses the custom "Demure" font (not publicly hosted);
-// a serif fallback stands in until the font file is added.
+// Live specimen text follows the site's shared typography.
 const CANVAS = { width: 1420, height: 800 };
 
 function pct(x: number, axis: "x" | "y") {
@@ -24,7 +23,7 @@ function vw(px: number) {
 function Board({ children }: { children: React.ReactNode }) {
   return (
     <section
-      className="relative aspect-[1420/800] w-full overflow-hidden bg-[#C20100] [font-family:Demure,ui-serif,Georgia,serif] text-white"
+      className="relative aspect-[1420/800] w-full overflow-hidden bg-[#C20100] font-sans text-white"
       data-theme="dark"
     >
       {children}

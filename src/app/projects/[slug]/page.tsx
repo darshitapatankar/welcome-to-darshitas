@@ -117,7 +117,7 @@ function ProjectNarrative({
             {visibleIntro.map((html) => (
               <p
                 key={html}
-                className="font-mono text-sm leading-relaxed text-white/70"
+                className="type-copy text-[14px] leading-[24px] text-[#a3a3a3] md:text-[15px] md:leading-[26px]"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             ))}
@@ -135,7 +135,7 @@ function ProjectNarrative({
               {section.paragraphsHtml.map((html) => (
                 <p
                   key={html}
-                  className="font-mono text-sm leading-relaxed text-white/70"
+                  className="type-copy text-[14px] leading-[24px] text-[#a3a3a3] md:text-[15px] md:leading-[26px]"
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               ))}
@@ -168,7 +168,7 @@ function ProjectCopySection({
           {paragraphs.map((html) => (
             <p
               key={html}
-              className="font-mono text-sm leading-relaxed text-white/70"
+              className="type-copy text-[14px] leading-[24px] text-[#a3a3a3] md:text-[15px] md:leading-[26px]"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           ))}
@@ -347,7 +347,7 @@ function ProjectMetadata({
             Description
           </dt>
           <dd
-            className="flex flex-col gap-4 text-[14px] leading-[22px] text-white/85"
+            className="type-copy flex flex-col gap-4 text-[14px] leading-[22px] text-[#bdbdbd]"
             data-project-description
           >
             {descriptionHtml.map((html) => (
@@ -363,7 +363,7 @@ function ProjectMetadata({
             <dt className="font-mono text-[12px] leading-[16px] text-white/60 uppercase">
               {label}
             </dt>
-            <dd className="text-[14px] leading-[20px] text-white/85">
+            <dd className="type-copy text-[14px] leading-[22px] text-[#bdbdbd]">
               {value}
             </dd>
           </div>
@@ -458,7 +458,7 @@ function Block({ block }: { block: ProjectBlock }) {
       return (
         <div className="project-page-gutter pb-6">
           <p
-            className="max-w-[820px] font-mono text-sm leading-relaxed text-white/70"
+            className="type-copy max-w-[820px] text-[14px] leading-[24px] text-[#a3a3a3] md:text-[15px] md:leading-[26px]"
             dangerouslySetInnerHTML={{ __html: block.html }}
           />
         </div>
@@ -467,7 +467,7 @@ function Block({ block }: { block: ProjectBlock }) {
       return (
         <div className="project-page-gutter py-6">
           <p
-            className="mb-9 w-full max-w-[600px] font-mono text-[16px] leading-[22px] text-white/70"
+            className="mb-9 w-full max-w-[600px] font-mono text-[14px] leading-[22px] text-white/70 md:text-[16px] md:leading-[24px]"
             dangerouslySetInnerHTML={{ __html: block.html }}
           />
         </div>
@@ -475,7 +475,7 @@ function Block({ block }: { block: ProjectBlock }) {
     case "list":
       return (
         <div className="project-page-gutter pb-6">
-          <ul className="max-w-[820px] list-disc pl-6 font-mono text-sm leading-relaxed text-white/70">
+          <ul className="type-copy max-w-[820px] list-disc pl-6 text-[14px] leading-[24px] text-[#a3a3a3] md:text-[15px] md:leading-[26px]">
             {block.items.map((item) => (
               <li key={item}>{item}</li>
             ))}

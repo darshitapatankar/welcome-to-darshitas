@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GridBg from "@/components/grid-bg";
 import ProjectCard, { type ProjectCardData } from "@/components/project-card";
-import { UnicornStudioEmbed } from "@/components/unicorn-scene";
+import UnicornScene from "@/components/unicorn-scene";
 import {
   MAINS_HERO_CARD,
   MAINS_ROWS,
@@ -139,39 +139,51 @@ export default function WorkGrid() {
         id="about"
         className="relative mt-24 min-h-[720px] md:mt-32 md:min-h-[900px]"
       >
-        <div className="relative z-[4] flex min-h-[720px] items-start justify-center overflow-hidden px-6 pt-24 pb-20 md:min-h-[900px] md:px-[50px] md:pt-[133px]">
-          <div className="about-scene-ambient pointer-events-none absolute inset-x-0 top-0 flex justify-center">
-            <UnicornStudioEmbed
+        <div
+          className="relative z-[4] mx-auto w-full max-w-[1296px] px-6 pb-16 md:px-12"
+          data-brand-film
+        >
+          <div className="aspect-video w-full overflow-hidden bg-black">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/E39U7x7YMD8"
+              title="Design Is Dead — Darshita Patankar's brand film"
+              className="h-full w-full border-0"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+        <div className="relative z-[4] flex min-h-[720px] items-center justify-center overflow-hidden px-6 py-20 md:min-h-[900px] md:px-[50px]">
+          <div className="about-scene-ambient pointer-events-none absolute inset-0">
+            <UnicornScene
               projectId={ABOUT_UNICORN_PROJECT_ID}
-              width={1440}
-              height={900}
-              fitWidthBelow={768}
-              className="max-w-none shrink-0"
+              className="absolute inset-0 h-full w-full"
             />
           </div>
           {SHOW_ABOUT_HTML_CARDS && (
-            <div className="relative flex w-full max-w-[404px] flex-col items-center justify-center gap-6 md:max-w-[856px] md:flex-row md:items-start md:gap-12">
+            <div className="relative grid w-full max-w-[404px] grid-cols-1 items-start gap-6 md:max-w-[856px] md:grid-cols-2 md:gap-12">
               <div
-                className="relative aspect-[404/600] w-full shrink-0 overflow-hidden md:max-w-[404px]"
+                className="relative aspect-[808/1236] w-full overflow-hidden"
                 data-about-html-card
               >
                 <Image
-                  src="/about-card-profile.png"
-                  alt="About Darshita Patankar, a visual designer from India"
+                  src="/about-intro-profile.png"
+                  alt="Darshita Patankar, a brand designer from India, on building brands through storytelling and thoughtful decisions"
                   fill
                   sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
-                  className="scale-[1.13] object-cover md:scale-100"
+                  className="object-cover"
                   draggable={false}
                   unoptimized
                 />
               </div>
               <div
-                className="relative aspect-[404/600] w-full shrink-0 overflow-hidden md:mt-[134px] md:max-w-[404px]"
+                className="relative aspect-[808/1236] w-full overflow-hidden md:mt-24"
                 data-about-html-card
               >
                 <Image
-                  src="/about-card-practice.png"
-                  alt="Darshita Patankar's design practice, interests, and availability"
+                  src="/about-intro-practice.png"
+                  alt="Darshita's work across identity, motion, illustration and typography, her Design Is Dead brand film, and availability for a full-time brand role"
                   fill
                   sizes="(min-width: 768px) 404px, calc(100vw - 48px)"
                   className="object-cover"

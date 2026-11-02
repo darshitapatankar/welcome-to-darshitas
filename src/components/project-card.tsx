@@ -17,10 +17,6 @@ import {
   updateCardDitherPointer,
 } from "@/components/card-dither";
 import { playCardHoverSound } from "@/components/site-sound";
-import {
-  applySampledCardGlow,
-  CARD_HOVER_CONFIG,
-} from "@/components/card-hover-glow";
 import { rememberWorkReturnPosition } from "@/lib/work-return-position";
 
 export type ProjectCardData = {
@@ -109,37 +105,6 @@ export default function ProjectCard({
     videoElement.addEventListener("canplay", ensurePlayback);
     return () => videoElement.removeEventListener("canplay", ensurePlayback);
   }, [card.thumbnailVideo]);
-
-  useEffect(() => {
-    const cardElement = cardRef.current;
-    if (!cardElement) return;
-    cardElement.style.setProperty(
-      "--card-glow-opacity",
-      String(CARD_HOVER_CONFIG.glowOpacity),
-    );
-    cardElement.style.setProperty(
-      "--card-glow-radius",
-      `${CARD_HOVER_CONFIG.glowRadius}px`,
-    );
-    cardElement.style.setProperty(
-      "--card-glow-inset",
-      `${Math.round(CARD_HOVER_CONFIG.glowRadius * -0.28)}px`,
-    );
-
-    const imageElement = imageRef.current;
-    if (imageElement) {
-      const sample = () => applySampledCardGlow(cardElement, imageElement);
-      if (imageElement.complete && imageElement.naturalWidth) sample();
-      else imageElement.addEventListener("load", sample, { once: true });
-      return () => imageElement.removeEventListener("load", sample);
-    }
-
-    const poster = new window.Image();
-    const samplePoster = () => applySampledCardGlow(cardElement, poster);
-    poster.addEventListener("load", samplePoster, { once: true });
-    poster.src = card.thumbnail;
-    return () => poster.removeEventListener("load", samplePoster);
-  }, [card.thumbnail]);
 
   const updateDitherPointer = useCallback(
     (event: ReactPointerEvent<HTMLElement>) => {
@@ -286,29 +251,8 @@ export default function ProjectCard({
           <h3 className="type-card-title font-normal text-[#F2F2F2] uppercase">
             {card.title}
           </h3>
-          {card.subtext && (
-            <p className="type-card-tagline text-[#CFCFCF]">{card.subtext}</p>
-          )}
+          {card.subtext && <p className="type-card-tagline">{card.subtext}</p>}
         </div>
-        {/* Framer's tagless cards use an "Invisible" Tag Groups variant that
-            still occupies layout space, so always reserve the row */}
-        <ul
-          className={`flex flex-wrap gap-2.5 ${
-            card.tags && card.tags.length > 0 ? "" : "invisible"
-          }`}
-        >
-          {(card.tags && card.tags.length > 0 ? card.tags : ["—"]).map(
-            (tag) => (
-              <li
-                key={tag}
-                data-card-tag
-                className="type-card-tag border border-[#3D3D3D] px-2 py-1 text-[#9A9A9A]"
-              >
-                {tag}
-              </li>
-            ),
-          )}
-        </ul>
       </div>
     </>
   );

@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { DM_Sans, Fragment_Mono, Inter, Montserrat } from "next/font/google";
-import localFont from "next/font/local";
 import SmoothScroll from "@/components/smooth-scroll";
 import Nav from "@/components/site/nav";
 import Footer from "@/components/site/footer";
@@ -10,98 +8,8 @@ import EscapeToHome from "@/components/escape-to-home";
 import SignalDecoder from "@/components/signal-decoder";
 import { LEGACY_PROJECT_PATHS } from "@/lib/project-routes";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
-import { workSans } from "./fonts";
+import { geistMono, workSans } from "./fonts";
 import "./globals.css";
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-});
-
-const geistMono = localFont({
-  src: [
-    { path: "./font-files/GeistMono-Thin.ttf", weight: "100" },
-    { path: "./font-files/GeistMono-ExtraLight.ttf", weight: "200" },
-    { path: "./font-files/GeistMono-Light.ttf", weight: "300" },
-    { path: "./font-files/GeistMono-Regular.ttf", weight: "400" },
-    { path: "./font-files/GeistMono-Medium.ttf", weight: "500" },
-    { path: "./font-files/GeistMono-SemiBold.ttf", weight: "600" },
-    { path: "./font-files/GeistMono-Bold.ttf", weight: "700" },
-    { path: "./font-files/GeistMono-ExtraBold.ttf", weight: "800" },
-    { path: "./font-files/GeistMono-Black.ttf", weight: "900" },
-    {
-      path: "./font-files/GeistMono-ThinItalic.ttf",
-      weight: "100",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-ExtraLightItalic.ttf",
-      weight: "200",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-LightItalic.ttf",
-      weight: "300",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-MediumItalic.ttf",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-SemiBoldItalic.ttf",
-      weight: "600",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-ExtraBoldItalic.ttf",
-      weight: "800",
-      style: "italic",
-    },
-    {
-      path: "./font-files/GeistMono-BlackItalic.ttf",
-      weight: "900",
-      style: "italic",
-    },
-  ],
-  variable: "--font-geist-mono",
-  display: "swap",
-});
-
-const fragmentMono = Fragment_Mono({
-  variable: "--font-fragment-mono",
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-// Custom display serif from the published Framer site (Fontshare), used for
-// the giant "Darshita Patankar" footer wordmark and case-study headings.
-const gambarino = localFont({
-  src: "../../public/fonts/gambarino.woff2",
-  variable: "--font-gambarino",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -155,7 +63,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${dmSans.variable} ${montserrat.variable} ${geistMono.variable} ${fragmentMono.variable} ${inter.variable} ${workSans.variable} ${gambarino.variable} antialiased`}
+      className={`${geistMono.variable} ${workSans.variable} antialiased`}
     >
       <head>
         <script

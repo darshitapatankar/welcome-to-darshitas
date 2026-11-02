@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { montserrat } from "@/components/project/fonts";
+import { workSans } from "@/app/fonts";
 import { FreeformCanvas, FreeformImage } from "@/components/project/freeform";
 import { ProjectImage } from "@/components/project/media";
 
@@ -29,7 +29,7 @@ function Caption({
 }) {
   return (
     <p
-      className={`${montserrat.className} absolute text-[clamp(11px,1.5vw,21.3px)] leading-[1.2] text-black`}
+      className={`${workSans.className} absolute text-[clamp(11px,1.5vw,21.3px)] leading-[1.2] text-black`}
       style={{
         left: `${(left / COLLAGE.width) * 100}%`,
         top: `${(top / COLLAGE.height) * 100}%`,
@@ -68,7 +68,7 @@ export default function IllustrationsPage() {
         data-theme="light"
       >
         <div
-          className={`${montserrat.className} flex w-[70%] max-w-[990px] flex-col gap-[2.5vw] text-[clamp(12px,1.67vw,23.67px)] leading-[1.2] text-black`}
+          className={`${workSans.className} flex w-[70%] max-w-[990px] flex-col gap-[2.5vw] text-[clamp(12px,1.67vw,23.67px)] leading-[1.2] text-black`}
         >
           <p>
             This art is inspired by Alphonse Mucha&rsquo;s Daydream, but with a

@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 // through the component's six variant patterns every 4 seconds,
 // with the section's script-lettering title overlaid inside the band.
 // Mains title sits right: 260px; Sides title sits left: 260px.
-const RULE = "rgb(37, 37, 51)";
+const RULE = "rgb(26, 26, 35)";
 const TILE_FRAME_INTERVAL_MS = 4000;
 
 const CELL_COLORS: Record<string, string> = {

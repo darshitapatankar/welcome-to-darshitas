@@ -2,6 +2,7 @@
 
 import HoverDrawNavItem from "@/components/site/hover-draw-nav-item";
 import SoundToggle from "@/components/site/sound-toggle";
+import NavOvalLink from "@/components/nav-oval-link";
 import { useChromeTheme } from "@/components/use-chrome-theme";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -12,7 +13,7 @@ import { useEffect, useState } from "react";
 const LINKS = [{ label: "WORK", href: "/#mains" }];
 
 const HERO_INTRO =
-  "Darshita Patankar is a visual designer crafting distinctive brands, digital experiences and illustrations.";
+  "Darshita Patankar is a designer who builds brands that tell a story, across identity, motion and film.";
 const EMAIL_LABEL = "dpatankar21@gmail.com →";
 
 const TOP_LOCK_PX = 100;
@@ -101,7 +102,9 @@ export default function Nav() {
       data-chrome-theme={theme}
       data-nav-hidden={isHidden ? "" : undefined}
     >
-      <div className="flex flex-col items-start gap-4 px-4 pt-8 pb-4 md:flex-row md:items-center md:justify-between md:gap-2.5 md:px-8">
+      <div
+        className={`flex gap-4 px-4 pt-8 pb-4 md:flex-row md:items-center md:justify-between md:gap-2.5 md:px-8 ${isProjectPage ? "flex-row items-center justify-between" : "flex-col items-start"}`}
+      >
         {isProjectPage ? (
           <a
             href="mailto:dpatankar21@gmail.com"
@@ -109,12 +112,18 @@ export default function Nav() {
             className="type-intro chrome-intro max-w-[815px] text-center no-underline md:text-left"
           >
             <span
-              className="inline-block"
+              className="hidden min-[640px]:inline-block"
               aria-hidden="true"
               data-signal-decode
               data-signal-group="hero"
             >
               {EMAIL_LABEL}
+            </span>
+            <span
+              className="whitespace-nowrap min-[640px]:hidden"
+              aria-hidden="true"
+            >
+              EMAIL →
             </span>
           </a>
         ) : (
@@ -126,16 +135,16 @@ export default function Nav() {
               data-signal-decode
               data-signal-group="hero"
             >
-              Darshita Patankar is a visual designer crafting{" "}
+              Darshita Patankar is a designer who builds brands{" "}
               <span className="md:block">
-                distinctive brands, digital experiences and illustrations.
+                that tell a story, across identity, motion and film.
               </span>
             </span>
           </p>
         )}
         <nav
           aria-label="Primary"
-          className="flex w-full shrink-0 flex-nowrap items-center justify-start gap-5 md:w-auto md:justify-center"
+          className={`flex shrink-0 flex-nowrap items-center md:w-auto md:justify-center ${isProjectPage ? "w-auto justify-end gap-2 md:gap-5 max-md:[&>a:first-child>span]:w-[88px] max-md:[&>a:last-child]:w-[116px]" : "w-full justify-start gap-5"}`}
         >
           {LINKS.map((link) => (
             <HoverDrawNavItem
@@ -146,7 +155,16 @@ export default function Nav() {
               restoreWorkPosition={isProjectPage && link.label === "WORK"}
             />
           ))}
-          <SoundToggle />
+          {isProjectPage ? (
+            <NavOvalLink
+              href="https://cal.com/darshi/30min"
+              label="BOOK A CALL"
+              signalDecode
+              signalGroup="nav"
+            />
+          ) : (
+            <SoundToggle />
+          )}
         </nav>
       </div>
     </header>

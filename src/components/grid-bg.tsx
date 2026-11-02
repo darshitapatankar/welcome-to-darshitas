@@ -4,8 +4,8 @@ import PixelsBar from "@/components/pixels-bar";
 // panel with four vertical hairlines (Grid BG: 181px | 1fr | 1fr | 1fr |
 // 180px columns), an optional two-row pixels bar with the section title,
 // and a bottom rule 140px above the panel's lower edge.
-const COLUMN_LINE = "rgb(47, 47, 64)";
-const RULE = "rgb(37, 37, 51)";
+const COLUMN_LINE = "rgb(29, 29, 39)";
+const RULE = "rgb(26, 26, 35)";
 
 type Gradient = "up" | "down" | "none";
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { dmSans } from "@/components/project/fonts";
+import { workSans } from "@/app/fonts";
 import { ProjectImage, ProjectVideo } from "@/components/project/media";
 import { WellimWordmarkSlide } from "@/components/project/wellim-art";
 
@@ -52,7 +52,7 @@ export default function WellimPage() {
             data-theme="light"
           >
             <div
-              className={`${dmSans.className} w-full max-w-[1140px] text-[clamp(16px,1.7vw,24px)] leading-[1.2] font-light tracking-[-0.02em] text-[#1C1A17]`}
+              className={`${workSans.className} w-full max-w-[1140px] text-[clamp(16px,1.7vw,24px)] leading-[1.2] font-light tracking-[-0.02em] text-[#1C1A17]`}
             >
               <p>
                 Wellim is for those who seek and manifest moments when they feel

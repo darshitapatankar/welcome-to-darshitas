@@ -38,7 +38,7 @@ export const MAINS_ROWS: ProjectCardData[][] = [
   ],
   [
     {
-      srNo: "[05]",
+      srNo: "[04]",
       title: "Icons at Wayground",
       href: "/projects/icons-at-wayground",
       subtext:
@@ -48,7 +48,7 @@ export const MAINS_ROWS: ProjectCardData[][] = [
       aspect: "1:1",
     },
     {
-      srNo: "[06]",
+      srNo: "[05]",
       title: "Stack Results",
       href: "/projects/stack-results",
       subtext:

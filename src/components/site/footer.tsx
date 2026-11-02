@@ -41,7 +41,7 @@ export default function Footer() {
       data-theme="dark"
     >
       <div
-        className="absolute top-6 left-1/2 z-[1] aspect-square h-auto w-[min(calc(100%_-_48px),48svh)] -translate-x-1/2 overflow-visible select-none lg:top-[4.15%] lg:left-[-4.425%] lg:h-[89.7%] lg:w-[67.85%] lg:translate-x-0 lg:overflow-hidden"
+        className="relative z-[1] aspect-square shrink-0 overflow-visible select-none lg:absolute lg:top-[4.15%] lg:left-[-4.425%] lg:h-[89.7%] lg:w-[67.85%] lg:overflow-hidden"
         data-footer-mirror-ball-frame
       >
         <iframe
@@ -52,8 +52,8 @@ export default function Footer() {
           allow="autoplay; fullscreen"
           onLoad={() => setSplineLoaded(true)}
           data-footer-spline
-          className={`absolute inset-0 z-[1] hidden h-full w-full translate-y-[30px] scale-110 mix-blend-screen select-none motion-reduce:hidden lg:block ${
-            splineLoaded ? "lg:opacity-90" : "lg:opacity-0"
+          className={`absolute inset-0 z-[1] block h-full w-full scale-110 mix-blend-screen select-none motion-reduce:hidden lg:translate-y-[30px] ${
+            splineLoaded ? "opacity-90" : "opacity-0"
           }`}
         />
         <Image
@@ -61,8 +61,8 @@ export default function Footer() {
           alt=""
           fill
           sizes="(min-width: 1024px) 67.85vw, min(calc(100vw - 48px), 48svh)"
-          className={`pointer-events-none z-0 block object-contain opacity-90 mix-blend-screen select-none ${
-            splineLoaded ? "motion-reduce:opacity-90 lg:opacity-0" : ""
+          className={`pointer-events-none z-0 block object-contain mix-blend-screen select-none ${
+            splineLoaded ? "opacity-0 motion-reduce:opacity-90" : "opacity-90"
           }`}
           draggable={false}
         />
@@ -94,29 +94,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <Image
-        src="/footer/ellipse2.png"
-        alt=""
-        width={1288}
-        height={1288}
-        loading="eager"
-        className="pointer-events-none absolute right-0 bottom-0 z-[4] h-auto w-[745px] max-w-none mix-blend-hard-light select-none lg:right-[calc(-30%_-_250px)] lg:bottom-[calc(-46.9%_-_440px)] lg:w-[1500px]"
-        aria-hidden="true"
-        draggable={false}
-        data-footer-eclipse
-      />
-
       <div
-        className="absolute right-6 bottom-24 left-6 z-[3] flex flex-col items-center lg:right-[12.5%] lg:bottom-[18.9%] lg:left-auto lg:w-auto lg:items-end"
+        className="absolute right-6 bottom-24 left-6 z-[3] flex flex-col items-center mix-blend-screen lg:right-[12.5%] lg:bottom-[18.9%] lg:left-auto lg:w-auto lg:items-end"
         data-footer-actions
       >
-        <div className="relative mb-6 aspect-[468/196] w-full max-w-[340px] select-none lg:mb-[43px] lg:w-[453px] lg:max-w-[453px]">
+        <div className="footer-signoff relative mb-6 aspect-[468/196] w-full max-w-[340px] select-none lg:mb-[43px] lg:w-[453px] lg:max-w-[453px]">
           <Image
             src="/footer/thank-you-visit-again.png"
             alt="Thank you, visit again"
             fill
             sizes="(min-width: 1024px) 453px, min(340px, calc(100vw - 48px))"
-            className="absolute inset-0 h-full w-full object-contain select-none"
+            className="absolute inset-0 h-full w-full object-contain mix-blend-screen select-none"
             draggable={false}
           />
         </div>
